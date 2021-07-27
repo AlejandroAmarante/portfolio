@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <meta name="author" content="Alejandro Montalvo" />
+    <link rel="stylesheet" href="./styling/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Alejandro Montalvo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap&family=Plaster&display=swap&family=Inter:wght@400;600&display=swap&family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2Ffavicon-32x32.png?v=1625104223248"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="navbar">
+      <div id="navbar__center">
+        <a id="navbar__logo" href="#top">a</a>
+        <ul id="navbar__links">
+          <li>
+            <a class="navbar__button" href="#about">About Me</a>
+          </li>
+          <li><a class="navbar__button" href="#projects">Projects</a></li>
+          <li><a class="navbar__button" href="#contact">Contact</a></li>
+        </ul>
+        <a href="javascript:void(0);" onclick="mobileFunction()">
+          <ion-icon id="mobilenav__icon" name="menu"></ion-icon>
+        </a>
+      </div>
+      <!-- Mobile Navigation -->
+      <div id="mobilenav">
+        <div id="mobilenav__links">
+          <a class="mobilenav__buttons" href="#about" onclick="mobileFunction()"
+            >About me</a
+          >
+          <a
+            class="mobilenav__buttons"
+            href="#projects"
+            onclick="mobileFunction()"
+            >Projects</a
+          >
+          <a
+            class="mobilenav__buttons"
+            href="#contact"
+            onclick="mobileFunction()"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Home Section -->
+    <section id="home">
+      <div id="home__content">
+        <div class="home__header">
+          <div id="typedtext"></div>
+        </div>
+        <div class="home__buttons">
+          <a
+            href="https://github.com/AlejandroMontalvo"
+            target="_blank"
+            class="btn"
+            ><ion-icon class="btn__icon" name="logo-github"></ion-icon
+            >Github</a
+          >
+          <a
+            href="https://www.linkedin.com/in/alejandro-montalvo-342649186/"
+            target="_blank"
+            class="btn"
+            ><ion-icon class="btn__icon" name="logo-linkedin"></ion-icon
+            >LinkedIn</a
+          >
+          <a href="mailto:alejandrormont@gmail.com" class="btn"
+            ><ion-icon class="btn__icon" name="mail"></ion-icon>Email</a
+          >
+          <a
+            href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+            target="_blank"
+            class="btn"
+            ><ion-icon class="btn__icon" name="document-text"></ion-icon
+            >Resume</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+      <div id="about__grid" data-aos="fade-up">
+        <div class="grid__title">About Me</div>
+        <div class="grid__img">
+          <img
+            src="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FPXL_20201106_024249478.PORTRAIT-01.COVER.jpg?v=1604631876485"
+            alt="Me!"
+          />
+        </div>
+        <div class="grid__text">
+          <div>
+            I'm a University of Central Florida student currently majoring in
+            Digital Media, specifically taking the web design course. Some of my
+            hobbies include graphic design, web development and game
+            development. Want to learn more about me?<br />
+          </div>
+        </div>
+        <div class="grid__btn">
+          <a
+            class="btn btn--large"
+            href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+            target="_blank"
+            >Check out my resume!
+            <ion-icon
+              class="btn__icon btn__icon--large"
+              name="open"
+            ></ion-icon
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="projects__grid">
+        <div class="grid__title" data-aos="fade-up">Projects</div>
+        <div class="Project1" data-aos="fade-up">
+          <a
+            ><img
+              class="project__image"
+              src="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FScreenshot.png?v=1627100481398"
+              alt="Project 1"
+          /></a>
+        </div>
+        <div class="Project1-Info" data-aos="fade-up">
+          <div class="project__title">My Resume Site</div>
+          <div class="project__external">
+            <a
+              href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+            >
+              <ion-icon
+                class="project__external__icon"
+                name="logo-github"
+              ></ion-icon
+            ></a>
+            <a
+              href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+            >
+              <ion-icon class="project__external__icon" name="open"></ion-icon
+            ></a>
+          </div>
+          <div class="project__description">
+            This is the Github repo of this website. It took me around 35 hours
+            to complete, with various iterations on it's designs and features,
+            and I plan to update it further over time.
+          </div>
+          <div class="tag tag--html">
+            <ion-icon
+              class="tag__icon tag__icon--html"
+              name="logo-html5"
+            ></ion-icon
+            >HTML
+          </div>
+          <div class="tag tag--css">
+            <ion-icon
+              class="tag__icon tag__icon--css"
+              name="logo-css3"
+            ></ion-icon
+            >CSS
+          </div>
+          <div class="tag tag--javascript">
+            <ion-icon
+              class="tag__icon tag__icon--javascript"
+              name="logo-javascript"
+            ></ion-icon
+            >Javascript
+          </div>
+        </div>
+        <div class="Project2-Info" data-aos="fade-up">
+          <div class="project__title">Under Construction</div>
+          <div class="project__external">
+            <a
+              href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+            >
+              <ion-icon
+                class="project__external__icon"
+                name="logo-github"
+              ></ion-icon
+            ></a>
+            <a
+              href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+            >
+              <ion-icon class="project__external__icon" name="open"></ion-icon
+            ></a>
+          </div>
+          <div class="project__description">
+            This project is under construction. Stay tuned to see what awesome
+            things I create!
+          </div>
+        </div>
+        <div class="Project2" data-aos="fade-up">
+          <a
+            ><img
+              class="project__image"
+              src="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2Fconstruction.png?v=1627191765252"
+              alt="Girl in a jacket"
+          /></a>
+        </div>
+        <div class="Project3" data-aos="fade-up">
+          <a
+            ><img
+              class="project__image"
+              src="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2Fconstruction.png?v=1627191765252"
+              alt="Girl in a jacket"
+          /></a>
+        </div>
+        <div class="Project3-Info" data-aos="fade-up">
+          <div class="project__title">Under Construction</div>
+          <div class="project__external">
+            <a
+              href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+            >
+              <ion-icon
+                class="project__external__icon"
+                name="logo-github"
+              ></ion-icon
+            ></a>
+            <a
+              href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+            >
+              <ion-icon class="project__external__icon" name="open"></ion-icon
+            ></a>
+          </div>
+          <div class="project__description">
+            This project is under construction. Stay tuned to see what awesome
+            things I create!
+          </div>
+        </div>
+        <div class="Project-Git" data-aos="fade-up">
+          <a
+            class="btn btn--large"
+            href="https://github.com/AlejandroMontalvo"
+            target="_blank"
+            >More on my Github
+            <ion-icon class="btn__icon btn__icon--large" name="logo-github"></ion-icon
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div id="contact__info" data-aos="fade-up">
+        <div id="contact__title">
+          Reach Out To Me.
+        </div>
+        <div id="contact__subtext">
+          I'm currently open to work as a Front-end Developer. <br />
+          Let's talk more about bringing your ideas to life.
+        </div>
+        <a
+          href="https://www.linkedin.com/in/alejandro-montalvo-342649186/"
+          target="_blank"
+          class="btn"
+          ><ion-icon class="btn__icon" name="logo-linkedin"></ion-icon
+          >LinkedIn</a
+        >
+        <a href="mailto:alejandrormont@gmail.com" class="btn"
+          ><ion-icon class="btn__icon" name="mail"></ion-icon>Email</a
+        >
+        <a
+          href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
+          target="_blank"
+          class="btn"
+          ><ion-icon class="btn__icon" name="document-text"></ion-icon
+          >Resume</a
+        >
+      </div>
+    </section>
+    <!-- Footer -->
+    <section id="footer">
+      Designed and developed by
+      <span style="color: #781fff;">Alejandro Montalvo</span><br />
+      Built with <span style="color: #781fff;">three.js</span>,
+      <span style="color: #781fff;">vanta.js</span>, and
+      <span style="color: #781fff;">aos.js</span>.
+    </section>
+    <!-- Scripts -->
+    <!-- Icons -->
+    <script
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"
+      type="text/javascript"
+    ></script>
+    <!-- Smoothcroll on mobile -->
+    <script
+      src="https://unpkg.com/zenscroll@4.0.2/zenscroll-min.js"
+      type="text/javascript"
+    ></script>
+    <!-- Preface Fancy -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      if (window.innerWidth <= 756) {
+        VANTA.NET({
+          el: "#home",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x6600ff,
+          backgroundColor: 0x090c10,
+          spacing: 25.0
+        });
+      } else {
+        VANTA.NET({
+          el: "#home",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x6600ff,
+          backgroundColor: 0x090c10
+        });
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>

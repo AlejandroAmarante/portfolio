@@ -1,0 +1,101 @@
+#contact {
+  width: 100%;
+  height: 70vh;
+  background-image: url(https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2Flayered-peaks-haikei1.svg?v=1619116297281);
+  background: #090c10;
+  text-align: center;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+#contact__info {
+  margin-top: 15vw;
+  display: inline-block;
+}
+
+#contact__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3vw;
+}
+
+#contact__subtext {
+  margin-bottom: 1.3vw;
+  font-size: 1.5vw;
+}
+
+#contact__form {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  padding-top: 6rem;
+  width: 40%;
+  font-size: 1.2rem;
+}
+
+.contact__input,
+#contact__textarea {
+  border: 1px solid silver;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Open-Sans", sans-serif;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+  outline: none;
+  padding: 12px;
+  resize: vertical;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+#contact__textarea {
+  height: 12vw;
+}
+
+#contact__submit {
+  cursor: pointer;
+  font-size: 1em;
+  border-style: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  background: #21262d;
+  border-style: none;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+  float: right;
+  box-shadow: 0.2em 0.2em 0em #4e0cb0;
+}
+
+#contact__submit:hover {
+  transition: 0.2s ease-in;
+  color: #001220;
+  background: #ddd;
+}
+
+#contact__icon {
+  position: relative;
+  top: 0.4vh; 
+  margin-left: 0.3rem;
+  color: #781fff;
+}
+
+#contact__submit:hover #contact__icon {
+  transition: 0.2s ease-in;
+  color: #001220;
+}
+
+
+@media (max-width: 765px) {
+  #contact__form {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+  .contact__input,
+  #contact__textarea {
+    font-size: 1.2rem;
+  }
+}
