@@ -1,0 +1,90 @@
+#about {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-color: #090c10;
+  padding-top: 13vw;
+}
+
+#about__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr 1fr 1fr;
+  grid-template-rows: 0fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "grid__title grid__title grid__img grid__img"
+    "txtArea txtArea grid__img grid__img"
+    "btnArea btnArea grid__img grid__img";
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid__img {
+  grid-area: grid__img;
+}
+
+.grid__img img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  border-radius: 15vw;
+  vertical-align: middle;
+  box-shadow: 1em 0.8em 0em #4e0cb0;
+}
+
+.grid__text {
+  grid-area: txtArea;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.8vw;
+}
+
+.grid__btn {
+  margin-top: 1vw;
+  grid-area: btnArea;
+}
+
+@media (max-width: 650px) {
+  #about__grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 15px 0px;
+    grid-template-areas:
+      "grid__title grid__title grid__title grid__title"
+      "grid__img grid__img grid__img grid__img"
+      "txtArea txtArea txtArea txtArea"
+      "btnArea btnArea btnArea btnArea";
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 0.1vh;
+  }
+
+  .grid__img {
+    margin-top: 0vh;
+    margin-left: 0px;
+
+  }
+  .grid__img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .grid__text {
+    grid-area: txtArea;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 4.8vw;
+    text-align: center;
+  }
+
+  .grid__btn {
+    grid-area: btnArea;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

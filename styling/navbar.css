@@ -1,0 +1,117 @@
+#navbar {
+  width: 100%;
+  height:4rem;
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  transition: 0.2s;
+  font-family: "Poppins", sans-serif;
+  z-index: 2;
+}
+
+#navbar__center {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#navbar__logo {
+  color: white;
+  font-family: "Plaster", sans-serif;
+  font-size: 3.5rem;
+  text-decoration: none;
+  line-height: 3.5rem;
+}
+
+#navbar__links {
+  float: right;
+  list-style-type: none;
+  display: flex;
+  margin-top: 1.2rem;
+}
+
+.navbar__button {
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  transition: 0.2s ease-in-out;
+  margin-left: 1rem;
+}
+
+.navbar__button:hover {
+  transition: 0.2s;
+  background-color: #ddd;
+  color: #001220;
+  border-radius: 1vw;
+}
+
+#mobilenav__icon {
+  color: white;
+  font-size: 4rem;
+  float: right;
+}
+
+#mobilenav {
+  position: relative;
+  transition: 0.2s ease-in-out;
+  margin-top: 0.5vh;
+}
+
+#mobilenav__links {
+  display: none;
+  transition: 0.2s ease-in-out;
+}
+
+.mobilenav__buttons {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.2s ease-in-out;
+}
+
+.mobilenav__buttons:hover {
+  background-color: #ddd;
+  color: #001220;
+}
+
+@media (min-width: 765px) {
+  #mobilenav__icon {
+    display: none;
+  }
+  #navbar__links {
+    display: flex;
+  }
+  #mobilenav {
+    display: none;
+  }
+}
+
+@media (max-width: 765px) {
+  
+  #navbar {
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  transition: 0.2s;
+  font-family: "Poppins", sans-serif;
+  z-index: 2;
+  background: #090c10;
+}
+  
+  #navbar__logo {
+  color: white;
+  font-family: "Plaster", sans-serif;
+  font-size: 4rem;
+  text-decoration: none;
+  line-height: 3rem;
+}
+  #navbar__links {
+    display: none;
+  }
+  #mobilenav__icon {
+    display: block;
+  }
+}

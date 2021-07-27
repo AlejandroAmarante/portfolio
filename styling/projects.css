@@ -1,0 +1,218 @@
+#projects {
+  width: 100%;
+  height: 160vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: #090c10;
+  padding-top: 7vw;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0fr 0.9fr 0.9fr 0.9fr 0.2fr;
+  gap: 1.5vw 0px;
+  grid-template-areas:
+    "grid__title grid__title"
+    "Project1 Project1-Info"
+    "Project2-Info Project2"
+    "Project3 Project3-Info"
+    "Project-Git Project-Git";
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Project1 {
+  grid-area: Project1;
+  background: #0d1016;
+  border-radius: 1vw 0vw 0vw 1vw;
+  border-top: 1px solid #202121;
+  border-bottom: 1px solid #202121;
+  border-left: 1px solid #202121;
+  overflow: hidden;
+}
+
+.Project1-Info {
+  grid-area: Project1-Info;
+  background: #0d1016;
+  border-radius: 0vw 1vw 1vw 0vw;
+  color: white;
+  border-top: 1px solid #202121;
+  border-bottom: 1px solid #202121;
+  border-right: 1px solid #202121;
+  padding: 1.5vw 1.5vw;
+}
+
+.project__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2vw;
+  display: inline-block;
+  margin-top: 0.6vw;
+  margin-bottom: 0.1vw;
+}
+
+.project__description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.project__external {
+  display: inline-block;
+  float: right;
+}
+
+.project__external__icon {
+  font-size: 3vw;
+  margin-left: 0.5vw;
+  color: white;
+}
+
+.tag {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 0.8vw;
+  border-radius: 0.3vw;
+  padding: 0.4vw;
+  font-size: 1.2vw;
+}
+
+.tag__icon {
+  position: relative;
+  top: 0.15vw; 
+  margin-right: 0.3vw;
+  margin-left: 0.1vw;
+  color: #781fff;
+  font-size: 1.2vw;
+  color: white;
+}
+
+.tag--html {
+  background: rgba(229,76,38,0.1);
+  color: rgba(229,76,38,1);
+}
+
+.tag__icon--html {
+  color: rgba(229,76,38,1);
+}
+
+.tag--css {
+  background: rgba(54,155,214, 0.1);
+  color: rgba(54,155,214, 1);
+}
+
+.tag__icon--css {
+  color: rgba(54,155,214, 1);
+}
+
+.tag--javascript {
+  background: rgba(254,229,1,0.1);
+  color: rgba(254,229,1,1);
+}
+
+.tag__icon--javascript {
+  color: rgba(254,229,1,1);
+}
+
+.Project2-Info {
+  grid-area: Project2-Info;
+  background: #0d1016;
+  border-radius: 1vw 0vw 0vw 1vw;
+  font-family: "Inter", sans-serif;
+  color: white;
+  border-top: 1px solid #202121;
+  border-bottom: 1px solid #202121;
+  border-left: 1px solid #202121;
+  padding: 1.5vw 1.5vw;
+}
+
+.Project2 {
+  grid-area: Project2;
+  background: #0d1016;
+  border-radius: 0vw 1vw 1vw 0vw;
+  border-top: 1px solid #202121;
+  border-bottom: 1px solid #202121;
+  border-right: 1px solid #202121;
+  overflow: hidden;
+}
+
+.Project3 {
+  grid-area: Project3;
+  background: #0d1016;
+  border-radius: 1vw 0vw 0vw 1vw;
+  border-top: 1px solid #202121;
+  border-bottom: 1px solid #202121;
+  border-left: 1px solid #202121;
+  overflow: hidden;
+}
+
+.Project3-Info {
+  grid-area: Project3-Info;
+  background: #0d1016;
+  border-radius: 0vw 1vw 1vw 0vw;
+  font-family: "Inter", sans-serif;
+  color: white;
+  border-top: 1px solid #202121;
+  border-bottom: 1px solid #202121;
+  border-right: 1px solid #202121;
+  padding: 1.5vw 1.5vw;
+}
+
+.Project-Git {
+  grid-area: Project-Git;
+  text-align: center;
+}
+
+.project__image {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8vw;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  overflow: hidden;
+  border-radius: 1vw 1vw 1vw 1vw;
+  overflow: hidden;
+}
+
+.tile-description {
+  background: #21262d;
+  color: white;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: 0;
+}
+
+.innerProjectTitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+
+@media (max-width: 765px) {
+  .projects__grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr;
+    gap: 10px 50px;
+    grid-template-areas:
+      "grid__title grid__title grid__title grid__title"
+      "Project-1 Project-1 Project-1 Project-1"
+      "Project-2 Project-2 Project-2 Project-2"
+      "Project-Git Project-Git Project-Git Project-Git";
+    width: 75%;
+    padding-top: 0rem;
+  }
+  .Project-3 {
+    display: none;
+  }
+  .Project-4 {
+    display: none;
+  }
+}
