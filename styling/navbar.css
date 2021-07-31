@@ -46,6 +46,7 @@
 }
 
 #mobilenav__icon {
+  display: none;
   color: white;
   font-size: 4rem;
   float: right;
@@ -76,17 +77,6 @@
   color: #001220;
 }
 
-@media (min-width: 765px) {
-  #mobilenav__icon {
-    display: none;
-  }
-  #navbar__links {
-    display: flex;
-  }
-  #mobilenav {
-    display: none;
-  }
-}
 
 @media (max-width: 765px) {
   

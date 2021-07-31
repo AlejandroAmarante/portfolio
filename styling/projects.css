@@ -61,7 +61,7 @@
 }
 
 .project__external {
-  display: inline-block;
+  display: inline-flex;
   float: right;
 }
 
@@ -83,7 +83,7 @@
 
 .tag__icon {
   position: relative;
-  top: 0.15vw; 
+  top: 0.15vw;
   margin-right: 0.3vw;
   margin-left: 0.1vw;
   color: #781fff;
@@ -92,30 +92,30 @@
 }
 
 .tag--html {
-  background: rgba(229,76,38,0.1);
-  color: rgba(229,76,38,1);
+  background: rgba(229, 76, 38, 0.1);
+  color: rgba(229, 76, 38, 1);
 }
 
 .tag__icon--html {
-  color: rgba(229,76,38,1);
+  color: rgba(229, 76, 38, 1);
 }
 
 .tag--css {
-  background: rgba(54,155,214, 0.1);
-  color: rgba(54,155,214, 1);
+  background: rgba(54, 155, 214, 0.1);
+  color: rgba(54, 155, 214, 1);
 }
 
 .tag__icon--css {
-  color: rgba(54,155,214, 1);
+  color: rgba(54, 155, 214, 1);
 }
 
 .tag--javascript {
-  background: rgba(254,229,1,0.1);
-  color: rgba(254,229,1,1);
+  background: rgba(254, 229, 1, 0.1);
+  color: rgba(254, 229, 1, 1);
 }
 
 .tag__icon--javascript {
-  color: rgba(254,229,1,1);
+  color: rgba(254, 229, 1, 1);
 }
 
 .Project2-Info {
