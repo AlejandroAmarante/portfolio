@@ -1,37 +1,29 @@
-Welcome to Glitch
-=================
+# ![Alt Text](./README%20imgs/alejandro.id.gif)
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+This is the current site I use to show off some projects from my portfolio and to share my actual resume PDF file. I've made it open source, so if you'd like to use this as a basis for your own portfolio, feel free to fork!
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+# Getting Started
 
-Find out more [about Glitch](https://glitch.com/about).
+To get this up and running, simply fork this project. Once you have the project forked blah blah blah
 
+# Overview
 
-Your Project
-------------
+Below is an overview of each file within this project:
 
-### ← README.md
+`index.html` - The defualt website page. All aspects of the site are brought together within this file.
 
-That's this file, where you can tell people what your cool website does and how you built it.
+`script.js` - Contains all javascript code used within the site.
 
-### ← index.html
+`styling\about.css` - The CSS code for the 'About Me' section of the site.
 
-Where you'll write the content of your website. 
+`styling\contact.css` - The CSS code for the 'Contact Me' section of the site.
 
-### ← style.css
+`styling\home.css` - The CSS code for the 'Home' section of the site.
 
-CSS files add styling rules to your content.
+`styling\main.css` - The main CSS file. All other CSS files are imported here, and then this file is used as the singular stylesheet for `index.html`.
 
-### ← script.js
+`styling\navbar.css` - The CSS code for the navbar.
 
-If you're feeling fancy you can add interactivity to your site with JavaScript.
+`styling\projects.css` - The CSS code for the 'Projects' section of the site.
 
-### ← assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+`styling\scrollbar.css` - The CSS code for the scrollbar.

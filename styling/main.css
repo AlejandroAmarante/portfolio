@@ -4,7 +4,6 @@
 @import "about.css";
 @import "projects.css";
 @import "contact.css";
-@import "footer.css";
 
 html {
   scroll-behavior: smooth;
@@ -39,10 +38,10 @@ body {
 .btn__icon {
   color: white;
   position: relative;
-  top: 0.2vw; 
+  top: 0.2vw;
   margin-right: 0.3vw;
   color: #781fff;
-  transition: 0.2s
+  transition: 0.2s;
 }
 
 .btn:hover .btn__icon {
@@ -58,7 +57,7 @@ body {
 
 .btn__icon--large {
   color: white;
-  top: 0.7vw; 
+  top: 0.7vw;
   font-size: 2.5vw;
   margin-right: 0vw;
 }
@@ -116,4 +115,13 @@ body {
     position: relative;
     top: 0.8vh;
   }
+}
+
+footer {
+  font-size: 1.3vw;
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  margin-bottom: 5vw;
+  margin-top: 5vw;
 }
