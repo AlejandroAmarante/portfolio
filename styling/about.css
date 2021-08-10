@@ -37,6 +37,7 @@
   grid-area: txtArea;
   color: white;
   font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 1.8vw;
 }
 
@@ -64,13 +65,11 @@
   .grid__img {
     margin-top: 0vh;
     margin-left: 0px;
-
   }
   .grid__img img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-
   }
 
   .grid__text {
