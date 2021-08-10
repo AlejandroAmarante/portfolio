@@ -1,6 +1,4 @@
-"https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"
-
-window.onscroll = function() {
+window.onscroll = function () {
   scrollFunction();
 };
 
@@ -35,8 +33,7 @@ function mobileFunction() {
 
 // set up text to print, each item in array is new line
 var arrText = new Array(
-  "Hey there! I'm Alejandro Montalvo,",
-  "and I build websites."
+  "Hey there! I'm Alejandro Montalvo, and I build websites."
 );
 var speed = 60; // time delay of print out
 var index = 0; // start printing array at this posision
