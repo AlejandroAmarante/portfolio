@@ -5,10 +5,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <meta name="author" content="Alejandro Montalvo" />
-  <link rel="stylesheet" href="./styling/main.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/aos.css" />
   <title>Alejandro Montalvo</title>
+
+  <!-- Favicon -->
   <link rel="shortcut icon" type="image/jpg" href="./imgs/favicon-32x32.png" />
+
+  <!-- Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -87,23 +93,22 @@
   <section id="projects">
     <div class="projects__grid">
       <div class="grid__title" data-aos="fade-up">Projects</div>
-      <div class="Project1" data-aos="fade-up">
-        <a><img class="project__image" src="./imgs/Project1.png" alt="Project 1" /></a>
+      <div class="Project1" data-aos="fade-right">
+        <a href="https://alejandro.id" target="_blank"><img class="project__image" src="./imgs/Project1.png"
+            alt="Project 1" /></a>
       </div>
-      <div class="Project1-Info" data-aos="fade-up">
-        <div class="project__title">My Resume Site</div>
+      <div class="Project1-Info" data-aos="fade-right">
+        <div class="project__title">alejandro.id</div>
         <div class="project__external">
-          <a
-            href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739">
+          <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank">
             <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
           </a>
-          <a style="text-decoration: none;"
-            href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739">
+          <a href="https://alejandro.id" target="_blank">
             <ion-icon class="project__external__icon" name="open"></ion-icon>
           </a>
         </div>
         <div class="project__description">
-          This is the Github repo of this website. It took me around 50 hours
+          This is my resume/portfolio website. It took me around 50 hours
           to complete, with various iterations on it's designs and features.
           I plan to update and improve this site over time.
         </div>
@@ -117,7 +122,7 @@
           <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>Javascript
         </div>
       </div>
-      <div class="Project2-Info" data-aos="fade-up">
+      <div class="Project2-Info" data-aos="fade-left">
         <div class="project__title">Under Construction</div>
         <div class="project__external">
           <a
@@ -134,13 +139,13 @@
           things I create!
         </div>
       </div>
-      <div class="Project2" data-aos="fade-up">
+      <div class="Project2" data-aos="fade-left">
         <a><img class="project__image" src="./imgs/ProjectConstruction.png" alt="Under Construction" /></a>
       </div>
-      <div class="Project3" data-aos="fade-up">
+      <div class="Project3" data-aos="fade-right">
         <a><img class="project__image" src="./imgs/ProjectConstruction.png" alt="Under Construction" /></a>
       </div>
-      <div class="Project3-Info" data-aos="fade-up">
+      <div class="Project3-Info" data-aos="fade-right">
         <div class="project__title">Under Construction</div>
         <div class="project__external">
           <a
@@ -195,13 +200,8 @@
     <span style="color: #781fff;">aos.js</span>.
   </footer>
   <!-- Scripts -->
-  <!-- Icons -->
-  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js" type="text/javascript"></script>
-  <!-- Smoothcroll on mobile -->
-  <script src="https://unpkg.com/zenscroll@4.0.2/zenscroll-min.js" type="text/javascript"></script>
-  <!-- Preface Fancy -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="scripts/three.min.js"></script>
+  <script src="scripts/vanta.net.min.js"></script>
   <script>
     if (window.innerWidth <= 756) {
       VANTA.NET({
@@ -232,11 +232,17 @@
       });
     }
   </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="scripts/navbar.js" type="text/javascript"></script>
+  <script src="scripts/typedtext.js" type="text/javascript"></script>
+  <script src="scripts/aos.min.js" type="text/javascript"></script>
   <script>
     AOS.init();
   </script>
-  <script src="script.js" type="text/javascript"></script>
+
+  <!-- Smoothcroll on mobile -->
+  <script src="scripts/zenscroll-min.js" type="text/javascript"></script>
+  <!-- Preface Fancy -->
+
 </body>
 
 </html>

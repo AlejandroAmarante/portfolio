@@ -14,16 +14,16 @@ Below is an overview of each file within this project:
 
 `script.js` - Contains all javascript code used within the site.
 
-`styling\about.css` - The CSS code for the 'About Me' section of the site.
+`styles\about.css` - The CSS code for the 'About Me' section of the site.
 
-`styling\contact.css` - The CSS code for the 'Contact Me' section of the site.
+`styles\contact.css` - The CSS code for the 'Contact Me' section of the site.
 
-`styling\home.css` - The CSS code for the 'Home' section of the site.
+`styles\home.css` - The CSS code for the 'Home' section of the site.
 
-`styling\main.css` - The main CSS file. All other CSS files are imported here, and then this file is used as the singular stylesheet for `index.html`.
+`styles\main.css` - The main CSS file. All other CSS files are imported here, and then this file is used as the singular stylesheet for `index.html`.
 
-`styling\navbar.css` - The CSS code for the navbar.
+`styles\navbar.css` - The CSS code for the navbar.
 
-`styling\projects.css` - The CSS code for the 'Projects' section of the site.
+`styles\projects.css` - The CSS code for the 'Projects' section of the site.
 
-`styling\scrollbar.css` - The CSS code for the scrollbar.
+`styles\scrollbar.css` - The CSS code for the scrollbar.

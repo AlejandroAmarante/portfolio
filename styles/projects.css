@@ -65,9 +65,13 @@
   float: right;
 }
 
+.project__external a {
+  margin-left: 0.8vw;
+  text-decoration: none;
+}
+
 .project__external__icon {
   font-size: 3vw;
-  margin-left: 0.5vw;
   color: white;
 }
 
