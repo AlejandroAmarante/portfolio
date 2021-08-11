@@ -4,7 +4,7 @@ This is the current site I use to show off some projects from my portfolio and t
 
 # Getting Started
 
-To get started, I suggest you take a look at Githubs quickstart guide [Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo), as it goes into the necessary detail to get this project up and running.
+To get started, I suggest you take a look at Github's quickstart guide [Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo), as it goes into the necessary detail to get this project up and running.
 
 # Overview
 
