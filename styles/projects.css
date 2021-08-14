@@ -1,8 +1,6 @@
 #projects {
   width: 100%;
   height: 160vh;
-  background-repeat: no-repeat;
-  background-size: cover;
   background: #090c10;
   padding-top: 7vw;
 }
@@ -90,7 +88,6 @@
   top: 0.15vw;
   margin-right: 0.3vw;
   margin-left: 0.1vw;
-  color: #781fff;
   font-size: 1.2vw;
   color: white;
 }
@@ -183,40 +180,127 @@
   overflow: hidden;
 }
 
-.tile-description {
-  background: #21262d;
-  color: white;
-  width: 100%;
-  height: 40%;
-  position: absolute;
-  bottom: 0;
-}
+@media (max-width: 640px) {
+  #projects {
+    width: 100%;
+    height: fit-content;
+    padding-top: 18vw;
+  }
 
-.innerProjectTitle {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  margin-left: 0.2rem;
-}
-
-@media (max-width: 765px) {
   .projects__grid {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr;
-    gap: 10px 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.8fr 1fr 0.8fr 1fr 0.8fr 1fr 0fr;
+    gap: 0px 0px;
     grid-template-areas:
-      "grid__title grid__title grid__title grid__title"
-      "Project-1 Project-1 Project-1 Project-1"
-      "Project-2 Project-2 Project-2 Project-2"
-      "Project-Git Project-Git Project-Git Project-Git";
-    width: 75%;
-    padding-top: 0rem;
+      "grid__title grid__title"
+      "Project1 Project1"
+      "Project1-Info Project1-Info"
+      "Project2 Project2"
+      "Project2-Info Project2-Info"
+      "Project3 Project3"
+      "Project3-Info Project3-Info"
+      "Project-Git Project-Git";
+    margin-top: 10vw;
   }
-  .Project-3 {
-    display: none;
+
+  .project__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 4.5vw;
+    display: inline-block;
+    margin-top: 0.6vw;
+    margin-bottom: 0.1vw;
   }
-  .Project-4 {
-    display: none;
+
+  .project__description {
+    font-family: "Inter", sans-serif;
+    font-size: 4vw;
+    margin-bottom: 1vw;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .Project1 {
+    grid-area: Project1;
+    background: #0d1016;
+    border-radius: 1vw 1vw 0vw 0vw;
+    border-top: 1px solid #202121;
+    border-left: 1px solid #202121;
+    border-right: 1px solid #202121;
+    overflow: hidden;
+  }
+
+  .Project1-Info {
+    grid-area: Project1-Info;
+    border-radius: 0vw 0vw 1vw 1vw;
+    border-bottom: 1px solid #202121;
+    border-left: 1px solid #202121;
+    border-right: 1px solid #202121;
+    padding: 3vw 5vw;
+    margin-bottom: 10vw;
+  }
+
+  .Project2 {
+    grid-area: Project2;
+    background: #0d1016;
+    border-radius: 1vw 0vw 0vw 1vw;
+    border-top: 1px solid #202121;
+    border-left: 1px solid #202121;
+    border-right: 1px solid #202121;
+    overflow: hidden;
+  }
+
+  .Project2-Info {
+    grid-area: Project2-Info;
+    border-radius: 0vw 1vw 1vw 0vw;
+    border-bottom: 1px solid #202121;
+    border-left: 1px solid #202121;
+    border-right: 1px solid #202121;
+    padding: 3vw 5vw;
+    margin-bottom: 10vw;
+  }
+
+  .Project3 {
+    grid-area: Project3;
+    background: #0d1016;
+    border-radius: 1vw 0vw 0vw 1vw;
+    border-top: 1px solid #202121;
+    border-left: 1px solid #202121;
+    border-right: 1px solid #202121;
+    overflow: hidden;
+  }
+
+  .Project3-Info {
+    grid-area: Project3-Info;
+    border-radius: 0vw 1vw 1vw 0vw;
+    border-bottom: 1px solid #202121;
+    border-left: 1px solid #202121;
+    border-right: 1px solid #202121;
+    padding: 3vw 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .project__external__icon {
+    font-size: 8vw;
+    color: white;
+  }
+
+  .tag {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 1vw;
+    border-radius: 1vw;
+    padding: 1vw;
+    font-size: 4vw;
+  }
+
+  .tag__icon {
+    position: relative;
+    top: 0.3vw;
+    margin-right: 0.8vw;
+    margin-left: 0.1vw;
+    font-size: 4vw;
   }
 }

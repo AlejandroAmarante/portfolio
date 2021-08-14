@@ -42,30 +42,13 @@
 
 @media (max-width: 640px) {
   #typedtext {
-    font-size: 10vw;
+    font-size: 11vw;
+    line-height: 10vw;
   }
 
-  .preface__header {
-    padding-top: 2vh;
-    height: 35vw;
-  }
-  .preface__button {
-    color: white;
-    margin: 1rem 1rem 1rem 0rem;
-    padding: 0.3em 0.4em 0.3em 0.4em;
-    cursor: pointer;
-    font-size: 4vw;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    background: #21262d;
-    border-radius: 6px;
-  }
-
-  .preface__button:hover {
-    color: white;
-  }
-
-  .preface__button:active {
-    color: #001220;
+  .home__header {
+    padding-top: 20vh;
+    height: 47vw;
+    padding-bottom: 5vh;
   }
 }

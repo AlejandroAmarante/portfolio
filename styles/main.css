@@ -72,57 +72,65 @@ body {
   text-shadow: 0.08em 0.08em #4e0cb0;
 }
 
-@media (max-width: 765px) {
-  .contact-form {
-    transition: width 0.5s;
-    width: 70%;
-  }
-
-  .grid__title {
-    grid-area: grid__title;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 6vh;
-    padding-top: 8.5vh;
-    text-align: center;
-  }
-
-  .button__external {
-    box-shadow: 0 0 0 6px #001220;
-    border-style: none;
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    padding: 1.5vh 1.5vh;
-    width: 60%;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    background-color: #c07afb;
-    transition: 0.2s ease-in;
-    font-size: 2.5vh;
-  }
-
-  .button__external:hover {
-    transition: 0.2s ease-in;
-    background-color: #001220;
-    color: #c07afb;
-    box-shadow: 0 0 0 6px #c07afb;
-  }
-
-  .button__icon {
-    height: 3.5vh;
-    width: 3.5vh;
-    position: relative;
-    top: 0.8vh;
-  }
-}
-
 footer {
   font-size: 1.3vw;
   color: white;
   font-family: "Inter", sans-serif;
   text-align: center;
-  margin-bottom: 5vw;
-  margin-top: 5vw;
+  margin-bottom: 2vw;
+  margin-top: 12vw;
+}
+
+@media (max-width: 640px) {
+  .grid__title {
+    grid-area: grid__title;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 10vw;
+    text-shadow: 1.1vw 1vw #4e0cb0;
+    text-align: center;
+  }
+
+  .btn {
+    margin: 1.8vw 1.8vw 1vw 0vw;
+    padding: 1.5vw 2.5vw 1.5vw 2.5vw;
+    font-size: 6vw;
+    border-radius: 1.5vw;
+    display: inline-block;
+  }
+
+  .btn__icon {
+    color: white;
+    position: relative;
+    top: 0.8vw;
+    margin-right: 1.2vw;
+    color: #781fff;
+    transition: 0.2s;
+    font-size: 6vw;
+  }
+
+  .btn--large {
+    padding: 3vw 2.5vw;
+    font-size: 5vw;
+    border-radius: 1.5vw;
+    box-shadow: 1vw 1.5vw 0vw #4e0cb0;
+  }
+
+  .btn__icon--large {
+    color: white;
+    top: 1vw;
+    font-size: 6.5vw;
+    margin-right: 0vw;
+  }
+
+  footer {
+    font-size: 5vw;
+    color: white;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    margin-top: 30vw;
+    margin-bottom: 5vw;
+    padding: 5vw;
+  }
 }

@@ -28,8 +28,8 @@
   margin-left: auto;
   margin-right: auto;
   width: 55%;
-  border-radius: 15vw;
-  box-shadow: 1em 0.8em 0em #4e0cb0;
+  border-radius: 25vw;
+  box-shadow: 2vw 1vw 0vw #4e0cb0;
 }
 
 .grid__text {
@@ -45,7 +45,15 @@
   grid-area: btnArea;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 640px) {
+  #about {
+    width: 100%;
+    height: fit-content;
+    background-size: cover;
+    background-color: #090c10;
+    padding-top: 13vw;
+  }
+
   #about__grid {
     display: grid;
     grid-template-columns: auto;
@@ -58,24 +66,26 @@
       "btnArea btnArea btnArea btnArea";
     width: 75%;
     margin: 0 auto;
-    padding-top: 0.1vh;
+    margin-top: 10vw;
   }
 
   .grid__img {
     margin-top: 0vh;
     margin-left: 0px;
+    margin-bottom: 3vw;
   }
   .grid__img img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 4vw 2vw 0vw #4e0cb0;
   }
 
   .grid__text {
     grid-area: txtArea;
     color: white;
     font-family: "Poppins", sans-serif;
-    font-size: 4.8vw;
+    font-size: 4vw;
     text-align: center;
   }
 
