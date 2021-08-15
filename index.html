@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <meta name="author" content="Alejandro Montalvo" />
-  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/main.css" media="screen" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <title>Alejandro Montalvo</title>
 
@@ -13,8 +13,8 @@
   <link rel="shortcut icon" type="image/jpg" href="./imgs/favicon-32x32.png" />
 
   <!-- Icons -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.esm.js" async defer></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.5.3/dist/ionicons/ionicons.js" async defer></script>
 </head>
 
 <body>
@@ -49,10 +49,10 @@
         <div id="typedtext"></div>
       </div>
       <div class="home__buttons">
-        <a href="https://github.com/AlejandroMontalvo" target="_blank" class="btn">
+        <a href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener" class="btn">
           <ion-icon class="btn__icon" name="logo-github"></ion-icon>Github
         </a>
-        <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" class="btn">
+        <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" rel="noopener" class="btn">
           <ion-icon class="btn__icon" name="logo-linkedin"></ion-icon>LinkedIn
         </a>
         <a href="mailto:alejandrormont@gmail.com" class="btn">
@@ -83,7 +83,7 @@
       <div class="grid__btn">
         <a class="btn btn--large"
           href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
-          target="_blank">Check out my resume!
+          target="_blank" rel="noopener">Check out my resume!
           <ion-icon class="btn__icon btn__icon--large" name="open"></ion-icon>
         </a>
       </div>
@@ -94,16 +94,16 @@
     <div class="projects__grid">
       <div class="grid__title" data-aos="fade-up">Projects</div>
       <div class="Project1" data-aos="fade-right">
-        <a href="https://alejandro.id" target="_blank"><img class="project__image" src="./imgs/Project1.png"
-            alt="Project 1" /></a>
+        <a href="https://alejandro.id" target="_blank" rel="noopener"><img class="project__image"
+            src="./imgs/Project1.png" alt="Project 1" /></a>
       </div>
       <div class="Project1-Info" data-aos="fade-right">
         <div class="project__title">alejandro.id</div>
         <div class="project__external">
-          <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank">
+          <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">
             <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
           </a>
-          <a href="https://alejandro.id" target="_blank">
+          <a href="https://alejandro.id" target="_blank" rel="noopener">
             <ion-icon class="project__external__icon" name="open"></ion-icon>
           </a>
         </div>
@@ -163,7 +163,8 @@
         </div>
       </div>
       <div class="Project-Git" data-aos="fade-up">
-        <a class="btn btn--large" href="https://github.com/AlejandroMontalvo" target="_blank">More on my Github
+        <a class="btn btn--large" href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener">More on my
+          Github
           <ion-icon class="btn__icon btn__icon--large" name="logo-github"></ion-icon>
         </a>
       </div>
@@ -179,14 +180,14 @@
         I'm currently open to work as a Front-end Developer. <br />
         Let's talk more about bringing your ideas to life.
       </div>
-      <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" class="btn">
+      <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" rel="noopener" class="btn">
         <ion-icon class="btn__icon" name="logo-linkedin"></ion-icon>LinkedIn
       </a>
       <a href="mailto:alejandrormont@gmail.com" class="btn">
         <ion-icon class="btn__icon" name="mail"></ion-icon>Email
       </a>
       <a href="https://cdn.glitch.com/8a4b6e05-cea3-4c3b-8913-b9b26befef2f%2FResume%20-%20Alejandro%20Montalvo.pdf?v=1623294123739"
-        target="_blank" class="btn">
+        target="_blank" rel="noopener" class="btn">
         <ion-icon class="btn__icon" name="document-text"></ion-icon>Resume
       </a>
     </div>
@@ -240,9 +241,7 @@
   </script>
 
   <!-- Smoothcroll on mobile -->
-  <script src="https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll.min.js" type="text/javascript"></script>
-  <!-- Preface Fancy -->
-
+  <script src="https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll.min.js" type="text/javascript" defer></script>
 </body>
 
 </html>

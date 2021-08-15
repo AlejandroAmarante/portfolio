@@ -244,7 +244,7 @@
   .Project2 {
     grid-area: Project2;
     background: #0d1016;
-    border-radius: 1vw 0vw 0vw 1vw;
+    border-radius: 1vw 1vw 0vw 0vw;
     border-top: 1px solid #202121;
     border-left: 1px solid #202121;
     border-right: 1px solid #202121;
@@ -253,7 +253,7 @@
 
   .Project2-Info {
     grid-area: Project2-Info;
-    border-radius: 0vw 1vw 1vw 0vw;
+    border-radius: 0vw 0vw 1vw 1vw;
     border-bottom: 1px solid #202121;
     border-left: 1px solid #202121;
     border-right: 1px solid #202121;
@@ -264,7 +264,7 @@
   .Project3 {
     grid-area: Project3;
     background: #0d1016;
-    border-radius: 1vw 0vw 0vw 1vw;
+    border-radius: 1vw 1vw 0vw 0vw;
     border-top: 1px solid #202121;
     border-left: 1px solid #202121;
     border-right: 1px solid #202121;
@@ -273,7 +273,7 @@
 
   .Project3-Info {
     grid-area: Project3-Info;
-    border-radius: 0vw 1vw 1vw 0vw;
+    border-radius: 0vw 0vw 1vw 1vw;
     border-bottom: 1px solid #202121;
     border-left: 1px solid #202121;
     border-right: 1px solid #202121;
