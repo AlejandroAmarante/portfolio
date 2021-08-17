@@ -46,7 +46,7 @@ Below is an overview of each file within this project:
 
 `vanta.net.js` - Used in conjuction with three.js to create the interactive background on the home page. [Learn more on the vanta.js Github](https://github.com/tengbao/vanta).
 
-`zenscroll-min.js` - A script to ensure that when a user clicks a link on mobile, their screen scrolls smoothly to that location. [Learn more on the zenscroll.js Github](https://github.com/zengabor/zenscroll).
+`zenscroll.js` - A script to ensure that when a user clicks a link on mobile, their screen scrolls smoothly to that location. [Learn more on the zenscroll.js Github](https://github.com/zengabor/zenscroll).
 
 # License
 
