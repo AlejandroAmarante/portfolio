@@ -1,1 +1,10 @@
-.zip
+# .gitignore Template
+
+# Archive File Formats
+*.7z
+*.bzip2
+*.gzip
+*.tar
+*.wim
+*.xz
+*.zip
