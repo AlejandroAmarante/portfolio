@@ -1,4 +1,8 @@
-# .gitignore Template
+# Universal .gitignore Template
+# Version 0.0.1
+
+# Node.js
+node_modules
 
 # Archive File Formats
 *.7z
