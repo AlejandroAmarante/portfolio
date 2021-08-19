@@ -2,8 +2,6 @@
   width: 100%;
   height: 4rem;
   position: fixed;
-  transition: 0.2s;
-  font-family: "Poppins", sans-serif;
   z-index: 2;
 }
 
@@ -21,9 +19,9 @@
 }
 
 #navbar__links {
+  display: flex;
   float: right;
   list-style-type: none;
-  display: flex;
   margin-top: 1.2rem;
 }
 

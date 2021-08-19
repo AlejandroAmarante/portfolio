@@ -190,7 +190,7 @@
   .projects__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.8fr 1fr 0.8fr 1fr 0.8fr 1fr 0fr;
+    grid-template-rows: 0.3fr 0.7fr 1fr 0.7fr 1fr 0.7fr 1fr 0fr;
     gap: 0px 0px;
     grid-template-areas:
       "grid__title grid__title"
