@@ -71,6 +71,12 @@
 .project__external__icon {
   font-size: 3vw;
   color: white;
+  transition: 0.2s;
+}
+
+.project__external__icon:hover {
+  color: #f20089;
+  transition: 0.2s;
 }
 
 .tag {

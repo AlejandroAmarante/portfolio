@@ -16,6 +16,12 @@
   font-size: 3.5rem;
   text-decoration: none;
   line-height: 3.5rem;
+  transition: 0.2s;
+}
+
+#navbar__logo:hover {
+  color: #ff0077;
+  transition: 0.2s ease-in-out;
 }
 
 #navbar__links {

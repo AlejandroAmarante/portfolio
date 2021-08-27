@@ -39,7 +39,7 @@ body {
 .btn__icon {
   top: 0.2vw;
   transition: 0.2s;
-  color: #781fff;
+  color: #ff0077;
   position: relative;
   margin: 0vw 0.3vw 0vw 0vw;
 }
@@ -52,7 +52,10 @@ body {
 .btn--large {
   padding: 1vw 1vw;
   font-size: 1.5vw;
-  box-shadow: 0.5vw 0.5vw 0vw #4e0cb0;
+}
+
+.btn--large:hover {
+  box-shadow: 0.5vw 0.5vw 0vw #ff0077;
 }
 
 .btn__icon--large {
@@ -68,7 +71,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 3.5vw;
-  text-shadow: 0.4vw 0.4vw #4e0cb0;
+  text-shadow: 0.3vw 0.3vw #ff0077;
 }
 
 footer {
@@ -80,7 +83,7 @@ footer {
 }
 
 .footer__link {
-  color: #781fff;
+  color: #ff0077;
   text-decoration: none;
 }
 
@@ -91,7 +94,7 @@ footer {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 10vw;
-    text-shadow: 1.1vw 1vw #4e0cb0;
+    text-shadow: 1.1vw 1vw #ff0077;
     text-align: center;
   }
 
@@ -108,7 +111,7 @@ footer {
     position: relative;
     top: 0.8vw;
     margin-right: 1.2vw;
-    color: #781fff;
+    color: #ff0077;
     transition: 0.2s;
     font-size: 6vw;
   }
@@ -117,7 +120,7 @@ footer {
     padding: 3vw 2.5vw;
     font-size: 5vw;
     border-radius: 1.5vw;
-    box-shadow: 1vw 1.5vw 0vw #4e0cb0;
+    box-shadow: 1vw 1.5vw 0vw #ff0077;
   }
 
   .btn__icon--large {
