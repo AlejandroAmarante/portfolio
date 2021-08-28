@@ -50,7 +50,6 @@
     height: fit-content;
     background-size: cover;
     background-color: #090c10;
-    padding-top: 13vw;
   }
 
   #about__grid {
@@ -84,7 +83,7 @@
     grid-area: txtArea;
     color: white;
     font-family: "Poppins", sans-serif;
-    font-size: 4vw;
+    font-size: 5vw;
     text-align: center;
   }
 

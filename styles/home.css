@@ -41,6 +41,12 @@
 }
 
 @media (max-width: 640px) {
+  #home {
+    width: 100%;
+    height: 100vw;
+    background: #090c10;
+  }
+
   #typedtext {
     font-size: 10vw;
     line-height: 10.5vw;
