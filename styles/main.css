@@ -132,10 +132,8 @@ footer {
 
   footer {
     font-size: 4.5vw;
-    color: white;
-    font-family: "Inter", sans-serif;
     text-align: center;
-    margin-top: 25vw;
+    margin-top: 45vw;
     padding: 9vw;
   }
 }
