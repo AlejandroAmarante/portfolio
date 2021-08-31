@@ -1,6 +1,6 @@
 #about {
   width: 100%;
-  height: 28vw;
+  height: 35vw;
   background-color: #090c10;
   padding-top: 12vw;
 }
@@ -28,7 +28,7 @@
   margin-right: auto;
   width: 55%;
   border-radius: 25vw;
-  box-shadow: 1vw 0.8vw 0vw #ff0077;
+  box-shadow: 1vw 0.8vw 0vw #862be8;
 }
 
 .grid__text {
@@ -76,7 +76,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 4vw 2vw 0vw #ff0077;
+    box-shadow: 4vw 2vw 0vw #862be8;
   }
 
   .grid__text {

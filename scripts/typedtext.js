@@ -1,9 +1,7 @@
 // set up text to print, each item in array is new line
-var arrText = new Array(
-  "Hey there! I'm Alejandro Montalvo, and I build websites."
-);
+var arrText = new Array("I'm Alejandro, and I create. ");
 var speed = 60; // time delay of print out
-var index = 0; // start printing array at this posision
+var index = 0; // start printing array at this position
 var arrLength = arrText[0].length; // the length of the text array
 var scrollAt = 20; // start scrolling up at this many lines
 

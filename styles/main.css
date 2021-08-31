@@ -26,7 +26,7 @@ body {
   text-decoration: none;
   background: #21262d;
   margin: 1vw 1vw 0vw 0vw;
-  padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+  padding: 0.5vw 0.6vw 0.5vw 0.6vw;
   font-family: "Poppins", sans-serif;
 }
 
@@ -37,9 +37,9 @@ body {
 }
 
 .btn__icon {
-  top: 0.2vw;
+  top: 0.22vw;
   transition: 0.2s;
-  color: #ff0077;
+  color: #862be8;
   position: relative;
   margin: 0vw 0.3vw 0vw 0vw;
 }
@@ -55,7 +55,7 @@ body {
 }
 
 .btn--large:hover {
-  box-shadow: 0.5vw 0.5vw 0vw #ff0077;
+  box-shadow: 0.5vw 0.5vw 0vw #862be8;
 }
 
 .btn__icon--large {
@@ -71,7 +71,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 3.5vw;
-  text-shadow: 0.3vw 0.3vw #ff0077;
+  text-shadow: 0.3vw 0.3vw #862be8;
 }
 
 footer {
@@ -79,12 +79,23 @@ footer {
   color: white;
   font-family: "Inter", sans-serif;
   text-align: center;
-  margin-bottom: 2vw;
+  margin-bottom: 1.2vw;
 }
 
 .footer__link {
-  color: #ff0077;
+  color: #862be8;
   text-decoration: none;
+}
+
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -94,7 +105,7 @@ footer {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 10vw;
-    text-shadow: 1.1vw 1vw #ff0077;
+    text-shadow: 1.1vw 1vw #862be8;
     text-align: center;
   }
 
@@ -111,7 +122,7 @@ footer {
     position: relative;
     top: 0.8vw;
     margin-right: 1.2vw;
-    color: #ff0077;
+    color: #862be8;
     transition: 0.2s;
     font-size: 6vw;
   }
@@ -120,7 +131,7 @@ footer {
     padding: 3vw 2.5vw;
     font-size: 5vw;
     border-radius: 1.5vw;
-    box-shadow: 1vw 1.5vw 0vw #ff0077;
+    box-shadow: 1vw 1.5vw 0vw #862be8;
   }
 
   .btn__icon--large {

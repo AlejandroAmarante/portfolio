@@ -38,11 +38,9 @@ Below is an overview of each file within this project:
 
 `scrollbar.css` - Styling for the scrollbar.
 
-## Other Javascript/CSS Files Used
+## Imported Javascript Files
 
-`aos.js/aos.css` - Animate on scroll library. Used to animate certain elements of the page when a user scrolls down it. [Learn more on the aos.js Github](https://github.com/michalsnik/aos).
-
-`zenscroll.js` - A script to ensure that when a user clicks a link on mobile, their screen scrolls smoothly to that location. [Learn more on the zenscroll.js Github](https://github.com/zengabor/zenscroll).
+`zenscroll.js` - A script to ensure that when a user clicks an anchor link on mobile, their screen scrolls smoothly to that location. [Learn more on the zenscroll.js Github](https://github.com/zengabor/zenscroll).
 
 # License
 
