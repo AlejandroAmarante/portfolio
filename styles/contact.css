@@ -16,13 +16,15 @@
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 3vw;
+  line-height: 0.3vw;
 }
 
 #contact__subtext {
-  margin-bottom: 1.3vw;
+  margin-bottom: 2vw;
   margin-left: 10vw;
   margin-right: 10vw;
   font-size: 1.5vw;
+  line-height: 0.5vw;
 }
 
 @media (max-width: 640px) {
