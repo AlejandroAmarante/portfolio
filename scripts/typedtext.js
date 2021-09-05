@@ -33,4 +33,6 @@ function typewriter() {
   }
 }
 
-setTimeout(typewriter, 400);
+document.fonts.load("5vw Poppins").then(() => {
+  setTimeout(typewriter, 800);
+});
