@@ -6,12 +6,12 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: #090c10;
-  width:  auto;
+  width: auto;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: silver;
+  background: #ddd;
 }
 
 /* Handle on hover */

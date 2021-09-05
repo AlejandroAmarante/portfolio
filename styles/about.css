@@ -2,7 +2,7 @@
   width: 100%;
   height: 35vw;
   background-color: #090c10;
-  padding-top: 12vw;
+  padding-top: 8vw;
 }
 
 #about__grid {
@@ -29,6 +29,7 @@
   width: 55%;
   border-radius: 25vw;
   box-shadow: 1vw 0.8vw 0vw #862be8;
+  margin-top: 5vw;
 }
 
 .grid__text {
@@ -38,6 +39,7 @@
   font-weight: 400;
   font-size: 1.8vw;
   margin: 0vw;
+  text-align: justify;
 }
 
 .grid__btn {

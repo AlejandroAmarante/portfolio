@@ -50,18 +50,17 @@
 @media (max-width: 640px) {
   #home {
     width: 100%;
-    height: 125vw;
+    height: 100vh;
     background: #090c10;
   }
 
   #typedtext {
     font-size: 10vw;
-    line-height: 10.5vw;
+    line-height: 13vw;
   }
 
   .home__header {
-    padding-top: 20vh;
-    height: 47vw;
-    padding-bottom: 5vh;
+    padding-top: 25vh;
+    height: 26vw;
   }
 }

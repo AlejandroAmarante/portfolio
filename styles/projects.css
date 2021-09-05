@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0fr 2fr 0.9fr 0.9fr 0.2fr;
-  gap: 2.2vw 0px;
+  gap: 1.5vw 0px;
   grid-template-areas:
     "grid__title grid__title"
     "Project1 Project1-Info"
@@ -178,7 +178,6 @@
 }
 
 .project__image {
-  background-color: red;
   width: 100%;
   height: 100%;
   border-radius: 0.8vw;
