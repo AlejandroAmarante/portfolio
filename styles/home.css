@@ -20,7 +20,7 @@
   height: 7.5vw;
 }
 
-#typedtext {
+#typewriter {
   color: white;
   text-align: left;
   font-family: "Poppins", sans-serif;
@@ -31,8 +31,8 @@
 }
 
 .blink {
-  animation: blink-animation 2s steps(2, start) infinite;
-  -webkit-animation: blink-animation 2s steps(2, start) infinite;
+  animation: blink-animation 1400ms steps(2, start) infinite;
+  -webkit-animation: blink-animation 1400ms steps(2, start) infinite;
 }
 
 @keyframes blink-animation {
