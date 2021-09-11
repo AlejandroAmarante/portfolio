@@ -25,16 +25,14 @@
 <body>
   <!-- Navigation -->
   <header>
-    <div id="navbar">
+    <nav id="navbar">
       <div id="navbar__center">
         <a id="navbar__logo" href="#top" onclick="logoFunction()">a</a>
-        <ul id="navbar__links">
-          <li>
-            <a class="navbar__button" href="#about">About Me</a>
-          </li>
-          <li><a class="navbar__button" href="#projects">Projects</a></li>
-          <li><a class="navbar__button" href="#contact">Contact</a></li>
-        </ul>
+        <div id="navbar__links">
+          <a class="navbar__button" href="#about">About Me</a>
+          <a class="navbar__button" href="#projects">Projects</a>
+          <a class="navbar__button" href="#contact">Contact</a>
+        </div>
         <!-- Mobile Navigation -->
         <a href="javascript:void(0);" onclick="mobileFunction()">
           <ion-icon id="mobilenav__icon" name="menu"></ion-icon>
@@ -47,7 +45,7 @@
           <a class="mobilenav__buttons" href="#contact" onclick="mobileFunction()">Contact</a>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
   <!-- Home Section -->
   <section id="home">
