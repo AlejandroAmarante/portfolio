@@ -15,7 +15,10 @@ function scrollFunction() {
     mobileNav.setAttribute("style", "background: #090c10;");
   } else {
     navBar.setAttribute("style", "border-bottom: none; background: none;");
-    mobileNav.setAttribute("style", "border-bottom: none; background: none;");
+    mobileNav.setAttribute(
+      "style",
+      "border-bottom: #090c10; background: #090c10;"
+    );
   }
 }
 
