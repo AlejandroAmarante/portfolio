@@ -53,7 +53,8 @@
     background: #090c10;
   }
 
-  #typedtext {
+  #typewriter {
+    text-align: left;
     font-size: 10vw;
     line-height: 13vw;
   }
