@@ -93,7 +93,7 @@ ion-icon {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 10vw;
-    text-shadow: 1.1vw 1vw #862be8;
+    text-shadow: 1.1vw 1vw #9147fe;
     text-align: center;
   }
 
@@ -118,7 +118,7 @@ ion-icon {
     padding: 3vw 2.5vw;
     font-size: 5vw;
     border-radius: 1.5vw;
-    box-shadow: 1vw 1.5vw 0vw #862be8;
+    box-shadow: 1vw 1.5vw 0vw #9147fe;
   }
 
   .btn__icon--large {
@@ -131,7 +131,8 @@ ion-icon {
   footer {
     font-size: 4.5vw;
     text-align: center;
-    margin-top: 45vw;
+    margin-top: 1vw;
     padding: 9vw;
+    margin-bottom: 20vw;
   }
 }

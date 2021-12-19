@@ -77,7 +77,7 @@
 }
 
 .project__external__icon:hover {
-  color: #862be8;
+  color: #9147fe;
   transition: 0.2s;
 }
 
@@ -135,13 +135,13 @@
   #projects {
     width: 100%;
     height: fit-content;
-    padding-top: 18vw;
+    padding-top: 25vw;
   }
 
   .projects__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.7fr 1fr 0.7fr 1fr 0.7fr 1fr 0fr;
+    grid-template-rows: 0.5fr 0.7fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "grid__title grid__title"
@@ -153,6 +153,7 @@
       "Project3-Info Project3-Info"
       "Project-Git Project-Git";
     margin-top: 10vw;
+    margin-bottom: 10vw;
   }
 
   .project__title {
