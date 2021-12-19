@@ -8,38 +8,41 @@
   <meta name="description" content="A site dedicated to describing who I am and what I do.">
   <title>Alejandro Montalvo</title>
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/jpg" href="./imgs/favicon-32x32.png" />
+  <link rel="shortcut icon" type="image/svg" href="./imgs/logo.svg" />
   <!-- Preload Assets -->
   <link rel="preload" href="./styles/main.css" media="screen" as="style" />
   <link rel="stylesheet" href="./styles/main.css" media="screen" />
-  <link rel="preload" href="fonts/Poppins-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="fonts/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="fonts/Plaster-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/ionicons@5.5.3/dist/ionicons/ionicons.js" as="script">
+  <link rel="preload" as="font" crossorigin type="font/tff" href="./fonts/Montserrat-Regular.ttf">
+  <link rel="preload" as="font" crossorigin type="font/tff" href="./fonts/Montserrat-Bold.ttf">
+  <link rel="preload" as="font" crossorigin type="font/tff" href="./fonts/Plaster-Regular.ttf">
   <!-- Icons -->
-  <script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.3/dist/ionicons/ionicons.js" async defer></script>
-  <script nomodule="" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.3/dist/ionicons/ionicons.esm.js" async
-    defer></script>
+  <link rel="preload" as="script" href="https://unpkg.com/ionicons@6.0.0/dist/ionicons/ionicons.esm.js">
+  <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js">
+  <script type="module" src="https://unpkg.com/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
+  <!-- Script -->
+  <link rel="preload" as="script" href="./scripts/script.js" as="script">
+  <script src="./scripts/script.js" type="text/javascript"></script>
 </head>
 
 <body>
   <!-- Navigation -->
+  <nav class="sidenav">
+    <a id="navlogo" href="#top" onclick="logoFunction()">a</a>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <label class="switch">
+      <input type="checkbox" id="darkModeCheckbox">
+      <ion-icon name="sunny"></ion-icon>
+      <ion-icon name="moon"></ion-icon>
+    </label>
+  </nav>
   <header>
-    <div id="navbar">
-      <div id="navbar__center">
-        <a id="navbar__logo" href="#top" onclick="logoFunction()">a</a>
-        <ul id="navbar__links">
-          <li>
-            <a class="navbar__button" href="#about">About Me</a>
-          </li>
-          <li><a class="navbar__button" href="#projects">Projects</a></li>
-          <li><a class="navbar__button" href="#contact">Contact</a></li>
-        </ul>
-        <!-- Mobile Navigation -->
-        <a href="javascript:void(0);" onclick="mobileFunction()">
-          <ion-icon id="mobilenav__icon" name="menu"></ion-icon>
-        </a>
-      </div>
+    <div id="navbar__center">
+      <a href="javascript:void(0);" onclick="mobileFunction()">
+        <ion-icon id="mobilenav__icon" name="menu"></ion-icon>
+      </a>
       <div id="mobilenav">
         <div id="mobilenav__links">
           <a class="mobilenav__buttons" href="#about" onclick="mobileFunction()">About me</a>
@@ -52,8 +55,10 @@
   <!-- Home Section -->
   <section id="home">
     <div id="home__content">
-      <div class="home__header">
-        <div id="typewriter"></div>
+      <div id="container">
+        <div id="staticText">I'm Alejandro and I </div>
+        <div id="dynamicText"></div>
+        <div id="cursor"></div>
       </div>
       <div class="home__buttons">
         <a href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener" class="btn">
@@ -63,10 +68,10 @@
           <ion-icon class="btn__icon" name="logo-linkedin"></ion-icon>LinkedIn
         </a>
         <a href="mailto:alejandrormont@gmail.com" class="btn">
-          <ion-icon class="btn__icon" name="mail"></ion-icon>Email
+          <ion-icon class="btn__icon" name="mail-sharp"></ion-icon>Email
         </a>
         <a href="./PDFs/Resume.pdf" target="_blank" class="btn">
-          <ion-icon class="btn__icon" name="document-text"></ion-icon>Resume
+          <ion-icon class="btn__icon" name="document-text-sharp"></ion-icon>Resume
         </a>
       </div>
     </div>
@@ -80,17 +85,17 @@
       </div>
       <p class="grid__text">
         My name is Alejandro Montalvo, and I'm a <a href="https://www.ucf.edu/" target="_blank" rel="noopener"
-          class="footer__link"><strong> University of Central
+          class="link"><strong> University of Central
             Florida</strong></a> student currently majoring in
         <a href="https://www.ucf.edu/degree/digital-media-ba/" target="_blank" rel="noopener"
-          class="footer__link"><strong>Digital Media</strong></a>. More specifically, the web design specialization.
+          class="link"><strong>Digital Media</strong></a>. More specifically, the web design specialization.
         Some of my
         hobbies include graphic design, web development and game
         development. Want to learn more about me?
       </p>
       <div class="grid__btn">
         <a class="btn btn--large" href="./PDFs/Resume.pdf" target="_blank" rel="noopener">Check out my resume!
-          <ion-icon class="btn__icon btn__icon--large" name="open"></ion-icon>
+          <ion-icon class="btn__icon btn__icon--large" name="open-sharp"></ion-icon>
         </a>
       </div>
     </div>
@@ -125,48 +130,10 @@
           <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
         </div>
         <div class="tag tag--javascript">
-          <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>Javascript
+          <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
         </div>
       </div>
-      <!-- TODO: Work on more projects to further populate this section ;) -->
-      <!--
-      <div class="Project2-Info">
-        <div class="project__title">Under Construction</div>
-        <div class="project__external">
-          <a href="">
-            <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
-          </a>
-          <a href="">
-            <ion-icon class="project__external__icon" name="open"></ion-icon>
-          </a>
-        </div>
-        <div class="project__description">
-          This project is under construction. Stay tuned to see what awesome
-          things I create!
-        </div>
-      </div>
-      <div class="Project2">
-        <a><img class="project__image" src="./imgs/ProjectConstruction.jpg" alt="Under Construction" /></a>
-      </div>
-      <div class="Project3">
-        <a><img class="project__image" src="./imgs/ProjectConstruction.jpg" alt="Under Construction" /></a>
-      </div>
-      <div class="Project3-Info">
-        <div class="project__title">Under Construction</div>
-        <div class="project__external">
-          <a href="">
-            <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
-          </a>
-          <a href="">
-            <ion-icon class="project__external__icon" name="open"></ion-icon>
-          </a>
-        </div>
-        <div class="project__description">
-          This project is under construction. Stay tuned to see what awesome
-          things I create!
-        </div>
-      </div>
-      
+      <!--      
       <div class="Project-Git">
         <a class="btn btn--large" href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener">More on my
           GitHub
@@ -180,7 +147,7 @@
   <section id="contact">
     <div id="contact__info">
       <h2 id="contact__title">
-        Reach Out To Me.
+        Lets get in touch
       </h2>
       <div id="contact__subtext">
         <p>
@@ -193,24 +160,13 @@
         <ion-icon class="btn__icon" name="logo-linkedin"></ion-icon>LinkedIn
       </a>
       <a href="mailto:alejandrormont@gmail.com" class="btn">
-        <ion-icon class="btn__icon" name="mail"></ion-icon>Email
+        <ion-icon class="btn__icon" name="mail-sharp"></ion-icon>Email
       </a>
       <a href="./PDFs/Resume.pdf" target="_blank" rel="noopener" class="btn">
-        <ion-icon class="btn__icon" name="document-text"></ion-icon>Resume
+        <ion-icon class="btn__icon" name="document-text-sharp"></ion-icon>Resume
       </a>
     </div>
   </section>
-  <!-- Footer -->
-  <footer>
-    <p>
-      Designed and developed by
-      <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" rel="noopener"
-        class="footer__link"><strong>Alejandro Montalvo</strong></a>.
-    </p>
-  </footer>
-  <!-- Scripts -->
-  <script src="scripts/navbar.js" type="text/javascript"></script>
-  <script src="scripts/typewriter.js" type="text/javascript"></script>
   <!-- Smoothscroll on mobile -->
   <script src="https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll.min.js" type="text/javascript" defer></script>
 </body>

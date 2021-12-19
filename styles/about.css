@@ -1,8 +1,8 @@
 #about {
   width: 100%;
-  height: 35vw;
-  background-color: #090c10;
-  padding-top: 8vw;
+  height: 80vh;
+  vertical-align: middle;
+  padding-top: 12rem;
 }
 
 #about__grid {
@@ -14,7 +14,6 @@
     "grid__title grid__title grid__img grid__img"
     "txtArea txtArea grid__img grid__img"
     "btnArea btnArea grid__img grid__img";
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -26,18 +25,16 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 55%;
-  border-radius: 25vw;
-  box-shadow: 1vw 0.8vw 0vw #862be8;
+  width: 50%;
   margin-top: 5vw;
+  border-radius: 69% 53% 88% 68% / 45% 82% 83% 94%;
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  animation: morphing 15s infinite;
 }
 
 .grid__text {
   grid-area: txtArea;
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 1.8vw;
+  color: var(--font-color);
   margin: 0vw;
   text-align: justify;
 }
@@ -45,6 +42,34 @@
 .grid__btn {
   margin-top: 1vw;
   grid-area: btnArea;
+}
+
+.link {
+  color: var(--font-color);
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 40% 30% 30% 40% / 50% 60% 70% 80%;
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  15% {
+    border-radius: 80% 70% 60% 50% / 40% 30% 20% 10%;
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  30% {
+    border-radius: 70% 30% 70% 30% / 30% 70% 30% 70%;
+  }
+  45% {
+    border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%;
+    box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
+  }
+  60% {
+    border-radius: 69% 29% 69% 29% / 29% 69% 29% 69%;
+  }
+  75% {
+    border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%;
+  }
 }
 
 @media (max-width: 640px) {

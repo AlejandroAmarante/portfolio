@@ -10,42 +10,79 @@
   width: 90%;
 }
 
-#navbar__logo {
-  color: white;
+#navlogo {
+  color: var(--font-color);
   font-family: "Plaster", sans-serif;
-  font-size: 4.5vw;
+  font-size: 6rem;
   text-decoration: none;
-  line-height: 4.2vw;
   transition: 0.2s;
+  margin: 0rem 3.5rem 0rem 3rem;
+  animation-play-state: paused;
 }
 
-#navbar__logo:hover {
-  color: #862be8;
-  transition: 0.2s ease-in-out;
+#navlogo:hover {
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 20s linear infinite;
+  background-size: 10000% 100%;
 }
 
-#navbar__links {
-  display: flex;
-  float: right;
-  list-style-type: none;
-  margin-top: 1.5vw;
+@keyframes rainbow_animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
-.navbar__button {
-  color: white;
-  padding: 0.5vw 1vw;
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 13rem; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  border-right: solid 1px var(--border-color);
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 0.8rem 1rem 0.8rem 1rem;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5vw;
-  transition: 0.2s ease-in-out;
-  margin-left: 1vw;
+  font-size: 2rem;
+  color: var(--font-color);
+  display: block;
 }
 
-.navbar__button:hover {
-  transition: 0.2s;
-  background-color: #ddd;
-  color: #001220;
-  border-radius: 0.6vw;
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: var(--hover-font-color);
+  background-color: var(--hover-color);
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 #mobilenav__icon {
@@ -78,6 +115,36 @@
 .mobilenav__buttons:hover {
   background-color: #ddd;
   color: #001220;
+}
+
+.switch {
+  margin: 0 auto;
+  width: 50%;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+ion-icon[name="sunny"] {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+ion-icon[name="moon"] {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 640px) {

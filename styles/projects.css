@@ -1,7 +1,6 @@
 #projects {
-  width: 100%;
+  width: 90%;
   height: 35vw;
-  background: #090c10;
   padding-top: 7vw;
 }
 
@@ -16,33 +15,33 @@
     "Project2-Info Project2"
     "Project3 Project3-Info"
     "Project-Git Project-Git";
-  width: 80%;
   margin: 0 auto;
 }
 
 .Project1 {
   grid-area: Project1;
-  background: #0d1016;
-  border-radius: 1vw 0vw 0vw 1vw;
-  border-top: 1px solid #202121;
-  border-bottom: 1px solid #202121;
-  border-left: 1px solid #202121;
+}
+
+.project__image {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.2s ease-in;
   overflow: hidden;
 }
 
 .Project1-Info {
   grid-area: Project1-Info;
-  background: #0d1016;
-  border-radius: 0vw 1vw 1vw 0vw;
-  color: white;
-  border-top: 1px solid #202121;
-  border-bottom: 1px solid #202121;
-  border-right: 1px solid #202121;
+  background: white;
+  color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
   padding: 1.5vw 1.5vw;
 }
 
 .project__title {
-  color: white;
+  color: black;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -73,7 +72,7 @@
 
 .project__external__icon {
   font-size: 3vw;
-  color: white;
+  color: black;
   transition: 0.2s;
 }
 
@@ -87,7 +86,6 @@
   font-weight: 600;
   display: inline-block;
   margin-right: 0.8vw;
-  border-radius: 0.3vw;
   padding: 0.4vw;
   font-size: 1.2vw;
 }
@@ -102,90 +100,35 @@
 }
 
 .tag--html {
-  background: rgba(229, 76, 38, 0.1);
-  color: rgba(229, 76, 38, 1);
+  background: rgba(229, 76, 38, 1);
+  color: white;
 }
 
 .tag__icon--html {
-  color: rgba(229, 76, 38, 1);
+  color: white;
 }
 
 .tag--css {
-  background: rgba(54, 155, 214, 0.1);
-  color: rgba(54, 155, 214, 1);
+  background: rgba(54, 155, 214, 1);
+  color: white;
 }
 
 .tag__icon--css {
-  color: rgba(54, 155, 214, 1);
+  color: white;
 }
 
 .tag--javascript {
-  background: rgba(254, 229, 1, 0.1);
-  color: rgba(254, 229, 1, 1);
+  background: rgba(254, 229, 1, 1);
+  color: white;
 }
 
 .tag__icon--javascript {
-  color: rgba(254, 229, 1, 1);
-}
-
-.Project2-Info {
-  grid-area: Project2-Info;
-  background: #0d1016;
-  border-radius: 1vw 0vw 0vw 1vw;
-  font-family: "Inter", sans-serif;
   color: white;
-  border-top: 1px solid #202121;
-  border-bottom: 1px solid #202121;
-  border-left: 1px solid #202121;
-  padding: 1.5vw 1.5vw;
-}
-
-.Project2 {
-  grid-area: Project2;
-  background: #0d1016;
-  border-radius: 0vw 1vw 1vw 0vw;
-  border-top: 1px solid #202121;
-  border-bottom: 1px solid #202121;
-  border-right: 1px solid #202121;
-  overflow: hidden;
-}
-
-.Project3 {
-  grid-area: Project3;
-  background: #0d1016;
-  border-radius: 1vw 0vw 0vw 1vw;
-  border-top: 1px solid #202121;
-  border-bottom: 1px solid #202121;
-  border-left: 1px solid #202121;
-  overflow: hidden;
-}
-
-.Project3-Info {
-  grid-area: Project3-Info;
-  background: #0d1016;
-  border-radius: 0vw 1vw 1vw 0vw;
-  font-family: "Inter", sans-serif;
-  color: white;
-  border-top: 1px solid #202121;
-  border-bottom: 1px solid #202121;
-  border-right: 1px solid #202121;
-  padding: 1.5vw 1.5vw;
 }
 
 .Project-Git {
   grid-area: Project-Git;
   text-align: center;
-}
-
-.project__image {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.8vw;
-  cursor: pointer;
-  transition: 0.2s ease-in;
-  overflow: hidden;
-  border-radius: 1vw 1vw 1vw 1vw;
-  overflow: hidden;
 }
 
 @media (max-width: 640px) {

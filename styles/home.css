@@ -1,50 +1,20 @@
 #home {
   width: 100%;
-  height: 100vh;
-  background: #090c10;
-  text-align: center;
+  height: 40vh;
 }
 
 #home__content {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  text-align: center;
 }
 
 .home__header {
   width: 100%;
-  padding-top: 40vh;
+  padding-top: 20rem;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   padding-bottom: 1vw;
   height: 7.5vw;
-}
-
-#typewriter {
-  color: white;
-  text-align: left;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 5vw;
-  line-height: 7.8vw;
-  text-align: center;
-}
-
-.blink {
-  animation: blink-animation 1400ms steps(2, start) infinite;
-  -webkit-animation: blink-animation 1400ms steps(2, start) infinite;
-}
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
 }
 
 @media (max-width: 640px) {

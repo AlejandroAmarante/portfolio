@@ -1,0 +1,38 @@
+#container {
+  margin-top: 22rem;
+  height: 8rem;
+  margin-bottom: 1.8rem;
+}
+
+#staticText {
+  display: inline-block;
+  font-size: 6rem;
+  color: var(--font-color);
+  letter-spacing: 2px;
+}
+
+#dynamicText {
+  font-family: "Montserrat";
+  display: inline-block;
+  font-size: 6rem;
+  color: var(--font-color);
+  letter-spacing: 2px;
+  margin-left: 1.2rem;
+}
+
+#cursor {
+  display: inline-block;
+  width: 5rem;
+  height: 7rem;
+  background-color: var(--font-color);
+}
+
+@keyframes blink {
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: var(--font-color);
+  }
+}

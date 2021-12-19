@@ -1,102 +1,89 @@
-@import "fonts.css";
-@import "scrollbar.css";
 @import "navbar.css";
+@import "buttons.css";
 @import "home.css";
 @import "about.css";
 @import "projects.css";
 @import "contact.css";
+@import "typeWriter.css";
 
+/* Root Variables ----------------*/
+:root {
+  --border-color: black;
+  --bg-color: white;
+  --font-color: black;
+  --hover-color: black;
+  --hover-font-color: white;
+}
+/*--------------------------------*/
+
+/* Dark Theme Colors -------------*/
+[data-theme="dark"] {
+  --border-color: white;
+  --bg-color: black;
+  --font-color: white;
+  --hover-color: white;
+  --hover-font-color: black;
+}
+/*--------------------------------*/
+
+/* Fonts ----------------------------------------*/
+@font-face {
+  font-family: "Plaster";
+  src: url("../fonts/Plaster-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
+/*-----------------------------------------------*/
+
+/* HTML Tags ----------------------------*/
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  margin-left: 17rem;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: #090c10;
+  font-family: "Montserrat";
 }
 
-.btn {
-  color: white;
-  cursor: pointer;
-  font-size: 1.5vw;
-  transition: 0.2s;
-  border-radius: 0.5vw;
-  text-decoration: none;
-  background: #21262d;
-  margin: 1vw 1vw 0vw 0vw;
-  padding: 0.5vw 0.6vw 0.5vw 0.6vw;
-  font-family: "Poppins", sans-serif;
-}
-
-.btn:hover {
-  transition: 0.2s;
-  color: #001220;
-  background-color: #ddd;
-}
-
-.btn__icon {
-  top: 0.22vw;
-  transition: 0.2s;
-  color: #862be8;
-  position: relative;
-  margin: 0vw 0.3vw 0vw 0vw;
-}
-
-.btn:hover .btn__icon {
-  transition: 0.2s;
-  color: #001220;
-}
-
-.btn--large {
-  padding: 1vw 1vw;
-  font-size: 1.5vw;
-}
-
-.btn--large:hover {
-  box-shadow: 0.5vw 0.5vw 0vw #862be8;
-}
-
-.btn__icon--large {
-  top: 0.7vw;
-  color: white;
-  font-size: 2.5vw;
-  margin-right: 0vw;
-}
-
-.grid__title {
+h1 {
   grid-area: grid__title;
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 3.5vw;
-  text-shadow: 0.3vw 0.3vw #862be8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 3.5rem;
   margin-bottom: 0vw;
 }
 
-footer {
-  font-size: 1.3vw;
-  color: white;
-  font-family: "Inter", sans-serif;
-  text-align: center;
-  margin-bottom: 1.2vw;
+p {
+  font-size: 2.1rem;
+  font-family: "OpenSans";
 }
-
-.footer__link {
-  color: #862be8;
-  text-decoration: none;
+ion-icon {
+  color: var(--font-color);
 }
+/*---------------------------------------*/
 
-@keyframes rainbow_animation {
-  0%,
-  100% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 100% 0;
-  }
+.grid__title {
+  grid-area: grid__title;
 }
 
 @media (max-width: 640px) {
@@ -123,7 +110,6 @@ footer {
     position: relative;
     top: 0.8vw;
     margin-right: 1.2vw;
-    color: #862be8;
     transition: 0.2s;
     font-size: 6vw;
   }
