@@ -1,7 +1,7 @@
 #navbar {
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   color: #001220;
   top: 0;
 }
@@ -11,17 +11,17 @@
   width: 90%;
 }
 
-#navlogo {
+#navLogo {
   color: var(--font-color);
   font-family: "Plaster", sans-serif;
   font-size: 6rem;
   text-decoration: none;
-  transition: 0.2s;
-  margin: 0rem 3.5rem 0rem 3rem;
-  animation-play-state: paused;
+  margin: auto;
+  width: fit-content;
 }
 
-#navlogo:hover {
+/* Rainbow Animation on :hover ------------------*/
+#navLogo:hover {
   background: linear-gradient(
     to right,
     red,
@@ -48,21 +48,21 @@
     background-position: 100% 100%;
   }
 }
+/*-----------------------------------------------*/
 
-/* The sidebar menu */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 13rem; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+.sideNav {
+  height: 100%;
+  width: 13rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-x: hidden;
   border-right: solid 1px var(--border-color);
 }
 
 /* The navigation menu links */
-.sidenav a {
+.sideNav a {
   padding: 0.8rem 1rem 0.8rem 1rem;
   text-decoration: none;
   font-size: 2rem;
@@ -71,7 +71,7 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.sideNav a:hover {
   color: var(--hover-font-color);
   background-color: var(--hover-color);
 }
@@ -81,8 +81,8 @@
   .sidenav {
     padding-top: 15px;
   }
-  .sidenav a {
-    font-size: 18px;
+  .sideNav a {
+    font-size: 5vh;
   }
 }
 
@@ -118,31 +118,25 @@
   color: #001220;
 }
 
-.switch {
+#switch {
   margin: 0 auto;
   width: 50%;
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   width: 20%;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+  margin-left: 1rem;
 }
 
 ion-icon[name="sunny"] {
-  display: none;
+  display: inline-block;
   width: 2rem;
   height: 2rem;
   margin-top: 1rem;
-  color: white;
 }
 
 ion-icon[name="moon"] {
-  display: inline-block;
+  display: none;
   width: 2rem;
   height: 2rem;
   margin-top: 1rem;
@@ -153,7 +147,6 @@ ion-icon[name="moon"] {
     width: 100%;
     height: 4rem;
     position: fixed;
-    transition: 0.2s;
     font-family: "Poppins", sans-serif;
     z-index: 2;
     background: #090c10;
@@ -171,5 +164,9 @@ ion-icon[name="moon"] {
   }
   #mobilenav__icon {
     display: block;
+  }
+
+  .sidenav {
+    display: none;
   }
 }

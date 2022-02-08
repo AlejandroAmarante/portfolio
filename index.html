@@ -3,37 +3,42 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Alejandro Montalvo" />
   <meta name="description" content="A site dedicated to describing who I am and what I do.">
+  <meta name="color-scheme" content="dark light">
   <title>Alejandro Montalvo</title>
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/svg" href="./imgs/logo.svg" />
   <!-- Preload Assets -->
   <link rel="preload" href="./styles/main.css" media="screen" as="style" />
+  <link rel="preload" href="./fonts/Plaster-Regular.ttf" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Montserrat-Regular.ttf" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Montserrat-Bold.ttf" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Regular.ttf" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Bold.ttf" as="font" type="font/woff2" crossorigin>
+  <!-- Import Stylesheet -->
   <link rel="stylesheet" href="./styles/main.css" media="screen" />
-  <link rel="preload" as="font" crossorigin type="font/tff" href="./fonts/Montserrat-Regular.ttf">
-  <link rel="preload" as="font" crossorigin type="font/tff" href="./fonts/Montserrat-Bold.ttf">
-  <link rel="preload" as="font" crossorigin type="font/tff" href="./fonts/Plaster-Regular.ttf">
   <!-- Icons -->
-  <link rel="preload" as="script" href="https://unpkg.com/ionicons@6.0.0/dist/ionicons/ionicons.esm.js">
-  <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js">
+  <link rel="preload" href="https://unpkg.com/ionicons@6.0.0/dist/ionicons/ionicons.esm.js" as="script" crossorigin>
+  <link rel="preload" href="https://unpkg.com/ionicons@6.0.0/dist/ionicons/ionicons.js" as="script" crossorigin>
   <script type="module" src="https://unpkg.com/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
-  <!-- Script -->
-  <link rel="preload" as="script" href="./scripts/script.js" as="script">
-  <script src="./scripts/script.js" type="text/javascript"></script>
+  <!-- Scripts -->
+  <!-- Smoothscroll on Safari -->
+  <script src="https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll.min.js" type="text/javascript"></script>
+  <link rel="preload" as="script" href="./scripts/main.js" as="script">
+  <script src="./scripts/main.js" type="text/javascript"></script>
 </head>
 
 <body>
   <!-- Navigation -->
-  <nav class="sidenav">
-    <a id="navlogo" href="#top" onclick="logoFunction()">a</a>
+  <nav class="sideNav">
+    <a id="navLogo" href="#top" onclick="logoFunction()">a</a>
     <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <label class="switch">
-      <input type="checkbox" id="darkModeCheckbox">
+    <label id="switch">
       <ion-icon name="sunny"></ion-icon>
       <ion-icon name="moon"></ion-icon>
     </label>
@@ -81,7 +86,7 @@
     <div id="about__grid">
       <h1 class="grid__title">About Me</h1>
       <div class="grid__img">
-        <img src="./imgs/aboutme.avif" alt="Me!" />
+        <img src="./imgs/aboutme.png" alt="Me!" />
       </div>
       <p class="grid__text">
         My name is Alejandro Montalvo, and I'm a <a href="https://www.ucf.edu/" target="_blank" rel="noopener"
@@ -102,11 +107,11 @@
   </section>
   <!-- Projects Section -->
   <section id="projects">
+    <h1>Projects</h1>
     <div class="projects__grid">
-      <h1 class="grid__title">Projects</h1>
       <div class="Project1">
         <a href="https://alejandro.id" target="_blank" rel="noopener"><img class="project__image"
-            src="./imgs/Project1.avif" alt="Project 1" /></a>
+            src="./imgs/Project1.png" alt="Project 1" /></a>
       </div>
       <div class="Project1-Info">
         <h2 class="project__title">alejandro.id</h2>
@@ -115,7 +120,7 @@
             <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
           </a>
           <a href="https://alejandro.id" target="_blank" rel="noopener">
-            <ion-icon class="project__external__icon" name="open"></ion-icon>
+            <ion-icon class="project__external__icon" name="open-sharp"></ion-icon>
           </a>
         </div>
         <p class="project__description">
@@ -133,6 +138,7 @@
           <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
         </div>
       </div>
+
       <!--      
       <div class="Project-Git">
         <a class="btn btn--large" href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener">More on my
@@ -146,9 +152,9 @@
   <!-- Contact Section -->
   <section id="contact">
     <div id="contact__info">
-      <h2 id="contact__title">
+      <h1 id="contact__title">
         Lets get in touch
-      </h2>
+      </h1>
       <div id="contact__subtext">
         <p>
           I'm currently open to work as a Front-end Developer.</p>
@@ -167,8 +173,6 @@
       </a>
     </div>
   </section>
-  <!-- Smoothscroll on mobile -->
-  <script src="https://cdn.jsdelivr.net/npm/zenscroll@4.0.2/zenscroll.min.js" type="text/javascript" defer></script>
 </body>
 
 </html>

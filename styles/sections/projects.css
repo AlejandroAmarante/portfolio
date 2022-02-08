@@ -1,63 +1,55 @@
 #projects {
   width: 90%;
-  height: 35vw;
-  padding-top: 7vw;
+  height: 90vh;
+  padding-top: 8vw;
 }
 
 .projects__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0fr 2fr 0.9fr 0.9fr 0.2fr;
-  gap: 1.5vw 0px;
-  grid-template-areas:
-    "grid__title grid__title"
-    "Project1 Project1-Info"
-    "Project2-Info Project2"
-    "Project3 Project3-Info"
-    "Project-Git Project-Git";
+  grid-template-rows: 1fr;
+  grid-template-areas: "Project1 Project1-Info";
   margin: 0 auto;
+  border: 1px solid var(--border-color);
+  margin-top: 1vw;
+  margin-bottom: 2vw;
 }
 
 .Project1 {
   grid-area: Project1;
+  height: 100%;
+}
+
+.Project1-Info {
+  grid-area: Project1-Info;
+  background: var(--bg-color);
+  color: var(--font-color);
+  padding: 1.5vw 1.5vw;
 }
 
 .project__image {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  transition: 0.2s ease-in;
   overflow: hidden;
 }
 
-.Project1-Info {
-  grid-area: Project1-Info;
-  background: white;
-  color: black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  padding: 1.5vw 1.5vw;
-}
-
 .project__title {
-  color: black;
+  color: var(--font-color);
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2vw;
   display: inline-block;
   margin-top: 0.6vw;
-  margin-bottom: 0.1vw;
+  margin-bottom: 1vw;
 }
 
 .project__description {
-  font-family: "Inter", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-size: 1.5vw;
   margin-bottom: 1vw;
   font-weight: 400;
-  text-align: justify;
-  margin-top: 0vw;
+  margin-top: 0px;
 }
 
 .project__external {
@@ -72,13 +64,7 @@
 
 .project__external__icon {
   font-size: 3vw;
-  color: black;
-  transition: 0.2s;
-}
-
-.project__external__icon:hover {
-  color: #9147fe;
-  transition: 0.2s;
+  color: var(--font-color);
 }
 
 .tag {
@@ -100,30 +86,27 @@
 }
 
 .tag--html {
-  background: rgba(229, 76, 38, 1);
-  color: white;
+  color: rgb(229, 76, 38);
 }
 
 .tag__icon--html {
-  color: white;
+  color: rgba(229, 76, 38);
 }
 
 .tag--css {
-  background: rgba(54, 155, 214, 1);
-  color: white;
+  color: rgb(54, 155, 214);
 }
 
 .tag__icon--css {
-  color: white;
+  color: rgb(54, 155, 214);
 }
 
 .tag--javascript {
-  background: rgba(254, 229, 1, 1);
-  color: white;
+  color: rgb(254, 229, 1);
 }
 
 .tag__icon--javascript {
-  color: white;
+  color: rgb(254, 229, 1);
 }
 
 .Project-Git {
@@ -177,18 +160,12 @@
     grid-area: Project1;
     background: #0d1016;
     border-radius: 1vw 1vw 0vw 0vw;
-    border-top: 1px solid #202121;
-    border-left: 1px solid #202121;
-    border-right: 1px solid #202121;
     overflow: hidden;
   }
 
   .Project1-Info {
     grid-area: Project1-Info;
     border-radius: 0vw 0vw 1vw 1vw;
-    border-bottom: 1px solid #202121;
-    border-left: 1px solid #202121;
-    border-right: 1px solid #202121;
     padding: 3vw 5vw;
     margin-bottom: 10vw;
   }

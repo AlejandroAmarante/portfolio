@@ -1,46 +1,33 @@
 window.onload = function () {
-  document
-    .getElementById("darkModeCheckbox")
-    .addEventListener("click", function () {
-      var sunny = document.getElementsByName("sunny")[0];
-      var moon = document.getElementsByName("moon")[0];
-      var isChecked = document
-        .getElementsByClassName("switch")[0]
-        .getElementsByTagName("input")[0].checked;
+  var sunny = document.getElementsByName("sunny")[0];
+  var moon = document.getElementsByName("moon")[0];
 
-      if (isChecked) {
-        sunny.style.display = "inline-block";
-        moon.style.display = "none";
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        sunny.style.display = "none";
-        moon.style.display = "inline-block";
-        document.documentElement.setAttribute("data-theme", "white");
-        localStorage.setItem("theme", "light");
-      }
-    });
+  document.documentElement.setAttribute(
+    "data-theme",
+    localStorage.getItem("theme")
+  );
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  if (localStorage.getItem("theme") == "light") {
+    sunny.style.display = "none";
+    moon.style.display = "inline-block";
+  }
+
+  document.getElementById("switch").addEventListener("click", function () {
+    if (localStorage.getItem("theme") == "dark") {
+      sunny.style.display = "none";
+      moon.style.display = "inline-block";
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    } else {
+      sunny.style.display = "inline-block";
+      moon.style.display = "none";
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    }
+  });
 
   var navBar = document.getElementById("navbar");
   var mobileNav = document.getElementById("mobilenav");
-  function scrollFunction() {
-    /* If user scrolls down more than 10 pixels, change the background
-     color and add border-bottom. Else, remove both.*/
-    // if (window.scrollY > 10) {
-    //   navBar.setAttribute(
-    //     "style",
-    //     "border-bottom: 1px solid #282828; background: #090c10;"
-    //   );
-    //   mobileNav.setAttribute("style", "background: #090c10;");
-    // } else {
-    //   navBar.setAttribute("style", "border-bottom: none; background: none;");
-    //   mobileNav.setAttribute("style", "border-bottom: none; background: none;");
-    // }
-  }
 
   var mobileLinks = document.getElementById("mobilenav__links");
   var mobileIcon = document.getElementById("mobilenav__icon");
@@ -63,10 +50,9 @@ window.onload = function () {
     navBar.setAttribute("style", "border-bottom: none; background: none;");
   }
 
-  function darkMode() {}
-
+  // TypeWriter ---------------------------------------------------------------|
   // List of sentences
-  var content = ["create.", "design.", "develop."];
+  var content = ["create.", "design.", "develop.", "learn."];
 
   // Current sentence being processed
   var contentIndex = 0;
@@ -84,7 +70,7 @@ window.onload = function () {
   var cursor = document.querySelector("#cursor");
 
   // Implements typing effect
-  function Type() {
+  function typeText() {
     cursor.style.animation = null;
     // Get substring with 1 characater added
     var text = content[contentIndex].substring(0, characterIndex + 1);
@@ -96,13 +82,13 @@ window.onload = function () {
       cursor.style.animation = "blink 1s step-end infinite";
       clearInterval(_INTERVAL_VAL);
       setTimeout(function () {
-        _INTERVAL_VAL = setInterval(Delete, 50);
+        _INTERVAL_VAL = setInterval(deleteText, 50);
       }, 2000);
     }
   }
 
   // Implements deleting effect
-  function Delete() {
+  function deleteText() {
     cursor.style.animation = null;
     // Get substring with 1 characater deleted
     var text = content[contentIndex].substring(0, characterIndex - 1);
@@ -122,11 +108,11 @@ window.onload = function () {
       // Start to display the next sentence after some time
       setTimeout(function () {
         cursor.style.display = "inline-block";
-        _INTERVAL_VAL = setInterval(Type, 100);
+        _INTERVAL_VAL = setInterval(typeText, 100);
       }, 200);
     }
   }
 
   // Start the typing effect on load
-  _INTERVAL_VAL = setInterval(Type, 100);
+  _INTERVAL_VAL = setInterval(typeText, 100);
 };

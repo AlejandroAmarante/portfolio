@@ -1,57 +1,29 @@
-@import "navbar.css";
+@import "./sections/home.css";
+@import "./sections/about.css";
+@import "./sections/projects.css";
+@import "./sections/contact.css";
+@import "fonts.css";
+@import "navigation.css";
 @import "buttons.css";
-@import "home.css";
-@import "about.css";
-@import "projects.css";
-@import "contact.css";
-@import "typeWriter.css";
 
-/* Root Variables ----------------*/
 :root {
-  --border-color: black;
-  --bg-color: white;
-  --font-color: black;
-  --hover-color: black;
-  --hover-font-color: white;
+  color-scheme: light dark; /* both supported */
+  --border-color: rgb(225, 225, 225);
+  --bg-color: rgb(15, 15, 15);
+  --font-color: rgb(225, 225, 225);
+  --hover-color: rgb(225, 225, 225);
+  --hover-font-color: rgb(15, 15, 15);
 }
-/*--------------------------------*/
 
-/* Dark Theme Colors -------------*/
-[data-theme="dark"] {
-  --border-color: white;
-  --bg-color: black;
-  --font-color: white;
-  --hover-color: white;
-  --hover-font-color: black;
+/* Light Theme Colors */
+[data-theme="light"] {
+  --border-color: rgb(15, 15, 15);
+  --bg-color: rgb(225, 225, 225);
+  --font-color: rgb(15, 15, 15);
+  --hover-color: rgb(15, 15, 15);
+  --hover-font-color: rgb(225, 225, 225);
 }
-/*--------------------------------*/
 
-/* Fonts ----------------------------------------*/
-@font-face {
-  font-family: "Plaster";
-  src: url("../fonts/Plaster-Regular.ttf");
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.ttf");
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Regular.ttf");
-}
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Bold.ttf");
-  font-weight: bold;
-}
-/*-----------------------------------------------*/
-
-/* HTML Tags ----------------------------*/
 html {
   scroll-behavior: smooth;
 }
@@ -60,30 +32,24 @@ body {
   background-color: var(--bg-color);
   color: var(--font-color);
   margin-left: 17rem;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
+  transition: 0.1s;
 }
 
 h1 {
-  grid-area: grid__title;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 3.5rem;
-  margin-bottom: 0vw;
+  font-size: 3vw;
+  margin: 0vw;
 }
 
 p {
-  font-size: 2.1rem;
+  font-size: 1.7vw;
   font-family: "OpenSans";
 }
+
 ion-icon {
   color: var(--font-color);
-}
-/*---------------------------------------*/
-
-.grid__title {
-  grid-area: grid__title;
 }
 
 @media (max-width: 640px) {
@@ -110,7 +76,6 @@ ion-icon {
     position: relative;
     top: 0.8vw;
     margin-right: 1.2vw;
-    transition: 0.2s;
     font-size: 6vw;
   }
 
