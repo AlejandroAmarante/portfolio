@@ -22,25 +22,23 @@ Below is an overview of each file within this project:
 
 ## Styles Directory
 
-`about.css` - Styling for the 'About Me' section of the site.
+`./sections/about.css` - Styling for the 'About Me' section of the site.
 
-`contact.css` - Styling for the 'Contact Me' section of the site.
+`./sections/contact.css` - Styling for the 'Contact Me' section of the site.
+
+`./sections/home.css` - Styling for the 'Home' section of the site.
+
+`./sections/projects.css` - Styling for the 'Projects' section of the site.
 
 `fonts.css` - Making the fonts available within the CSS.
-
-`home.css` - Styling for the 'Home' section of the site.
 
 `main.css` - The main CSS file. All other CSS files are imported here, and then this file is used as the singular stylesheet for `index.html`.
 
 `navbar.css` - Styling for the navbar.
 
-`projects.css` - Styling for the 'Projects' section of the site.
-
-`scrollbar.css` - Styling for the scrollbar.
-
 ## Imported Javascript Files
 
-`zenscroll.js` - A script to ensure that when a user clicks an anchor link on mobile, their screen scrolls smoothly to that location. [Learn more on the zenscroll.js Github](https://github.com/zengabor/zenscroll).
+`zenscroll.js` - A script to ensure that when a user clicks an anchor link on Safari mobile, their screen scrolls smoothly to that location. [Learn more on the zenscroll.js Github](https://github.com/zengabor/zenscroll).
 
 # License
 

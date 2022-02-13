@@ -1,12 +1,18 @@
 window.onload = function () {
+  // Dark/Light Theme Logic
+  // Aqcuire the theme icons as variables
   var sunny = document.getElementsByName("sunny")[0];
   var moon = document.getElementsByName("moon")[0];
 
+  /* Set the theme to the previously saved 
+     value for the theme within localstorage, if available  */
   document.documentElement.setAttribute(
     "data-theme",
     localStorage.getItem("theme")
   );
 
+  /* If the current theme is 'light', change the
+     change the theme icon  */
   if (localStorage.getItem("theme") == "light") {
     sunny.style.display = "none";
     moon.style.display = "inline-block";
