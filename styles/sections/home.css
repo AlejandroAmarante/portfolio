@@ -8,6 +8,7 @@
 #home__content {
   width: 100%;
   margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
 }
 
 #staticText {
@@ -50,6 +51,24 @@
     width: 100%;
     height: 100vh;
     background: #090c10;
+  }
+
+  #staticText {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 6vw;
+    color: var(--font-color);
+    letter-spacing: 0.1vw;
+    margin-bottom: 1vw;
+  }
+
+  #dynamicText {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 6vw;
+    color: var(--font-color);
+    letter-spacing: 0.1vw;
+    margin-left: 1vw;
   }
 
   #typewriter {

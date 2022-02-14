@@ -32,7 +32,6 @@ body {
   background-color: var(--bg-color);
   color: var(--font-color);
   margin-left: 17rem;
-  font-family: "Montserrat", sans-serif;
   transition: 0.1s;
 }
 
@@ -45,21 +44,23 @@ h1 {
 
 p {
   font-size: 1.7vw;
-  font-family: "OpenSans";
+  font-family: "OpenSans", sans-serif;
 }
 
 ion-icon {
   color: var(--font-color);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
+  body {
+    margin-left: 0px;
+  }
+
   .grid__title {
     grid-area: grid__title;
     color: white;
-    font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 10vw;
-    text-shadow: 1.1vw 1vw #9147fe;
     text-align: center;
   }
 
@@ -91,13 +92,5 @@ ion-icon {
     top: 1vw;
     font-size: 6.5vw;
     margin-right: 0vw;
-  }
-
-  footer {
-    font-size: 4.5vw;
-    text-align: center;
-    margin-top: 1vw;
-    padding: 9vw;
-    margin-bottom: 20vw;
   }
 }

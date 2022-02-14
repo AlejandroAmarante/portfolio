@@ -63,6 +63,7 @@
 
 /* The navigation menu links */
 .sideNav a {
+  font-family: "Montserrat", sans-serif;
   padding: 0.8rem 1rem 0.8rem 1rem;
   text-decoration: none;
   font-size: 2rem;
@@ -88,34 +89,37 @@
 
 #mobilenav__icon {
   display: none;
-  color: white;
+  color: var(--font-color);
   font-size: 4rem;
   float: right;
 }
 
 #mobilenav {
-  position: relative;
-  transition: 0.2s ease-in-out;
+  width: 90%;
+  position: fixed;
+  background-color: var(--bg-color);
+  z-index: 10;
 }
 
 #mobilenav__links {
+  padding-top: 3.5rem;
   display: none;
-  transition: 0.2s ease-in-out;
-  margin-top: 1.2vw;
+  width: 100%;
 }
 
-.mobilenav__buttons {
-  color: white;
+.mobilenav__button {
+  text-align: center;
+  font-family: "Montserrat", "sans-serif";
+  color: var(--font-color);
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 2rem;
   display: block;
-  transition: 0.2s ease-in-out;
 }
 
-.mobilenav__buttons:hover {
-  background-color: #ddd;
-  color: #001220;
+.mobilenav__button:hover {
+  background-color: var(--hover-color);
+  color: var(--hover-font-color);
 }
 
 #switch {
@@ -142,7 +146,11 @@ ion-icon[name="moon"] {
   margin-top: 1rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 840px) {
+  .sideNav {
+    display: none;
+  }
+
   #navbar {
     width: 100%;
     height: 4rem;

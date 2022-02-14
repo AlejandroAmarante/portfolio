@@ -38,17 +38,19 @@ window.onload = function () {
   var mobileLinks = document.getElementById("mobilenav__links");
   var mobileIcon = document.getElementById("mobilenav__icon");
 
-  function mobileFunction() {
-    if (mobileLinks.style.display === "block") {
-      mobileLinks.style.display = "none";
-      mobileIcon.setAttribute("name", "menu");
-    } else {
-      mobileLinks.style.display = "block";
-      navBar.setAttribute("style", "background: #090c10;");
-      mobileNav.setAttribute("style", "background: #090c10;");
-      mobileIcon.setAttribute("name", "close");
-    }
-  }
+  document.querySelectorAll(".mobilenav__toggle").forEach((item) => {
+    item.addEventListener("click", function () {
+      if (mobileLinks.style.display === "block") {
+        mobileLinks.style.display = "none";
+        mobileIcon.setAttribute("name", "menu");
+      } else {
+        mobileLinks.style.display = "block";
+        navBar.setAttribute("style", "background: #090c10;");
+        mobileNav.setAttribute("style", "background: #090c10;");
+        mobileIcon.setAttribute("name", "close");
+      }
+    });
+  });
 
   function logoFunction() {
     mobileLinks.style.display = "none";
@@ -80,7 +82,7 @@ window.onload = function () {
     cursor.style.animation = null;
     // Get substring with 1 characater added
     var text = content[contentIndex].substring(0, characterIndex + 1);
-    textElement.innerHTML = text;
+    textElement.innerText = text;
     characterIndex++;
 
     // If full sentence has been displayed then start to delete the sentence after some time
