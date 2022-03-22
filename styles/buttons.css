@@ -35,3 +35,32 @@
   top: 0.2vw;
   color: var(--font-color);
 }
+
+@media (max-width: 800px) {
+  .btn {
+    margin: 1.8vw 1.8vw 1vw 0vw;
+    padding: 1.5vw 2.5vw 1.5vw 2.5vw;
+    font-size: 6vw;
+    display: inline-block;
+  }
+
+  .btn__icon {
+    color: white;
+    position: relative;
+    top: 0.8vw;
+    margin-right: 1.2vw;
+    font-size: 6vw;
+  }
+
+  .btn--large {
+    padding: 3vw 2.5vw;
+    font-size: 5vw;
+  }
+
+  .btn__icon--large {
+    color: white;
+    top: 1vw;
+    font-size: 6.5vw;
+    margin-right: 0vw;
+  }
+}

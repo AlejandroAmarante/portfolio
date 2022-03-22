@@ -1,27 +1,32 @@
 #projects {
   width: 90%;
-  height: 90vh;
-  padding-top: 8vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .projects__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "Project1 Project1-Info";
+  grid-template-areas: "project project-Info";
   margin: 0 auto;
   border: 1px solid var(--border-color);
   margin-top: 1vw;
   margin-bottom: 2vw;
 }
 
-.Project1 {
-  grid-area: Project1;
+.project {
+  grid-area: project;
   height: 100%;
 }
 
-.Project1-Info {
-  grid-area: Project1-Info;
+.project-Info {
+  grid-area: project-Info;
   background: var(--bg-color);
   color: var(--font-color);
   padding: 1.5vw 1.5vw;
@@ -115,7 +120,7 @@
   text-align: center;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   #projects {
     width: 100%;
     height: fit-content;
@@ -124,18 +129,12 @@
 
   .projects__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 0.7fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "grid__title grid__title"
-      "Project1 Project1"
-      "Project1-Info Project1-Info"
-      "Project2 Project2"
-      "Project2-Info Project2-Info"
-      "Project3 Project3"
-      "Project3-Info Project3-Info"
-      "Project-Git Project-Git";
+      "project project"
+      "project-Info project-Info";
     margin-top: 10vw;
     margin-bottom: 10vw;
   }
@@ -150,65 +149,22 @@
   }
 
   .project__description {
-    font-family: "Inter", sans-serif;
     font-size: 4vw;
     margin-bottom: 1vw;
     font-weight: 400;
     text-align: justify;
   }
 
-  .Project1 {
-    grid-area: Project1;
+  .project {
+    grid-area: project;
     background: #0d1016;
-    border-radius: 1vw 1vw 0vw 0vw;
-    overflow: hidden;
   }
 
-  .Project1-Info {
-    grid-area: Project1-Info;
+  .project-info {
+    grid-area: project-Info;
     border-radius: 0vw 0vw 1vw 1vw;
     padding: 3vw 5vw;
     margin-bottom: 10vw;
-  }
-
-  .Project2 {
-    grid-area: Project2;
-    background: #0d1016;
-    border-radius: 1vw 1vw 0vw 0vw;
-    border-top: 1px solid #202121;
-    border-left: 1px solid #202121;
-    border-right: 1px solid #202121;
-    overflow: hidden;
-  }
-
-  .Project2-Info {
-    grid-area: Project2-Info;
-    border-radius: 0vw 0vw 1vw 1vw;
-    border-bottom: 1px solid #202121;
-    border-left: 1px solid #202121;
-    border-right: 1px solid #202121;
-    padding: 3vw 5vw;
-    margin-bottom: 10vw;
-  }
-
-  .Project3 {
-    grid-area: Project3;
-    background: #0d1016;
-    border-radius: 1vw 1vw 0vw 0vw;
-    border-top: 1px solid #202121;
-    border-left: 1px solid #202121;
-    border-right: 1px solid #202121;
-    overflow: hidden;
-  }
-
-  .Project3-Info {
-    grid-area: Project3-Info;
-    border-radius: 0vw 0vw 1vw 1vw;
-    border-bottom: 1px solid #202121;
-    border-left: 1px solid #202121;
-    border-right: 1px solid #202121;
-    padding: 3vw 5vw;
-    margin-bottom: 3vw;
   }
 
   .project__external__icon {

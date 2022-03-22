@@ -87,37 +87,44 @@
   }
 }
 
-#mobilenav__icon {
+#mobileNav {
   display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 10;
+}
+
+#mobileNav__icon {
   color: var(--font-color);
   font-size: 4rem;
   float: right;
 }
 
-#mobilenav {
+#mobileNav__center {
   width: 90%;
-  position: fixed;
-  background-color: var(--bg-color);
-  z-index: 10;
+  margin: 0 auto;
 }
 
-#mobilenav__links {
-  padding-top: 3.5rem;
+#mobileNav__links {
   display: none;
-  width: 100%;
+  padding-top: 1rem;
 }
 
-.mobilenav__button {
+.mobileNav__button {
+  display: block;
   text-align: center;
   font-family: "Montserrat", "sans-serif";
   color: var(--font-color);
+  margin: 0px;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 2rem;
-  display: block;
+  padding: none;
 }
 
-.mobilenav__button:hover {
+.mobileNav__button:hover {
   background-color: var(--hover-color);
   color: var(--hover-font-color);
 }
@@ -146,35 +153,23 @@ ion-icon[name="moon"] {
   margin-top: 1rem;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 800px) {
   .sideNav {
     display: none;
   }
 
-  #navbar {
-    width: 100%;
-    height: 4rem;
-    position: fixed;
-    font-family: "Poppins", sans-serif;
-    z-index: 2;
-    background: #090c10;
-  }
-
-  #navbar__logo {
-    color: white;
-    font-family: "Plaster", sans-serif;
-    font-size: 4rem;
-    text-decoration: none;
-    line-height: 3rem;
-  }
-  #navbar__links {
-    display: none;
-  }
-  #mobilenav__icon {
+  #mobileNav {
     display: block;
   }
 
-  .sidenav {
-    display: none;
+  #mobileNav__logo {
+    display: inline-block;
+    color: var(--font-color);
+    font-family: "Plaster", sans-serif;
+    font-size: 4.5rem;
+    text-decoration: none;
+    margin: auto;
+    width: fit-content;
+    line-height: 3rem;
   }
 }

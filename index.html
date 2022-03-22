@@ -34,7 +34,7 @@
 <body>
   <!-- Navigation -->
   <nav class="sideNav">
-    <a id="navLogo" href="#top" onclick="logoFunction()">a</a>
+    <a id="navLogo" href="#top">a</a>
     <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
@@ -44,27 +44,26 @@
     </label>
   </nav>
   <header>
-    <div id="navbar__center">
-      <div id="mobilenav">
-        <a class="mobilenav__toggle">
-          <ion-icon id="mobilenav__icon" name="menu"></ion-icon>
+    <nav id="mobileNav">
+      <div id="mobileNav__center">
+        <a id="mobileNav__logo" href="#top">a</a>
+        <a class="mobileNav__toggle">
+          <ion-icon id="mobileNav__icon" name="menu"></ion-icon>
         </a>
-        <div id="mobilenav__links" class="mobilenav__toggle">
-          <a class="mobilenav__button mobilenav__toggle" href="#about" onclick="mobileFunction()">About me</a>
-          <a class="mobilenav__button mobilenav__toggle" href="#projects" onclick="mobileFunction()">Projects</a>
-          <a class="mobilenav__button mobilenav__toggle" href="#contact" onclick="mobileFunction()">Contact</a>
+        <div id="mobileNav__links">
+          <a class="mobileNav__button mobileNav__toggle" href="#about">About me</a>
+          <a class="mobileNav__button mobileNav__toggle" href="#projects">Projects</a>
+          <a class="mobileNav__button mobileNav__toggle" href="#contact">Contact</a>
         </div>
       </div>
-      </nav>
+    </nav>
   </header>
   <!-- Home Section -->
   <section id="home">
     <div id="home__content">
-      <div id="container">
-        <div id="staticText">I'm Alejandro and I </div>
-        <div id="dynamicText"></div>
-        <div id="cursor"></div>
-      </div>
+      <div id="staticText">I'm Alejandro and I </div>
+      <div id="dynamicText"></div>
+      <div id="cursor"></div>
       <div class="home__buttons">
         <a href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener" class="btn">
           <ion-icon class="btn__icon" name="logo-github"></ion-icon>GitHub
@@ -109,11 +108,11 @@
   <section id="projects">
     <h1>Projects</h1>
     <div class="projects__grid">
-      <div class="Project1">
+      <div class="project">
         <a href="https://alejandro.id" target="_blank" rel="noopener"><img class="project__image"
             src="./imgs/Project1.png" alt="Project 1" /></a>
       </div>
-      <div class="Project1-Info">
+      <div class="project-info">
         <h2 class="project__title">alejandro.id</h2>
         <div class="project__external">
           <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">

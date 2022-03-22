@@ -40,6 +40,7 @@ h1 {
   font-weight: bold;
   font-size: 3vw;
   margin: 0vw;
+  line-height: 3vw;
 }
 
 p {
@@ -56,41 +57,16 @@ ion-icon {
     margin-left: 0px;
   }
 
+  p {
+    font-size: 4vw;
+    font-family: "OpenSans", sans-serif;
+  }
+
   .grid__title {
     grid-area: grid__title;
     color: white;
     font-weight: 700;
     font-size: 10vw;
     text-align: center;
-  }
-
-  .btn {
-    margin: 1.8vw 1.8vw 1vw 0vw;
-    padding: 1.5vw 2.5vw 1.5vw 2.5vw;
-    font-size: 6vw;
-    border-radius: 1.5vw;
-    display: inline-block;
-  }
-
-  .btn__icon {
-    color: white;
-    position: relative;
-    top: 0.8vw;
-    margin-right: 1.2vw;
-    font-size: 6vw;
-  }
-
-  .btn--large {
-    padding: 3vw 2.5vw;
-    font-size: 5vw;
-    border-radius: 1.5vw;
-    box-shadow: 1vw 1.5vw 0vw #9147fe;
-  }
-
-  .btn__icon--large {
-    color: white;
-    top: 1vw;
-    font-size: 6.5vw;
-    margin-right: 0vw;
   }
 }

@@ -50,35 +50,32 @@
   #home {
     width: 100%;
     height: 100vh;
-    background: #090c10;
+    text-align: center;
+    padding-top: 30vh;
   }
 
   #staticText {
     display: inline-block;
     font-weight: bold;
-    font-size: 6vw;
+    font-size: 12vw;
     color: var(--font-color);
     letter-spacing: 0.1vw;
-    margin-bottom: 1vw;
+    margin-bottom: 0vw;
   }
 
   #dynamicText {
     font-weight: bold;
     display: inline-block;
-    font-size: 6vw;
+    font-size: 12vw;
     color: var(--font-color);
     letter-spacing: 0.1vw;
     margin-left: 1vw;
   }
 
-  #typewriter {
-    text-align: left;
-    font-size: 10vw;
-    line-height: 13vw;
-  }
-
-  .home__header {
-    padding-top: 25vh;
-    height: 26vw;
+  #cursor {
+    display: inline-block;
+    width: 6vw;
+    height: 10vw;
+    background-color: var(--font-color);
   }
 }
