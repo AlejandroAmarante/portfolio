@@ -32,7 +32,7 @@
 #cursor {
   display: inline-block;
   width: 3vw;
-  height: 10vw;
+  height: 5vw;
   background-color: var(--font-color);
 }
 
