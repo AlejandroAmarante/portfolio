@@ -44,7 +44,6 @@ h1 {
 }
 
 p {
-  font-size: 1.7vw;
   font-family: "OpenSans", sans-serif;
 }
 
@@ -57,14 +56,17 @@ ion-icon {
     margin-left: 0px;
   }
 
+  h1 {
+    color: var(--font-color);
+    font-size: 10vw;
+  }
+
   p {
-    font-size: 4vw;
     font-family: "OpenSans", sans-serif;
   }
 
   .grid__title {
     grid-area: grid__title;
-    color: white;
     font-weight: 700;
     font-size: 10vw;
     text-align: center;

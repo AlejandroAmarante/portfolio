@@ -12,16 +12,16 @@
 #contact__subtext {
   margin-top: 0vw;
   margin-bottom: 2vw;
-  margin-right: 10vw;
   font-size: 1vw;
   line-height: 0.5vw;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   #contact {
     width: 100%;
     text-align: center;
-    height: fit-content;
+    display: flex;
+    align-items: center;
   }
 
   #contact__info {
@@ -34,8 +34,8 @@
   }
 
   #contact__subtext {
-    margin-bottom: 2.2vw;
-    font-size: 10vw;
+    margin-bottom: 2vw;
+    font-size: 4.5vw;
     text-align: center;
     line-height: normal;
   }

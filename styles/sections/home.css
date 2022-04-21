@@ -14,7 +14,7 @@
 #staticText {
   display: inline-block;
   font-weight: bold;
-  font-size: 5vw;
+  font-size: 4.5vw;
   color: var(--font-color);
   letter-spacing: 0.1vw;
   margin-bottom: 1vw;
@@ -23,7 +23,7 @@
 #dynamicText {
   font-weight: bold;
   display: inline-block;
-  font-size: 5vw;
+  font-size: 4.5vw;
   color: var(--font-color);
   letter-spacing: 0.1vw;
   margin-left: 1vw;
@@ -46,18 +46,19 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   #home {
     width: 100%;
     height: 100vh;
     text-align: center;
-    padding-top: 30vh;
+    display: flex;
+    align-items: center;
   }
 
   #staticText {
     display: inline-block;
     font-weight: bold;
-    font-size: 12vw;
+    font-size: 15vw;
     color: var(--font-color);
     letter-spacing: 0.1vw;
     margin-bottom: 0vw;
@@ -66,10 +67,11 @@
   #dynamicText {
     font-weight: bold;
     display: inline-block;
-    font-size: 12vw;
+    font-size: 15vw;
     color: var(--font-color);
     letter-spacing: 0.1vw;
     margin-left: 1vw;
+    margin-bottom: 1.2vw;
   }
 
   #cursor {

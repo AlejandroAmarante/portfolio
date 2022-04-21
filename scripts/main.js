@@ -1,8 +1,9 @@
 window.onload = function () {
   // Dark/Light Theme Logic
   // Aqcuire the theme icons as variables
-  var sunny = document.getElementsByName("sunny")[0];
-  var moon = document.getElementsByName("moon")[0];
+  var sunnyIcons = document.getElementsByName("sunny");
+  var moonIcons = document.getElementsByName("moon");
+  var themeSwitches = document.getElementsByClassName("switch");
 
   /* Set the theme to the previously saved 
      value for the theme within localstorage, if available  */
@@ -11,36 +12,44 @@ window.onload = function () {
   /* If the current theme is 'light', change the
      change the theme icon  */
   if (localStorage.theme == "light") {
-    sunny.style.display = "none";
-    moon.style.display = "inline-block";
+    for (var i = 0; i < sunnyIcons.length; i++) {
+      sunnyIcons[i].style.display = "none";
+      moonIcons[i].style.display = "inline-block";
+    }
   }
 
-  document.getElementById("switch").addEventListener("click", function () {
-    if (localStorage.theme == "dark") {
-      sunny.style.display = "none";
-      moon.style.display = "inline-block";
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.theme = "light";
-    } else {
-      sunny.style.display = "inline-block";
-      moon.style.display = "none";
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.theme = "dark";
-    }
-  });
+  for (var i = 0; i < themeSwitches.length; i++) {
+    themeSwitches[i].addEventListener("click", function () {
+      if (localStorage.theme == "dark") {
+        for (var j = 0; j < moonIcons.length; j++) {
+          sunnyIcons[j].style.display = "none";
+          moonIcons[j].style.display = "inline-block";
+        }
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.theme = "light";
+      } else {
+        for (var j = 0; j < sunnyIcons.length; j++) {
+          sunnyIcons[j].style.display = "inline-block";
+          moonIcons[j].style.display = "none";
+        }
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.theme = "dark";
+      }
+    });
+  }
   //---------------------------------------------------------------------------|
 
-  var mobileLinks = document.getElementById("mobileNav");
-  var menuIcon = document.getElementById("mobilenav__icon");
+  var mobileLinks = document.getElementById("mobileNav__links");
+  var menuIcon = document.getElementById("mobileNav__icon");
 
   document.querySelectorAll(".mobileNav__toggle").forEach((element) => {
     element.addEventListener("click", function () {
-      if (menuIcon.getAttribute("name") === "close") {
+      if (menuIcon.getAttribute("name") === "close-sharp") {
         mobileLinks.style.display = "none";
-        menuIcon.setAttribute("name", "menu");
+        menuIcon.setAttribute("name", "menu-sharp");
       } else {
         mobileLinks.style.display = "block";
-        menuIcon.setAttribute("name", "close");
+        menuIcon.setAttribute("name", "close-sharp");
       }
     });
   });
@@ -49,12 +58,12 @@ window.onload = function () {
     .getElementById("mobileNav__logo")
     .addEventListener("click", function () {
       mobileLinks.style.display = "none";
-      menuIcon.setAttribute("name", "menu");
+      menuIcon.setAttribute("name", "menu-sharp");
     });
 
   // TypeWriter ---------------------------------------------------------------|
   // List of sentences
-  var content = ["create.", "design.", "develop.", "learn."];
+  var content = ["create.", "design.", "develop."];
 
   // Current sentence being processed
   var contentIndex = 0;

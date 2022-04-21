@@ -129,13 +129,9 @@
   color: var(--hover-font-color);
 }
 
-#switch {
-  margin: 0 auto;
-  width: 50%;
+.switch {
+  width: fit-content;
   cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
   margin-left: 1rem;
 }
 
@@ -171,5 +167,30 @@ ion-icon[name="moon"] {
     margin: auto;
     width: fit-content;
     line-height: 3rem;
+  }
+
+  .switch {
+    width: fit-content;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: fixed;
+  }
+
+  ion-icon[name="sunny"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 0.8rem;
+  }
+
+  ion-icon[name="moon"] {
+    display: none;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 0.8rem;
   }
 }

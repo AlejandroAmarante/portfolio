@@ -16,9 +16,9 @@ Below is an overview of each file within this project:
 
 ## Scripts Directory
 
-`navbar.js` - Some simple navbar code that helps transistion the background of the navbar when a user scrolls.
+`main.js` - Includes the main logic behind the dark/light themes, mobile navbar system, and the typewriter style text.
 
-`typedtext.js` - Creates the "typing" effect seen on the home page of the site.
+`zenscroll-min.js` - A minified script to ensure that when a user clicks an anchor link on Safari mobile, their screen scrolls smoothly to that location. [Learn more on the zenscroll.js Github](https://github.com/zengabor/zenscroll).
 
 ## Styles Directory
 
@@ -35,10 +35,6 @@ Below is an overview of each file within this project:
 `main.css` - The main CSS file. All other CSS files are imported here, and then this file is used as the singular stylesheet for `index.html`.
 
 `navbar.css` - Styling for the navbar.
-
-## Imported Javascript Files
-
-`zenscroll.js` - A script to ensure that when a user clicks an anchor link on Safari mobile, their screen scrolls smoothly to that location. [Learn more on the zenscroll.js Github](https://github.com/zengabor/zenscroll).
 
 # License
 

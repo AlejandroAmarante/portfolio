@@ -1,6 +1,6 @@
 #about {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -27,11 +27,12 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  margin-top: 2vw;
-  border-radius: 69% 53% 88% 68% / 45% 82% 83% 94%;
-  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-  animation: morphing 15s infinite;
+  width: 45%;
+  margin-top: 1.5vw;
+  border-radius: 100%;
+  -moz-box-shadow: 0 0 15px var(--border-color);
+  -webkit-box-shadow: 0 0 15px var(--border-color);
+  box-shadow: 0px 0px 15px var(--border-color);
 }
 
 .grid__text {
@@ -50,35 +51,11 @@
   grid-area: grid__title;
 }
 
-@keyframes morphing {
-  0% {
-    border-radius: 40% 30% 30% 40% / 50% 60% 70% 80%;
-    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-  }
-  15% {
-    border-radius: 80% 70% 60% 50% / 40% 30% 20% 10%;
-    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-  }
-  30% {
-    border-radius: 70% 30% 70% 30% / 30% 70% 30% 70%;
-  }
-  45% {
-    border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%;
-    box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
-  }
-  60% {
-    border-radius: 69% 29% 69% 29% / 29% 69% 29% 69%;
-  }
-  75% {
-    border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%;
-  }
-}
-
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   #about {
     width: 100%;
-    height: fit-content;
-    background-size: cover;
+    display: flex;
+    align-items: center;
   }
 
   #about__grid {
@@ -97,7 +74,7 @@
   }
 
   .grid__img {
-    margin-top: 0vh;
+    margin-top: 1vh;
     margin-left: 0px;
     margin-bottom: 3vw;
   }
@@ -109,9 +86,6 @@
 
   .grid__text {
     grid-area: txtArea;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    font-size: 5vw;
     text-align: center;
   }
 
@@ -120,5 +94,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0vw;
   }
 }
