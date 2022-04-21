@@ -30,11 +30,13 @@ Below is an overview of each file within this project:
 
 `./sections/projects.css` - Styling for the 'Projects' section of the site.
 
+`buttons.css` - Styling for all the buttons used throughout the site.
+
 `fonts.css` - Making the fonts available within the CSS.
 
 `main.css` - The main CSS file. All other CSS files are imported here, and then this file is used as the singular stylesheet for `index.html`.
 
-`navbar.css` - Styling for the navbar.
+`navigation.css` - Styling for the sidebar and navbar.
 
 # License
 
