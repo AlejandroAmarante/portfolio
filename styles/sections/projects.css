@@ -53,6 +53,8 @@
   margin-bottom: 1vw;
   font-weight: 400;
   margin-top: 0px;
+  font-size: 1.6vw;
+  text-align: justify;
 }
 
 .project__external {
@@ -118,7 +120,7 @@
 
 @media (max-width: 800px) {
   #projects {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     align-items: center;
   }
@@ -134,6 +136,8 @@
     margin-top: 10vw;
     margin-bottom: 10vw;
     justify-content: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
   }
 
   .project__title {
@@ -143,13 +147,14 @@
     margin-top: 0.6vw;
     margin-bottom: 0.1vw;
     text-align: center;
-    font-size: 6vw;
+    font-size: 7vw;
   }
 
   .project__description {
     margin-bottom: 1vw;
     font-weight: 400;
     text-align: justify;
+    font-size: 5vw;
   }
 
   .project {
@@ -164,7 +169,8 @@
   }
 
   .project__external__icon {
-    font-size: 8vw;
+    font-size: 10vw;
+    padding-left: 3vw;
   }
 
   .tag {
@@ -174,7 +180,7 @@
     margin-right: 1vw;
     border-radius: 1vw;
     padding: 1vw;
-    font-size: 4vw;
+    font-size: 5vw;
     margin-bottom: 0vw;
   }
 
@@ -182,7 +188,6 @@
     position: relative;
     top: 0.3vw;
     margin-right: 0.8vw;
-    margin-left: 0.1vw;
-    font-size: 4vw;
+    font-size: 5vw;
   }
 }

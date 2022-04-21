@@ -12,7 +12,7 @@
 #contact__subtext {
   margin-top: 0vw;
   margin-bottom: 2vw;
-  font-size: 1vw;
+  font-size: 1.6vw;
   line-height: 0.5vw;
 }
 
@@ -34,8 +34,9 @@
   }
 
   #contact__subtext {
-    margin-bottom: 2vw;
-    font-size: 4.5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-size: 5vw;
     text-align: center;
     line-height: normal;
   }

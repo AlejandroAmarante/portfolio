@@ -11,7 +11,7 @@
 
 #about__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.6fr 1fr;
   grid-template-rows: 0fr 1fr fit-content;
   grid-template-areas:
     "grid__title grid__img"
@@ -40,6 +40,8 @@
   color: var(--font-color);
   margin: 0px;
   text-align: inter-word;
+  font-size: 1.5vw;
+  text-align: justify;
 }
 
 .grid__btn {
@@ -87,6 +89,7 @@
   .grid__text {
     grid-area: txtArea;
     text-align: center;
+    font-size: 5vw;
   }
 
   .grid__btn {

@@ -32,7 +32,7 @@
 #cursor {
   display: inline-block;
   width: 3vw;
-  height: 5vw;
+  height: 10vw;
   background-color: var(--font-color);
 }
 
@@ -76,8 +76,8 @@
 
   #cursor {
     display: inline-block;
-    width: 6vw;
-    height: 10vw;
+    width: 7vw;
+    height: 12vw;
     background-color: var(--font-color);
   }
 }
