@@ -40,4 +40,4 @@ Below is an overview of each file within this project:
 
 # License
 
-This project is licensed under MIT. If you plan to fork this project and change the license, keep in mind that this project also uses outside projects which may include different licenses.
+This project is licensed under MIT. If you plan to fork this project and change the license, keep in mind that this project also uses outside projects which may use different licenses.
