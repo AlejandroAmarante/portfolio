@@ -9,7 +9,7 @@ window.onload = function () {
      value for the theme within localstorage, if available  */
   document.documentElement.setAttribute("data-theme", localStorage.theme);
 
-  /* If the current theme is 'light', change the
+  /* If the current theme is 'light', 
      change the theme icon  */
   if (localStorage.theme == "light") {
     for (var i = 0; i < sunnyIcons.length; i++) {
@@ -41,25 +41,24 @@ window.onload = function () {
 
   var mobileLinks = document.getElementById("mobileNav__links");
   var menuIcon = document.getElementById("mobileNav__icon");
+  var menuClose = document.getElementsByClassName("mobileNav__close");
 
-  document.querySelectorAll(".mobileNav__toggle").forEach((element) => {
-    element.addEventListener("click", function () {
-      if (menuIcon.getAttribute("name") === "close-sharp") {
-        mobileLinks.style.display = "none";
-        menuIcon.setAttribute("name", "menu-sharp");
-      } else {
-        mobileLinks.style.display = "block";
-        menuIcon.setAttribute("name", "close-sharp");
-      }
-    });
+  menuIcon.addEventListener("click", function () {
+    if (menuIcon.getAttribute("name") === "close-sharp") {
+      mobileLinks.style.display = "none";
+      menuIcon.setAttribute("name", "menu-sharp");
+    } else {
+      mobileLinks.style.display = "block";
+      menuIcon.setAttribute("name", "close-sharp");
+    }
   });
 
-  document
-    .getElementById("mobileNav__logo")
-    .addEventListener("click", function () {
+  for (var i = 0; i < menuClose.length; i++) {
+    menuClose[i].addEventListener("click", function () {
       mobileLinks.style.display = "none";
       menuIcon.setAttribute("name", "menu-sharp");
     });
+  }
 
   // TypeWriter ---------------------------------------------------------------|
   // List of sentences
