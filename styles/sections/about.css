@@ -14,21 +14,24 @@
   grid-template-columns: 0.6fr 1fr;
   grid-template-rows: 0fr 1fr fit-content;
   grid-template-areas:
-    "grid__title grid__img"
-    "txtArea grid__img"
-    "btnArea grid__img";
+    "about__title about__image"
+    "about__description about__image"
+    "about__button about__image";
 }
 
-.grid__img {
-  grid-area: grid__img;
+.about__title {
+  grid-area: about__title;
 }
 
-.grid__img img {
-  box-sizing: border-box;
+.about__image {
+  grid-area: about__image;
+}
+
+.about__image img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 45%;
+  width: 35%;
   margin-top: 1.5vw;
   border-radius: 100%;
   -moz-box-shadow: 0 0 15px var(--border-color);
@@ -36,22 +39,17 @@
   box-shadow: 0px 0px 15px var(--border-color);
 }
 
-.grid__text {
-  grid-area: txtArea;
+.about__description {
+  grid-area: about__description;
   color: var(--font-color);
   margin: 0px;
-  text-align: inter-word;
   font-size: 1.5vw;
   text-align: justify;
 }
 
-.grid__btn {
+.about__button {
   margin-top: 2vw;
-  grid-area: btnArea;
-}
-
-.grid__title {
-  grid-area: grid__title;
+  grid-area: about__button;
 }
 
 @media (max-width: 800px) {
@@ -67,34 +65,36 @@
     grid-template-rows: auto;
     gap: 15px 0px;
     grid-template-areas:
-      "grid__title grid__title grid__title grid__title"
-      "grid__img grid__img grid__img grid__img"
-      "txtArea txtArea txtArea txtArea"
-      "btnArea btnArea btnArea btnArea";
+      "about__title"
+      "about__image"
+      "about__description"
+      "about__button";
     width: 75%;
     margin: 0 auto;
     margin-top: 10vw;
   }
 
-  .grid__img {
+  .about__title {
+    text-align: center;
+  }
+
+  .about__image {
     margin-top: 1vh;
     margin-left: 0px;
     margin-bottom: 3vw;
   }
-  .grid__img img {
+  .about__image img {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .grid__text {
-    grid-area: txtArea;
+  .about__description {
     text-align: center;
     font-size: 5vw;
   }
 
-  .grid__btn {
-    grid-area: btnArea;
+  .about__button {
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -1,5 +1,5 @@
 #projects {
-  width: 90%;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -120,7 +120,7 @@
 
 @media (max-width: 800px) {
   #projects {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     align-items: center;
   }
@@ -141,13 +141,10 @@
   }
 
   .project__title {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    display: inline-block;
     margin-top: 0.6vw;
     margin-bottom: 0.1vw;
     text-align: center;
-    font-size: 7vw;
+    font-size: 7.5vw;
   }
 
   .project__description {

@@ -2,7 +2,7 @@
 <html lang="en" id="top">
 
 <head>
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.jsdelivr.net/npm/ionicons@6.0.0/">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' https://cdn.jsdelivr.net/npm/ionicons@6.0.0/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Alejandro Montalvo" />
@@ -74,7 +74,7 @@
         <a href="mailto:alejandrormont@gmail.com" class="btn">
           <ion-icon class="btn__icon" name="mail-sharp"></ion-icon>Email
         </a>
-        <a href="./PDFs/Resume.pdf" target="_blank" class="btn">
+        <a href="./PDFs/AlejandroMontalvo.pdf" target="_blank" class="btn">
           <ion-icon class="btn__icon" name="document-text-sharp"></ion-icon>Resume
         </a>
       </div>
@@ -83,11 +83,11 @@
   <!-- About Section -->
   <section id="about">
     <div id="about__grid">
-      <h1 class="grid__title">About Me</h1>
-      <div class="grid__img">
+      <h1 class="about__title">About Me</h1>
+      <picture class="about__image">
         <img src="./imgs/aboutme.webp" alt="Me!" />
-      </div>
-      <p class="grid__text">
+      </picture>
+      <p class="about__description">
         My name is Alejandro Montalvo, and I'm a <a href="https://www.ucf.edu/" target="_blank" rel="noopener"
           class="link"><strong> University of Central
             Florida</strong></a> student currently majoring in
@@ -97,7 +97,7 @@
         hobbies include graphic design, web development and game
         development. Want to learn more about me?
       </p>
-      <div class="grid__btn">
+      <div class="about__button">
         <a class="btn btn--large" href="./PDFs/Resume.pdf" target="_blank" rel="noopener">Check out my resume!
           <ion-icon class="btn__icon btn__icon--large" name="open-sharp"></ion-icon>
         </a>
@@ -109,8 +109,9 @@
     <h1>Projects</h1>
     <div class="projects__grid">
       <div class="project">
-        <a href="https://alejandro.id" target="_blank" rel="noopener"><img class="project__image"
-            src="./imgs/Project1.webp" alt="Project 1" /></a>
+        <a href="https://alejandro.id" target="_blank" rel="noopener">
+          <picture><img class="project__image" src="./imgs/Project1.webp" alt="Project 1" /></picture>
+        </a>
       </div>
       <div class="project-info">
         <h2 class="project__title">alejandro.id</h2>
@@ -158,7 +159,7 @@
       <a href="mailto:alejandrormont@gmail.com" class="btn">
         <ion-icon class="btn__icon" name="mail-sharp"></ion-icon>Email
       </a>
-      <a href="./PDFs/Resume.pdf" target="_blank" rel="noopener" class="btn">
+      <a href="./PDFs/AlejandroMontalvo.pdf" target="_blank" rel="noopener" class="btn">
         <ion-icon class="btn__icon" name="document-text-sharp"></ion-icon>Resume
       </a>
     </div>

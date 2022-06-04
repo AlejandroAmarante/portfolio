@@ -8,20 +8,20 @@
 
 :root {
   color-scheme: light dark; /* both supported */
-  --border-color: rgb(225, 225, 225);
+  --border-color: rgb(235, 235, 235);
   --bg-color: rgb(15, 15, 15);
-  --font-color: rgb(225, 225, 225);
-  --hover-color: rgb(225, 225, 225);
+  --font-color: rgb(235, 235, 235);
+  --hover-color: rgb(235, 235, 235);
   --hover-font-color: rgb(15, 15, 15);
 }
 
 /* Light Theme Colors */
 [data-theme="light"] {
   --border-color: rgb(15, 15, 15);
-  --bg-color: rgb(225, 225, 225);
+  --bg-color: rgb(235, 235, 235);
   --font-color: rgb(15, 15, 15);
   --hover-color: rgb(15, 15, 15);
-  --hover-font-color: rgb(225, 225, 225);
+  --hover-font-color: rgb(235, 235, 235);
 }
 
 html {
@@ -32,6 +32,7 @@ body {
   background-color: var(--bg-color);
   color: var(--font-color);
   margin-left: 17rem;
+  padding-right: 2vw;
   transition: 0.1s;
 }
 
