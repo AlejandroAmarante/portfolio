@@ -11,7 +11,7 @@
 .projects__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: fit-content;
   grid-template-areas: "project project-Info";
   margin: 0 auto;
   border: 1px solid var(--border-color);

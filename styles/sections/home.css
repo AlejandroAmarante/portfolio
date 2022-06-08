@@ -39,10 +39,10 @@
 @keyframes blink {
   from,
   to {
-    background-color: transparent;
+    opacity: 100%;
   }
   50% {
-    background-color: var(--font-color);
+    opacity: 0%;
   }
 }
 
