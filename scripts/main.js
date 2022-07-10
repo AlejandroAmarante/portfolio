@@ -1,9 +1,9 @@
 window.onload = function () {
   // Dark/Light Theme Logic
   // Aqcuire the theme icons as variables
-  var sunnyIcons = document.getElementsByName("sunny");
-  var moonIcons = document.getElementsByName("moon");
-  var themeSwitches = document.getElementsByClassName("switch");
+  let sunnyIcons = document.getElementsByName("sunny");
+  let moonIcons = document.getElementsByName("moon");
+  let themeSwitches = document.getElementsByClassName("switch");
 
   /* Set the theme to the previously saved 
      value for the theme within localstorage, if available  */
@@ -12,23 +12,23 @@ window.onload = function () {
   /* If the current theme is 'light', 
      change the theme icon  */
   if (localStorage.theme == "light") {
-    for (var i = 0; i < sunnyIcons.length; i++) {
+    for (let i = 0; i < sunnyIcons.length; i++) {
       sunnyIcons[i].style.display = "none";
       moonIcons[i].style.display = "inline-block";
     }
   }
 
-  for (var i = 0; i < themeSwitches.length; i++) {
+  for (let i = 0; i < themeSwitches.length; i++) {
     themeSwitches[i].addEventListener("click", function () {
       if (localStorage.theme == "dark") {
-        for (var j = 0; j < moonIcons.length; j++) {
+        for (let j = 0; j < moonIcons.length; j++) {
           sunnyIcons[j].style.display = "none";
           moonIcons[j].style.display = "inline-block";
         }
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.theme = "light";
       } else {
-        for (var j = 0; j < sunnyIcons.length; j++) {
+        for (let j = 0; j < sunnyIcons.length; j++) {
           sunnyIcons[j].style.display = "inline-block";
           moonIcons[j].style.display = "none";
         }
@@ -37,11 +37,10 @@ window.onload = function () {
       }
     });
   }
-  //---------------------------------------------------------------------------|
 
-  var mobileLinks = document.getElementById("mobileNav__links");
-  var menuIcon = document.getElementById("mobileNav__icon");
-  var menuClose = document.getElementsByClassName("mobileNav__close");
+  let mobileLinks = document.getElementById("mobileNav__links");
+  let menuIcon = document.getElementById("mobileNav__icon");
+  let menuClose = document.getElementsByClassName("mobileNav__close");
 
   menuIcon.addEventListener("click", function () {
     if (menuIcon.getAttribute("name") === "close-sharp") {
@@ -53,7 +52,7 @@ window.onload = function () {
     }
   });
 
-  for (var i = 0; i < menuClose.length; i++) {
+  for (let i = 0; i < menuClose.length; i++) {
     menuClose[i].addEventListener("click", function () {
       mobileLinks.style.display = "none";
       menuIcon.setAttribute("name", "menu-sharp");
@@ -62,28 +61,28 @@ window.onload = function () {
 
   // TypeWriter ---------------------------------------------------------------|
   // List of sentences
-  var content = ["create.", "design.", "develop."];
+  let content = ["create.", "design.", "develop."];
 
   // Current sentence being processed
-  var contentIndex = 0;
+  let contentIndex = 0;
 
   // Character number of the current sentence being processed
-  var characterIndex = 0;
+  let characterIndex = 0;
 
   // Holds the handle returned from setInterval
-  var _INTERVAL_VAL;
+  let _INTERVAL_VAL;
 
   // Element that holds the text
-  var textElement = document.querySelector("#dynamicText");
+  let textElement = document.querySelector("#dynamicText");
 
   // Cursor element
-  var cursor = document.querySelector("#cursor");
+  let cursor = document.querySelector("#cursor");
 
   // Implements typing effect
   function typeText() {
     cursor.style.animation = null;
     // Get substring with 1 characater added
-    var text = content[contentIndex].substring(0, characterIndex + 1);
+    let text = content[contentIndex].substring(0, characterIndex + 1);
     textElement.innerText = text;
     characterIndex++;
 
@@ -101,7 +100,7 @@ window.onload = function () {
   function deleteText() {
     cursor.style.animation = null;
     // Get substring with 1 characater deleted
-    var text = content[contentIndex].substring(0, characterIndex - 1);
+    let text = content[contentIndex].substring(0, characterIndex - 1);
     textElement.innerHTML = text;
     characterIndex--;
 
@@ -125,4 +124,16 @@ window.onload = function () {
 
   // Start the typing effect on load
   _INTERVAL_VAL = setInterval(typeText, 100);
+
+  let aboutSection = document.getElementById("about");
+  let sideNavAbout = document.getElementById("sideNav__about");
+  console.log(aboutSection.offsetTop);
+  window.onscroll = function () {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset + 10 >= aboutSection.offsetTop) {
+      sideNavAbout.style.background = "white";
+    } else if (window.pageYOffset + 10 >= 700) {
+      sideNavAbout.style.background = "black";
+    }
+  };
 };

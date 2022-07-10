@@ -11,12 +11,17 @@
 
 #about__grid {
   display: grid;
-  grid-template-columns: 0.6fr 1fr;
-  grid-template-rows: 0fr 1fr fit-content;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 0fr 1fr 0.3fr;
   grid-template-areas:
     "about__title about__image"
     "about__description about__image"
     "about__button about__image";
+  background-color: var(--bg-color-layer1);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  width: 85%;
 }
 
 .about__title {
@@ -31,24 +36,21 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
+  width: 50%;
   margin-top: 1.5vw;
   border-radius: 100%;
-  -moz-box-shadow: 0 0 15px var(--border-color);
-  -webkit-box-shadow: 0 0 15px var(--border-color);
-  box-shadow: 0px 0px 15px var(--border-color);
 }
 
 .about__description {
   grid-area: about__description;
   color: var(--font-color);
-  margin: 0px;
-  font-size: 1.5vw;
+  margin: 0rem 0rem 1rem 0rem;
+  font-size: 1.45vw;
   text-align: justify;
+  text-justify: distribute;
 }
 
 .about__button {
-  margin-top: 2vw;
   grid-area: about__button;
 }
 

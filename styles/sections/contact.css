@@ -5,14 +5,21 @@
   align-items: center;
 }
 
+#contact__info {
+  background-color: var(--bg-color-layer1);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 0.8rem;
+}
+
 #contact__title {
   font-weight: bold;
 }
 
 #contact__subtext {
   margin-top: 0vw;
-  margin-bottom: 2vw;
-  font-size: 1.6vw;
+  margin-bottom: 0rem;
+  font-size: 1.4vw;
   line-height: 0.5vw;
 }
 

@@ -8,20 +8,24 @@
 
 :root {
   color-scheme: light dark; /* both supported */
-  --border-color: rgb(235, 235, 235);
-  --bg-color: rgb(15, 15, 15);
-  --font-color: rgb(235, 235, 235);
-  --hover-color: rgb(235, 235, 235);
-  --hover-font-color: rgb(15, 15, 15);
+  --border-color: #d1d1d1;
+  --bg-color: #0f0f0f;
+  --bg-color-layer1: #141414;
+  --bg-color-layer2: #1f1f1f;
+  --font-color: #d1d1d1;
+  --hover-color: #d1d1d1;
+  --hover-font-color: #0f0f0f;
 }
 
 /* Light Theme Colors */
 [data-theme="light"] {
-  --border-color: rgb(15, 15, 15);
-  --bg-color: rgb(235, 235, 235);
-  --font-color: rgb(15, 15, 15);
-  --hover-color: rgb(15, 15, 15);
-  --hover-font-color: rgb(235, 235, 235);
+  --border-color: #0f0f0f;
+  --bg-color: #e0e0e0;
+  --bg-color-layer1: #ececec;
+  --bg-color-layer2: #fafafa;
+  --font-color: #0f0f0f;
+  --hover-color: #0f0f0f;
+  --hover-font-color: #ebebeb;
 }
 
 html {
@@ -39,7 +43,7 @@ body {
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 3vw;
+  font-size: 2.8vw;
   margin: 0vw;
   line-height: 3vw;
 }

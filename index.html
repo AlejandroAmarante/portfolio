@@ -33,9 +33,9 @@
   <!-- Desktop Navigation -->
   <nav class="sideNav">
     <a id="navLogo" href="#top">a</a>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a id="sideNav__about" href="#about">About Me</a>
+    <a id="sideNav__projects" href="#projects">Projects</a>
+    <a id="sideNav__contact" href="#contact">Contact</a>
     <label class="switch">
       <ion-icon name="sunny"></ion-icon>
       <ion-icon name="moon"></ion-icon>
@@ -93,13 +93,14 @@
           class="link"><strong> University of Central
             Florida</strong></a> student currently majoring in
         <a href="https://www.ucf.edu/degree/digital-media-ba/" target="_blank" rel="noopener"
-          class="link"><strong>Digital Media</strong></a>. More specifically, the web design specialization.
+          class="link"><strong>Digital Media</strong></a>, specifically, the web design specialization.
         Some of my
         hobbies include graphic design, web development and game
         development. Want to learn more about me?
       </p>
       <div class="about__button">
-        <a class="btn btn--large" href="./PDFs/AlejandroMontalvo.pdf" target="_blank" rel="noopener">Check out my resume!
+        <a class="btn btn--large" href="./PDFs/AlejandroMontalvo.pdf" target="_blank" rel="noopener">Check out my
+          resume!
           <ion-icon class="btn__icon btn__icon--large" name="open-sharp"></ion-icon>
         </a>
       </div>
@@ -107,39 +108,40 @@
   </section>
   <!-- Projects Section -->
   <section id="projects">
-    <h1>Projects</h1>
-    <div class="projects__grid">
+    <div id="projects__content">
+      <h1>Projects</h1>
       <div class="project">
         <a href="https://alejandro.id" target="_blank" rel="noopener">
           <picture><img class="project__image" src="./imgs/Project1.webp" alt="Project 1" />
           </picture>
         </a>
+        <div class="project-info">
+          <h2 class="project__title">alejandro.id</h2>
+          <div class="project__external">
+            <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">
+              <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
+            </a>
+            <a href="https://alejandro.id" target="_blank" rel="noopener">
+              <ion-icon class="project__external__icon" name="open-sharp"></ion-icon>
+            </a>
+          </div>
+          <p class="project__description">
+            This is my resume/portfolio website. It took me around 60 hours
+            to complete, with various iterations on it's designs and features.
+            I plan to update and improve this site over time.
+          </p>
+          <div class="tag tag--html">
+            <ion-icon class="tag__icon tag__icon--html" name="logo-html5"></ion-icon>HTML
+          </div>
+          <div class="tag tag--css">
+            <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
+          </div>
+          <div class="tag tag--javascript">
+            <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
+          </div>
+        </div>
       </div>
-      <div class="project-info">
-        <h2 class="project__title">alejandro.id</h2>
-        <div class="project__external">
-          <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">
-            <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
-          </a>
-          <a href="https://alejandro.id" target="_blank" rel="noopener">
-            <ion-icon class="project__external__icon" name="open-sharp"></ion-icon>
-          </a>
-        </div>
-        <p class="project__description">
-          This is my resume/portfolio website. It took me around 60 hours
-          to complete, with various iterations on it's designs and features.
-          I plan to update and improve this site over time.
-        </p>
-        <div class="tag tag--html">
-          <ion-icon class="tag__icon tag__icon--html" name="logo-html5"></ion-icon>HTML
-        </div>
-        <div class="tag tag--css">
-          <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
-        </div>
-        <div class="tag tag--javascript">
-          <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
-        </div>
-      </div>
+
     </div>
   </section>
   <!-- Contact Section -->
