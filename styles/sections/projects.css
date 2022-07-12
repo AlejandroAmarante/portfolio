@@ -15,6 +15,7 @@
   box-sizing: border-box;
   border-radius: 1rem;
   width: 85%;
+  border: solid 1px var(--border-color);
 }
 
 .project {

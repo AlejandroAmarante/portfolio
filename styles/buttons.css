@@ -1,8 +1,9 @@
 .btn {
   cursor: pointer;
   color: var(--font-color);
+
   border-radius: 0.4rem;
-  font-size: 1.4vw;
+  font-size: 1.6rem;
   text-decoration: none;
   background: var(--bg-color-layer2);
   margin-right: 1vw;

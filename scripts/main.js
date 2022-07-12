@@ -125,15 +125,54 @@ window.onload = function () {
   // Start the typing effect on load
   _INTERVAL_VAL = setInterval(typeText, 100);
 
-  let aboutSection = document.getElementById("about");
-  let sideNavAbout = document.getElementById("sideNav__about");
-  console.log(aboutSection.offsetTop);
-  window.onscroll = function () {
-    console.log(window.pageYOffset);
-    if (window.pageYOffset + 10 >= aboutSection.offsetTop) {
-      sideNavAbout.style.background = "white";
-    } else if (window.pageYOffset + 10 >= 700) {
-      sideNavAbout.style.background = "black";
-    }
-  };
+  // let navButtonArray = document.querySelectorAll(".sideNav__button");
+  // let active = document.querySelector(
+  //   ".sideNav__button .sideNav__button--active"
+  // );
+  // for (let i = 0; i < navButtonArray.length; i++) {
+  //   navButtonArray[i].addEventListener("click", function () {
+  //     if (active) active.classList.remove("sideNav__button--active");
+  //     navButtonArray[i].classList.add("sideNav__button--active");
+  //   });
+  // }
+
+  // document.addEventListener("click", function (event) {
+  //   let active = document.querySelector(
+  //     ".sideNav__button .sideNav__button--active"
+  //   );
+  //   if (active) active.classList.remove("sideNav__button--active");
+  //   if (event.target.classList.contains("sideNav__button")) {
+  //     event.target.classList.remove("sideNav__button");
+  //     event.target.classList.add("sideNav__button--active");
+  //   }
+  // });
+
+  // let homeSection = document.getElementById("home");
+  // let aboutSection = document.getElementById("about");
+  // let sideNavAbout = document.getElementById("sideNav__about");
+  // let projectsSection = document.getElementById("projects");
+  // let sideNavProjects = document.getElementById("sideNav__projects");
+  // console.log(aboutSection.offsetHeight);
+  // window.onscroll = function () {
+  //   if (window.scrollY < homeSection.offsetHeight / 1.5) {
+  //     sideNavAbout.style.background = "";
+  //     sideNavAbout.style.color = "";
+  //   } else if (
+  //     window.pageYOffset > homeSection.offsetHeight / 1.5 &&
+  //     window.pageYOffset < aboutSection.offsetTop - aboutSection.offsetHeight
+  //   ) {
+  //     sideNavAbout.style.background = "white";
+  //     sideNavAbout.style.color = "black";
+  //   } else if (
+  //     window.pageYOffset > aboutSection.offsetHeight / 2 &&
+  //     window.pageYOffset <
+  //       projectsSection.offsetTop + projectsSection.offsetHeight
+  //   ) {
+  //     sideNavProjects.style.background = "white";
+  //     sideNavProjects.style.color = "black";
+  //   } else {
+  //     sideNavAbout.style.background = "";
+  //     sideNavAbout.style.color = "";
+  //   }
+  // };
 };

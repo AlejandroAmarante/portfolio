@@ -58,7 +58,7 @@
   top: 0;
   left: 0;
   overflow-x: hidden;
-  /*border-right: solid 1px var(--border-color);*/
+  border-right: solid 1px var(--border-color);
   background: var(--bg-color-layer1);
 }
 
@@ -74,6 +74,11 @@
 
 /* When you mouse over the navigation links, change their color */
 .sideNav a:hover {
+  color: var(--hover-font-color);
+  background-color: var(--hover-color);
+}
+
+.sideNav__button--active {
   color: var(--hover-font-color);
   background-color: var(--hover-color);
 }

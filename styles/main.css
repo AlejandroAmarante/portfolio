@@ -8,20 +8,20 @@
 
 :root {
   color-scheme: light dark; /* both supported */
-  --border-color: #d1d1d1;
+  --border-color: #181818;
   --bg-color: #0f0f0f;
   --bg-color-layer1: #141414;
-  --bg-color-layer2: #1f1f1f;
-  --font-color: #d1d1d1;
-  --hover-color: #d1d1d1;
+  --bg-color-layer2: #1d1d1d;
+  --font-color: #e0e0e0;
+  --hover-color: #e0e0e0;
   --hover-font-color: #0f0f0f;
 }
 
 /* Light Theme Colors */
 [data-theme="light"] {
-  --border-color: #0f0f0f;
+  --border-color: #dbdbdb;
   --bg-color: #e0e0e0;
-  --bg-color-layer1: #ececec;
+  --bg-color-layer1: #ebebeb;
   --bg-color-layer2: #fafafa;
   --font-color: #0f0f0f;
   --hover-color: #0f0f0f;
