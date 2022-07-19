@@ -44,17 +44,17 @@ window.onload = function () {
 
   menuIcon.addEventListener("click", function () {
     if (menuIcon.getAttribute("name") === "close-sharp") {
-      mobileLinks.style.display = "none";
+      mobileLinks.style.height = "0rem";
       menuIcon.setAttribute("name", "menu-sharp");
     } else {
-      mobileLinks.style.display = "block";
+      mobileLinks.style.height = "13rem";
       menuIcon.setAttribute("name", "close-sharp");
     }
   });
 
   for (let i = 0; i < menuClose.length; i++) {
     menuClose[i].addEventListener("click", function () {
-      mobileLinks.style.display = "none";
+      mobileLinks.style.height = "0rem";
       menuIcon.setAttribute("name", "menu-sharp");
     });
   }

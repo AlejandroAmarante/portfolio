@@ -35,9 +35,15 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
-  margin-left: 17rem;
-  padding-right: 2vw;
-  transition: 0.1s;
+  padding-left: 14vw;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  transition: 0.2s ease-in-out;
 }
 
 h1 {
@@ -45,7 +51,6 @@ h1 {
   font-weight: bold;
   font-size: 2.8vw;
   margin: 0vw;
-  line-height: 3vw;
 }
 
 p {
@@ -58,22 +63,16 @@ ion-icon {
 
 @media (max-width: 800px) {
   body {
-    margin-left: 0px;
+    padding-left: 0;
   }
 
   h1 {
     color: var(--font-color);
     font-size: 10vw;
+    text-align: center;
   }
 
   p {
     font-family: "OpenSans", sans-serif;
-  }
-
-  .grid__title {
-    grid-area: grid__title;
-    font-weight: 700;
-    font-size: 10vw;
-    text-align: center;
   }
 }

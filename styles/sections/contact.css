@@ -8,7 +8,7 @@
 #contact__info {
   background-color: var(--bg-color-layer1);
   border: solid 1px var(--border-color);
-  padding: 1.5rem;
+  padding: 1.2rem;
   box-sizing: border-box;
   border-radius: 0.8rem;
 }
@@ -30,6 +30,9 @@
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
   }
 
   #contact__info {
@@ -38,7 +41,7 @@
 
   #contact__title {
     font-weight: 700;
-    font-size: 9vw;
+    font-size: 2rem;
   }
 
   #contact__subtext {

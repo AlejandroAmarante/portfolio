@@ -50,13 +50,12 @@
   #home {
     width: 100%;
     height: 100vh;
-    text-align: center;
+    text-align: left;
     display: flex;
     align-items: center;
   }
 
   #staticText {
-    display: inline-block;
     font-weight: bold;
     font-size: 15vw;
     color: var(--font-color);
@@ -66,18 +65,22 @@
 
   #dynamicText {
     font-weight: bold;
-    display: inline-block;
     font-size: 15vw;
     color: var(--font-color);
     letter-spacing: 0.1vw;
     margin-left: 1vw;
     margin-bottom: 1.2vw;
+    height: 3rem;
   }
 
   #cursor {
     display: inline-block;
     width: 7vw;
-    height: 12vw;
+    height: 13vw;
     background-color: var(--font-color);
+  }
+
+  #home__buttons {
+    width: 50%;
   }
 }

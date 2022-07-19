@@ -5,23 +5,23 @@
   align-items: center;
 }
 
-.link {
+.embededLink {
   color: var(--font-color);
 }
 
 #about__grid {
   display: grid;
+  width: 85%;
   grid-template-columns: 45% 55%;
-  grid-template-rows: 0fr 1fr 0.3fr;
+  grid-template-rows: 0fr 1fr;
   grid-template-areas:
     "about__title about__image"
     "about__description about__image"
     "about__button about__image";
   background-color: var(--bg-color-layer1);
-  padding: 1.5rem;
+  padding: 4vw;
   box-sizing: border-box;
   border-radius: 1rem;
-  width: 85%;
   border: solid 1px var(--border-color);
 }
 
@@ -57,24 +57,22 @@
 
 @media (max-width: 800px) {
   #about {
-    width: 100%;
-    display: flex;
-    align-items: center;
+    height: 100vh;
+    justify-content: center;
   }
 
   #about__grid {
     display: grid;
+    width: 90%;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    gap: 15px 0px;
+    gap: 3vw;
     grid-template-areas:
       "about__title"
       "about__image"
       "about__description"
       "about__button";
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 10vw;
+    margin-top: 8vw;
   }
 
   .about__title {
@@ -82,25 +80,18 @@
   }
 
   .about__image {
-    margin-top: 1vh;
-    margin-left: 0px;
-    margin-bottom: 3vw;
+    margin: 1vw;
   }
   .about__image img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 40vw;
   }
 
   .about__description {
-    text-align: center;
-    font-size: 5vw;
+    font-size: 4.8vw;
+    margin-bottom: 0;
   }
 
   .about__button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0vw;
+    width: 100%;
   }
 }
