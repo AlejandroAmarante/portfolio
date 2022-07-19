@@ -81,7 +81,7 @@
 }
 
 #mobileNav {
-  display: block;
+  display: none;
   width: 100%;
   position: fixed;
   top: 0;
