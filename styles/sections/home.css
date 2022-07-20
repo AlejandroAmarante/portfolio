@@ -3,12 +3,18 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #home__content {
   width: 100%;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
+}
+
+#typewriter__text {
+  height: fit-content;
 }
 
 #staticText {
@@ -36,6 +42,31 @@
   background-color: var(--font-color);
 }
 
+#scroll__indicator {
+  display: none;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+#scroll__indicator ion-icon {
+  animation: updown 2s ease infinite;
+  font-size: 6rem;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-25%);
+  }
+
+  50% {
+    transform: translateY(25%);
+  }
+
+  100% {
+    transform: translateY(-25%);
+  }
+}
+
 @keyframes blink {
   from,
   to {
@@ -53,11 +84,23 @@
     text-align: left;
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #home__content {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    margin-top: auto;
+  }
+
+  #typewriter__text {
+    height: 20rem;
   }
 
   #staticText {
     font-weight: bold;
-    font-size: 15vw;
+    font-size: 16vw;
     color: var(--font-color);
     letter-spacing: 0.1vw;
     margin-bottom: 0vw;
@@ -65,7 +108,7 @@
 
   #dynamicText {
     font-weight: bold;
-    font-size: 15vw;
+    font-size: 16vw;
     color: var(--font-color);
     letter-spacing: 0.1vw;
     margin-left: 1vw;
@@ -82,5 +125,11 @@
 
   #home__buttons {
     width: 50%;
+    display: none;
+  }
+
+  #scroll__indicator {
+    display: block;
+    margin-top: auto;
   }
 }

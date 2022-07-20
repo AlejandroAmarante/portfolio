@@ -19,7 +19,7 @@
     "about__description about__image"
     "about__button about__image";
   background-color: var(--bg-color-layer1);
-  padding: 4vw;
+  padding: 1.5rem;
   box-sizing: border-box;
   border-radius: 1rem;
   border: solid 1px var(--border-color);
@@ -72,7 +72,8 @@
       "about__image"
       "about__description"
       "about__button";
-    margin-top: 8vw;
+    margin-top: 3.5rem;
+    padding: 1.2rem;
   }
 
   .about__title {
@@ -87,7 +88,7 @@
   }
 
   .about__description {
-    font-size: 4.8vw;
+    font-size: 4.9vw;
     margin-bottom: 0;
   }
 

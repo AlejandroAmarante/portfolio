@@ -62,9 +62,11 @@
   <!-- Home Section -->
   <section id="home">
     <div id="home__content">
-      <div id="staticText">I'm Alejandro and I </div>
-      <div id="dynamicText"></div>
-      <div id="cursor"></div>
+      <div id="typewriter__text">
+        <div id="staticText">I'm Alejandro and I </div>
+        <div id="dynamicText"></div>
+        <div id="cursor"></div>
+      </div>
       <div id="home__buttons">
         <a href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener" class="button">
           <ion-icon class="button__icon" name="logo-github"></ion-icon>GitHub
@@ -80,6 +82,10 @@
           <ion-icon class="button__icon" name="document-text-sharp"></ion-icon>Resume
         </a>
       </div>
+
+    </div>
+    <div id="scroll__indicator">
+      <ion-icon name="chevron-down-sharp"></ion-icon>
     </div>
   </section>
   <!-- About Section -->
@@ -87,7 +93,7 @@
     <div id="about__grid">
       <h1 class="about__title">About Me</h1>
       <picture class="about__image">
-        <img src="./imgs/aboutme.webp" alt="Me!" />
+        <img src="./imgs/aboutme.webp" alt="Me" />
       </picture>
       <p class="about__description">
         My name is Alejandro Montalvo, and I'm a <a href="https://www.ucf.edu/" target="_blank" rel="noopener"
@@ -118,14 +124,16 @@
           </picture>
         </a>
         <div class="project-info">
-          <h2 class="project__title">alejandro.id</h2>
-          <div class="project__external">
-            <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">
-              <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
-            </a>
-            <a href="https://alejandro.id" target="_blank" rel="noopener">
-              <ion-icon class="project__external__icon" name="open-sharp"></ion-icon>
-            </a>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <h2 class="project__title">alejandro.id</h2>
+            <div class="project__external">
+              <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">
+                <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
+              </a>
+              <a href="https://alejandro.id" target="_blank" rel="noopener">
+                <ion-icon class="project__external__icon" name="open-sharp"></ion-icon>
+              </a>
+            </div>
           </div>
           <p class="project__description">
             This is my resume/portfolio website. It took me around 60 hours

@@ -16,6 +16,7 @@
   border-radius: 1rem;
   width: 85%;
   border: solid 1px var(--border-color);
+  margin-top: 3.5rem;
 }
 
 .project {
@@ -64,7 +65,6 @@
 
 .project__external {
   display: inline-flex;
-  float: right;
 }
 
 .project__external a {
