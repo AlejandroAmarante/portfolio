@@ -20,9 +20,9 @@
 /* Light Theme Colors */
 [data-theme="light"] {
   --border-color: #dbdbdb;
-  --bg-color: #e0e0e0;
-  --bg-color-layer1: #ebebeb;
-  --bg-color-layer2: #fafafa;
+  --bg-color: #eeeeee;
+  --bg-color-layer1: #f5f5f5;
+  --bg-color-layer2: #ffffff;
   --font-color: #0f0f0f;
   --hover-color: #0f0f0f;
   --hover-font-color: #ebebeb;
@@ -35,7 +35,7 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
-  padding-left: 14vw;
+  padding-left: 16rem;
   box-sizing: border-box;
   margin: 0;
   width: 100%;
@@ -61,6 +61,11 @@ ion-icon {
   color: var(--font-color);
 }
 
+.embededLink {
+  color: var(--font-color);
+  text-decoration-thickness: 0.2rem;
+}
+
 @media (max-width: 800px) {
   body {
     padding-left: 0;
@@ -75,5 +80,4 @@ ion-icon {
   p {
     font-family: "OpenSans", sans-serif;
   }
-
 }

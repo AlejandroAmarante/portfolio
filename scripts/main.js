@@ -44,11 +44,11 @@ window.onload = function () {
 
   menuIcon.addEventListener("click", function () {
     if (menuIcon.getAttribute("name") === "close-sharp") {
-      mobileLinks.style.height = "0rem";
       menuIcon.setAttribute("name", "menu-sharp");
+      mobileLinks.style.height = "0rem";
     } else {
-      mobileLinks.style.height = "13rem";
       menuIcon.setAttribute("name", "close-sharp");
+      mobileLinks.style.height = "13rem";
     }
   });
 

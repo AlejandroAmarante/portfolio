@@ -84,12 +84,24 @@
   display: none;
   width: 100%;
   position: fixed;
+  justify-content: space-around;
+  align-items: flex;
+  flex-direction: column;
   top: 0;
   overflow: hidden;
   transition: height 0.5s ease-in-out;
+  -webkit-transition: height 0.5s ease-in-out;
   border-bottom: solid 1px var(--border-color);
   background: var(--bg-color-layer1);
   z-index: 10;
+}
+
+#mobileNav__menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #mobileNav__icon {
@@ -99,13 +111,8 @@
   cursor: pointer;
 }
 
-#mobileNav__center {
-  width: 90%;
-  margin: 0 auto;
-}
-
 #mobileNav__links {
-  padding-top: 1rem;
+  padding-top: 0rem;
   height: 0px;
 }
 
@@ -127,23 +134,22 @@
 }
 
 .switch {
-  width: fit-content;
   cursor: pointer;
-  margin-left: 1rem;
+  width: fit-content;
+  height: fit-content;
 }
 
 ion-icon[name="sunny"] {
-  display: inline-block;
   width: 2rem;
   height: 2rem;
-  margin-top: 1rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
 }
 
 ion-icon[name="moon"] {
   display: none;
   width: 2rem;
   height: 2rem;
-  margin-top: 1rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
 }
 
 @media (max-width: 800px) {
@@ -152,26 +158,17 @@ ion-icon[name="moon"] {
   }
 
   #mobileNav {
-    display: block;
+    display: inline-flex;
   }
 
   #mobileNav__logo {
-    display: inline-block;
     color: var(--font-color);
     font-family: "Plaster", sans-serif;
     font-size: 4.5rem;
+    margin-top: -1rem;
     text-decoration: none;
-    margin: auto;
+    height: 100%;
     width: fit-content;
-    line-height: 3rem;
-  }
-
-  .switch {
-    width: fit-content;
-    margin: auto;
-    left: 0;
-    right: 0;
-    position: fixed;
   }
 
   ion-icon[name="sunny"] {
@@ -180,7 +177,6 @@ ion-icon[name="moon"] {
     justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    margin-top: 0.8rem;
   }
 
   ion-icon[name="moon"] {
@@ -188,6 +184,5 @@ ion-icon[name="moon"] {
     align-items: center;
     width: 2.5rem;
     height: 2.5rem;
-    margin-top: 0.8rem;
   }
 }

@@ -36,26 +36,26 @@
     <a class="sideNav__button" href="#about">About Me</a>
     <a class="sideNav__button" href="#projects">Projects</a>
     <a class="sideNav__button" href="#contact">Contact</a>
-    <label class="switch">
+    <div class="switch">
       <ion-icon name="sunny"></ion-icon>
       <ion-icon name="moon"></ion-icon>
-    </label>
+    </div>
   </nav>
   <header>
     <!-- Mobile Navigation -->
     <nav id="mobileNav">
-      <div id="mobileNav__center">
+      <div id="mobileNav__menu">
         <a id="mobileNav__logo" class="mobileNav__close" href="#top">a</a>
-        <label class="switch">
+        <div class="switch">
           <ion-icon name="sunny"></ion-icon>
           <ion-icon name="moon"></ion-icon>
-        </label>
-        <ion-icon id="mobileNav__icon" name="menu-sharp"></ion-icon>
-        <div id="mobileNav__links">
-          <a class="mobileNav__button mobileNav__close" href="#about">About Me</a>
-          <a class="mobileNav__button mobileNav__close" href="#projects">Projects</a>
-          <a class="mobileNav__button mobileNav__close" href="#contact">Contact</a>
         </div>
+        <ion-icon id="mobileNav__icon" name="menu-sharp"></ion-icon>
+      </div>
+      <div id="mobileNav__links">
+        <a class="mobileNav__button mobileNav__close" href="#about">About Me</a>
+        <a class="mobileNav__button mobileNav__close" href="#projects">Projects</a>
+        <a class="mobileNav__button mobileNav__close" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -118,40 +118,102 @@
   <section id="projects">
     <div id="projects__content">
       <h1>Projects</h1>
-      <div class="project">
-        <a href="https://alejandro.id" target="_blank" rel="noopener">
-          <picture><img class="project__image" src="./imgs/Project1.webp" alt="Project 1" />
-          </picture>
-        </a>
-        <div class="project-info">
-          <div style="display: flex; flex-direction: row; justify-content: space-between;">
-            <h2 class="project__title">alejandro.id</h2>
-            <div class="project__external">
-              <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">
-                <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
-              </a>
-              <a href="https://alejandro.id" target="_blank" rel="noopener">
-                <ion-icon class="project__external__icon" name="open-sharp"></ion-icon>
-              </a>
+      <div id="projects__list">
+        <div class="project">
+          <a class="project__image" href="https://alejandro.id" target="_blank" rel="noopener">
+            <picture><img src="./imgs/Project1.webp" alt="Project 1" />
+            </picture>
+          </a>
+          <div class="project__information">
+            <div class="project__header">
+              <a class="project__title embededLink" href="https://alejandro.id" target="_blank"
+                rel="noopener">alejandro.id</a>
+              <div class="project__external">
+                <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">
+                  <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <p class="project__description">
+              This is my resume/portfolio website. It took me around 60 hours
+              to complete, with various iterations on it's designs and features.
+              I plan to update and improve this site over time.
+            </p>
+            <div class="tag tag--html">
+              <ion-icon class="tag__icon tag__icon--html" name="logo-html5"></ion-icon>HTML
+            </div>
+            <div class="tag tag--css">
+              <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
+            </div>
+            <div class="tag tag--javascript">
+              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
             </div>
           </div>
-          <p class="project__description">
-            This is my resume/portfolio website. It took me around 60 hours
-            to complete, with various iterations on it's designs and features.
-            I plan to update and improve this site over time.
-          </p>
-          <div class="tag tag--html">
-            <ion-icon class="tag__icon tag__icon--html" name="logo-html5"></ion-icon>HTML
+        </div>
+        <div class="project">
+          <a class="project__image" href="https://alejandromontalvo.github.io/weathr/" target="_blank" rel="noopener">
+            <picture><img src="./imgs/Project2.webp" alt="Project 1" />
+            </picture>
+          </a>
+          <div class="project__information">
+            <div class="project__header">
+              <a class="project__title embededLink" href="https://alejandromontalvo.github.io/weathr/" target="_blank"
+                rel="noopener">weathr</a>
+              <div class="project__external">
+                <a href="https://github.com/AlejandroMontalvo/weathr" target="_blank" rel="noopener">
+                  <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <p class="project__description">
+              A simple weather site that displays todays weather. Fetches data provided by the <a class="embededLink"
+                href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeather Weather API</a>. An
+              OpenWeather API key is required for use.
+            </p>
+            <div class="tag tag--html">
+              <ion-icon class="tag__icon tag__icon--html" name="logo-html5"></ion-icon>HTML
+            </div>
+            <div class="tag tag--css">
+              <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
+            </div>
+            <div class="tag tag--javascript">
+              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
+            </div>
           </div>
-          <div class="tag tag--css">
-            <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
-          </div>
-          <div class="tag tag--javascript">
-            <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
+        </div>
+        <div class="project">
+          <a class="project__image" href="https://alejandromontalvo.github.io/secure-password-generator/"
+            target="_blank" rel="noopener">
+            <picture><img src="./imgs/Project3.webp" alt="Project 1" />
+            </picture>
+          </a>
+          <div class="project__information">
+            <div class="project__header">
+              <a class="project__title embededLink"
+                href="https://alejandromontalvo.github.io/secure-password-generator/">SPG</a>
+              <div class="project__external">
+                <a href="https://github.com/AlejandroMontalvo/alejandro.id" target="_blank" rel="noopener">
+                  <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <p class="project__description">
+              An easy-to-use, yet powerful, secure password generator. Features a highly customizable password
+              generation
+              experience, all handled clientside for extra security.
+            </p>
+            <div class="tag tag--html">
+              <ion-icon class="tag__icon tag__icon--html" name="logo-html5"></ion-icon>HTML
+            </div>
+            <div class="tag tag--css">
+              <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
+            </div>
+            <div class="tag tag--javascript">
+              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
   <!-- Contact Section -->
