@@ -6,7 +6,7 @@
 }
 
 #contact__info {
-  background-color: var(--bg-color-layer1);
+  background-color: var(--bg-color-panel);
   border: solid 1px var(--border-color);
   padding: 1.2rem;
   box-sizing: border-box;

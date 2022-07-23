@@ -7,7 +7,7 @@
   left: 0;
   overflow-x: hidden;
   border-right: solid 1px var(--border-color);
-  background: var(--bg-color-layer1);
+  background: var(--bg-color-panel);
 }
 
 #sideNav__logo {
@@ -92,7 +92,7 @@
   transition: height 0.5s ease-in-out;
   -webkit-transition: height 0.5s ease-in-out;
   border-bottom: solid 1px var(--border-color);
-  background: var(--bg-color-layer1);
+  background: var(--bg-color-panel);
   z-index: 10;
 }
 

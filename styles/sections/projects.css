@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2vw;
-  background-color: var(--bg-color-layer1);
+  background-color: var(--bg-color-panel);
   padding: 1.5rem;
   box-sizing: border-box;
   border-radius: 1rem;
@@ -30,11 +30,12 @@
   margin-bottom: 1vw;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-color-layer2);
+  background-color: var(--bg-color-card);
   box-sizing: border-box;
   border-radius: 1rem;
   width: 30%;
   height: fit-content;
+  border: 1px solid var(--border-color);
 }
 
 .project__image {

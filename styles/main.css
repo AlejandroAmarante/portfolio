@@ -10,8 +10,8 @@
   color-scheme: light dark; /* both supported */
   --border-color: #181818;
   --bg-color: #0f0f0f;
-  --bg-color-layer1: #141414;
-  --bg-color-layer2: #1d1d1d;
+  --bg-color-panel: #141414;
+  --bg-color-card: #1d1d1d;
   --font-color: #e0e0e0;
   --hover-color: #e0e0e0;
   --hover-font-color: #0f0f0f;
@@ -21,8 +21,8 @@
 [data-theme="light"] {
   --border-color: #dbdbdb;
   --bg-color: #eeeeee;
-  --bg-color-layer1: #f5f5f5;
-  --bg-color-layer2: #ffffff;
+  --bg-color-panel: #f5f5f5;
+  --bg-color-card: #fafafa;
   --font-color: #0f0f0f;
   --hover-color: #0f0f0f;
   --hover-font-color: #ebebeb;
@@ -63,6 +63,7 @@ ion-icon {
 
 .embededLink {
   color: var(--font-color);
+  text-decoration-color: var(--font-color);
   text-decoration-thickness: 0.2rem;
 }
 
