@@ -27,15 +27,16 @@
 
 .about__image {
   grid-area: about__image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about__image img {
   display: block;
-  margin: auto;
-  width: 22vw;
-  height: 90%;
+  width: 50%;
+  height: auto;
   border-radius: 100%;
-  padding: 1.5vw;
   box-sizing: border-box;
 }
 
