@@ -143,9 +143,10 @@
   text-align: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   #projects {
     width: 100%;
+    padding-top: 2rem;
     align-items: center;
   }
 

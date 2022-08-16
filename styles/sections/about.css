@@ -32,8 +32,8 @@
 .about__image img {
   display: block;
   margin: auto;
-  width: 55%;
-  height: 100%;
+  width: 22vw;
+  height: 90%;
   border-radius: 100%;
   padding: 1.5vw;
   box-sizing: border-box;
@@ -52,7 +52,13 @@
   grid-area: about__button;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1400px) {
+  .about__image img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
   #about {
     height: 100vh;
     justify-content: center;

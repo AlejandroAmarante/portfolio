@@ -65,15 +65,15 @@
 
 @keyframes updown {
   0% {
-    transform: translateY(-25%);
+    transform: translateY(-50%);
   }
 
   50% {
-    transform: translateY(25%);
+    transform: translateY(0%);
   }
 
   100% {
-    transform: translateY(-25%);
+    transform: translateY(-50%);
   }
 }
 
@@ -91,7 +91,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   #home {
     width: 100%;
     height: 100vh;
