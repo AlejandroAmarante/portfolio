@@ -17,7 +17,7 @@
   background-color: var(--bg-color-panel);
   padding: 1.5rem;
   box-sizing: border-box;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   border: solid 1px var(--border-color);
 }
 

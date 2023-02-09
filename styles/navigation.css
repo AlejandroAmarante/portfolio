@@ -1,4 +1,4 @@
-.sideNav {
+#nav {
   height: 100%;
   width: 13rem;
   position: fixed;
@@ -10,17 +10,19 @@
   background: var(--bg-color-panel);
 }
 
-#sideNav__logo {
+#nav__logo {
   color: var(--font-color);
   font-family: "Plaster", sans-serif;
   font-size: 6rem;
   text-decoration: none;
   margin: auto;
   width: fit-content;
+  display: block;
+  text-align: center;
 }
 
 /* Rainbow Animation on :hover ------------------*/
-#sideNav__logo:hover {
+#nav__logo:hover {
   background: linear-gradient(
     to right,
     red,
@@ -50,7 +52,7 @@
 /*-----------------------------------------------*/
 
 /* The navigation menu links */
-.sideNav a {
+.nav__link {
   display: block;
   font-family: "Montserrat", sans-serif;
   padding: 0.8rem 1rem 0.8rem 1rem;
@@ -60,22 +62,22 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.sideNav a:hover {
+.nav__link:hover {
   color: var(--hover-font-color);
   background-color: var(--hover-color);
 }
 
-.sideNav__button--active {
+.nav__link--active {
   color: var(--hover-font-color);
   background-color: var(--hover-color);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {
+  .nav {
     padding-top: 15px;
   }
-  .sideNav a {
+  .nav__link {
     font-size: 5vh;
   }
 }
@@ -153,7 +155,7 @@ ion-icon[name="moon"] {
 }
 
 @media (max-width: 1000px) {
-  .sideNav {
+  #nav {
     display: none;
   }
 

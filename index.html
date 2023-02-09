@@ -13,22 +13,23 @@
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/svg" href="./imgs/favicon.svg" />
   <!-- Import Stylesheet -->
+  <link rel="preload" as="style" href="./styles/main.css" media="screen">
   <link rel="stylesheet" href="./styles/main.css" media="screen" />
   <!-- Icons -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
   <!-- Scripts -->
-  <link rel="preload" as="script" href="./scripts/main.js" as="script">
+  <link rel="preload" as="script" href="./scripts/main.js">
   <script src="./scripts/main.js" type="text/javascript"></script>
 </head>
 
 <body>
   <!-- Desktop Navigation -->
-  <nav class="sideNav">
-    <a id="sideNav__logo" href="#top">a</a>
-    <a class="sideNav__button" href="#about">About Me</a>
-    <a class="sideNav__button" href="#projects">Projects</a>
-    <a class="sideNav__button" href="#contact">Contact</a>
+  <nav id="nav">
+    <a id="nav__logo" href="#top">a</a>
+    <a class="nav__link" href="#about">About Me</a>
+    <a class="nav__link" href="#projects">Projects</a>
+    <a class="nav__link" href="#contact">Contact</a>
     <div class="switch">
       <ion-icon name="sunny"></ion-icon>
       <ion-icon name="moon"></ion-icon>
@@ -75,7 +76,6 @@
           <ion-icon class="button__icon" name="document-text-sharp"></ion-icon>Resume
         </a>
       </div>
-
     </div>
     <div id="scroll__indicator">
       <ion-icon name="chevron-down-sharp"></ion-icon>
@@ -217,7 +217,7 @@
       </h1>
       <div id="contact__subtext">
         <p>
-          I'm currently open to work as a Front-end Developer.</p>
+          I'm currently open to work as a Front-End Developer.</p>
         <p>
           Let's talk more about bringing your ideas to life.</p>
         </p>
