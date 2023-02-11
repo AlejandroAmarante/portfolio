@@ -63,8 +63,7 @@
 
 /* When you mouse over the navigation links, change their color */
 .nav__link:hover {
-  color: var(--hover-font-color);
-  background-color: var(--hover-color);
+  text-decoration: underline;
 }
 
 .nav__link--active {
