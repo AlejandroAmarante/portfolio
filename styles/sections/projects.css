@@ -3,25 +3,22 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 #projects__content {
   display: flex;
   flex-direction: column;
   margin-bottom: 2vw;
-  /* background-color: var(--bg-color-panel); */
   padding: 1.5rem;
   box-sizing: border-box;
   border-radius: 0.6rem;
   width: 85%;
-  /* border: solid 1px var(--border-color); */
   margin-top: 3.5rem;
 }
 
 #projects__list {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -48,11 +45,12 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .project__information {
   color: var(--font-color);
-  padding: 1rem 1.5rem 1.5rem 1rem;
+  padding: 1rem;
   box-sizing: border-box;
   width: 100%;
 }
@@ -61,12 +59,11 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 2vw;
-  display: inline-block;
+  margin-bottom: 0.4rem;
 }
 
 .project__header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 0.4rem;
@@ -74,16 +71,16 @@
 
 .project__description {
   font-family: "OpenSans", sans-serif;
-  margin-top: 0rem;
+  margin-top: 0;
   margin-bottom: 0.4rem;
   font-weight: 400;
   font-size: 1.45vw;
   text-align: justify;
-  text-justify: distribute;
 }
 
 .project__external {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
 }
 
 .project__external a {
@@ -113,26 +110,11 @@
   color: white;
 }
 
-.tag--html {
-  color: var(--font-color);
-}
-
-.tag__icon--html {
-  color: var(--font-color);
-}
-
-.tag--css {
-  color: var(--font-color);
-}
-
-.tag__icon--css {
-  color: var(--font-color);
-}
-
-.tag--javascript {
-  color: var(--font-color);
-}
-
+.tag--html,
+.tag__icon--html,
+.tag--css,
+.tag__icon--css,
+.tag--javascript,
 .tag__icon--javascript {
   color: var(--font-color);
 }
@@ -154,7 +136,7 @@
   }
 
   .project__image img {
-    border-radius: 1rem 1rem 0rem 0rem;
+    border-radius: 1rem;
   }
 
   .project__title {

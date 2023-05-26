@@ -1,10 +1,10 @@
-@import "./sections/home.css";
-@import "./sections/about.css";
-@import "./sections/projects.css";
-@import "./sections/contact.css";
-@import "fonts.css";
-@import "navigation.css";
-@import "buttons.css";
+@import url("./sections/home.css");
+@import url("./sections/about.css");
+@import url("./sections/projects.css");
+@import url("./sections/contact.css");
+@import url("fonts.css");
+@import url("navigation.css");
+@import url("buttons.css");
 
 :root {
   color-scheme: light dark; /* both supported */
@@ -35,7 +35,7 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
-  padding-left: 16rem;
+  padding-inline-start: 16rem;
   box-sizing: border-box;
   margin: 0;
   width: 100%;
@@ -50,7 +50,8 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 2.8vw;
-  margin: 0vw;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 p {
@@ -61,7 +62,7 @@ ion-icon {
   color: var(--font-color);
 }
 
-.embededLink {
+.embeddedLink {
   color: var(--font-color);
   text-decoration-color: var(--font-color);
   text-decoration-thickness: 0.2rem;
@@ -69,7 +70,7 @@ ion-icon {
 
 @media (max-width: 1000px) {
   body {
-    padding-left: 0;
+    padding-inline-start: 0;
   }
 
   h1 {

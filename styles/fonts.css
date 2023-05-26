@@ -7,6 +7,7 @@
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
   font-display: swap;
 }
 
@@ -20,6 +21,7 @@
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
   font-display: swap;
 }
 
