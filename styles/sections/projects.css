@@ -1,19 +1,13 @@
 #projects {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-}
-
-#projects__content {
   display: flex;
   flex-direction: column;
   margin-bottom: 2vw;
-  padding: 1.5rem;
   box-sizing: border-box;
   border-radius: 0.6rem;
   width: 85%;
   margin-top: 3.5rem;
+  height: 100vh;
+  justify-content: center;
 }
 
 #projects__list {
@@ -30,10 +24,13 @@
   background-color: var(--bg-color-card);
   box-sizing: border-box;
   border-radius: 0.6rem;
-  width: 30%;
   height: fit-content;
   border: 1px solid var(--border-color);
   overflow: hidden;
+  width: calc(33.33% - 1vw); /* Set the width to one-third minus the margin */
+  max-width: calc(
+    33.33% - 1vw
+  ); /* Set the maximum width to one-third minus the margin */
 }
 
 .project__image {
@@ -46,6 +43,7 @@
   height: 100%;
   cursor: pointer;
   object-fit: cover;
+  border-radius: 0.6rem;
 }
 
 .project__information {
@@ -59,7 +57,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 2vw;
-  margin-bottom: 0.4rem;
+  margin: 0.4rem 0px 0.4rem 0px;
 }
 
 .project__header {
@@ -72,7 +70,7 @@
 .project__description {
   font-family: "OpenSans", sans-serif;
   margin-top: 0;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   font-weight: 400;
   font-size: 1.45vw;
   text-align: justify;
@@ -93,12 +91,17 @@
   color: var(--font-color);
 }
 
+.tags {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .tag {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   display: inline-block;
   margin-right: 0.8vw;
-  padding: 0.4vw;
   font-size: 1.2vw;
 }
 
@@ -127,16 +130,20 @@
 @media (max-width: 1000px) {
   #projects {
     width: 100%;
-    padding-top: 2rem;
+    padding-top: 5rem;
     align-items: center;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
   }
 
   #projects__list {
     flex-direction: column;
+    align-items: center;
   }
 
   .project__image img {
-    border-radius: 1rem;
+    border-radius: 0.6rem;
   }
 
   .project__title {
@@ -147,25 +154,19 @@
   }
 
   .project__description {
-    margin-bottom: 1vw;
     font-weight: 400;
     text-align: justify;
     font-size: 4vw;
     margin-top: 1vw;
+    margin-bottom: 3vw;
   }
 
   .project {
     flex-direction: column;
     margin-top: 5vw;
-    width: 100%;
+    width: 90%;
+    max-width: 100%;
   }
-
-  .project__information {
-    grid-area: project__information;
-    border-radius: 0vw 0vw 1vw 1vw;
-    padding: 3vw 5vw;
-  }
-
   .project__external__icon {
     font-size: 10vw;
     padding-left: 3vw;
