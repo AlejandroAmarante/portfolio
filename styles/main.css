@@ -6,6 +6,7 @@
 @import url("navigation.css");
 @import url("buttons.css");
 
+/* Dark Theme Colors */
 :root {
   color-scheme: light dark; /* both supported */
   --border-color: #181818;
@@ -15,6 +16,11 @@
   --font-color: #e0e0e0;
   --hover-color: #e0e0e0;
   --hover-font-color: #0f0f0f;
+  --html-tag-color: #e34c26;
+  --css-tag-color: #1b73ba;
+  --js-tag-color: #f4da3b;
+  --nodejs-tag-color: #363028;
+  --react-tag-color: #282c34;
 }
 
 /* Light Theme Colors */
