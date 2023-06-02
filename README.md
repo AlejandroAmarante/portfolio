@@ -1,6 +1,6 @@
-# ![Alt Text](./imgs/alejandro.id.gif)
+# My Portfolio
 
-[alejandro.id](https://www.alejandro.id) is the current site I use to show off some projects from my portfolio and to share my actual resume PDF file. I've made it open source, so if you'd like to use this as a basis for your own portfolio, feel free to fork!
+My portfolio serves as a showcase for my projects and provides access to my resume in PDF format. The portfolio website is open source, allowing you to fork it and use it as a foundation for your own portfolio.
 
 # Getting Started
 
