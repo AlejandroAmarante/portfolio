@@ -4,34 +4,36 @@ window.onload = function () {
   const moonIcons = document.getElementsByName("moon");
   const themeSwitches = document.getElementsByClassName("switch");
 
-  let theme = localStorage.theme || "dark";
-  document.documentElement.setAttribute("data-theme", theme);
+  // Use a constant for the theme name to avoid magic strings
+  const THEME_DARK = "dark";
+  const THEME_LIGHT = "light";
+  let theme = localStorage.theme || THEME_DARK;
 
-  if (theme === "light") {
-    for (let i = 0; i < sunnyIcons.length; i++) {
-      sunnyIcons[i].style.display = "none";
-      moonIcons[i].style.display = "inline-block";
+  // Function to toggle theme
+  function toggleTheme() {
+    if (theme === THEME_DARK) {
+      for (let i = 0; i < sunnyIcons.length; i++) {
+        sunnyIcons[i].style.display = "none";
+        moonIcons[i].style.display = "inline-block";
+      }
+      theme = THEME_LIGHT;
+    } else {
+      for (let i = 0; i < sunnyIcons.length; i++) {
+        sunnyIcons[i].style.display = "inline-block";
+        moonIcons[i].style.display = "none";
+      }
+      theme = THEME_DARK;
     }
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.theme = theme;
   }
 
+  // Apply the initial theme
+  document.documentElement.setAttribute("data-theme", theme);
+
+  // Attach click event listener to theme switches
   for (let i = 0; i < themeSwitches.length; i++) {
-    themeSwitches[i].addEventListener("click", function () {
-      if (theme === "dark") {
-        for (let j = 0; j < moonIcons.length; j++) {
-          sunnyIcons[j].style.display = "none";
-          moonIcons[j].style.display = "inline-block";
-        }
-        theme = "light";
-      } else {
-        for (let j = 0; j < sunnyIcons.length; j++) {
-          sunnyIcons[j].style.display = "inline-block";
-          moonIcons[j].style.display = "none";
-        }
-        theme = "dark";
-      }
-      document.documentElement.setAttribute("data-theme", theme);
-      localStorage.theme = theme;
-    });
+    themeSwitches[i].addEventListener("click", toggleTheme);
   }
 
   // Mobile Navigation
@@ -39,10 +41,7 @@ window.onload = function () {
   const menuIcon = document.getElementById("mobileNav__icon");
   const menuClose = document.getElementsByClassName("mobileNav__close")[0];
 
-  menuIcon.addEventListener("click", toggleMenu);
-  menuClose.addEventListener("click", closeMenu);
-  mobileLinks.addEventListener("click", closeMenu);
-
+  // Function to toggle mobile menu
   function toggleMenu() {
     if (menuIcon.getAttribute("name") === "close-sharp") {
       closeMenu();
@@ -52,19 +51,26 @@ window.onload = function () {
     }
   }
 
+  // Function to close mobile menu
   function closeMenu() {
     mobileLinks.style.height = "0rem";
     menuIcon.setAttribute("name", "menu-sharp");
   }
 
+  // Attach click event listeners for mobile navigation
+  menuIcon.addEventListener("click", toggleMenu);
+  menuClose.addEventListener("click", closeMenu);
+  mobileLinks.addEventListener("click", closeMenu);
+
   // TypeWriter
-  const content = ["create.", "design.", "develop."];
+  const content = ["create.", "design.", "develop.", "innovate."];
   let contentIndex = 0;
   let characterIndex = 0;
   let intervalValue;
   const textElement = document.querySelector("#dynamicText");
   const cursor = document.querySelector("#cursor");
 
+  // Function to type text
   function typeText() {
     cursor.style.animation = null;
     let text = content[contentIndex].substring(0, characterIndex + 1);
@@ -80,6 +86,7 @@ window.onload = function () {
     }
   }
 
+  // Function to delete text
   function deleteText() {
     cursor.style.animation = null;
     let text = content[contentIndex].substring(0, characterIndex - 1);
@@ -99,20 +106,23 @@ window.onload = function () {
     }
   }
 
+  // Initialize the typeText function
   intervalValue = setInterval(typeText, 100);
 
   // Navigation Links
   const navLinks = document.querySelectorAll(".nav__link");
 
-  const changeLinkBackground = (link) => {
+  // Function to change link background
+  function changeLinkBackground(link) {
     navLinks.forEach((navLink) => {
       navLink.style.color = "";
       navLink.style.backgroundColor = "";
     });
     link.style.color = "var(--hover-font-color)";
     link.style.backgroundColor = "var(--hover-color)";
-  };
+  }
 
+  // Attach click event listeners to navigation links
   navLinks.forEach((navLink) => {
     navLink.addEventListener("click", (e) => {
       e.preventDefault();
@@ -123,6 +133,7 @@ window.onload = function () {
     });
   });
 
+  // Detect scroll and highlight active link
   document.addEventListener("scroll", () => {
     if (window.scrollY < 600) {
       navLinks.forEach((navLink) => {

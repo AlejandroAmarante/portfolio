@@ -12,8 +12,9 @@
   margin-right: 1vw;
   padding: 0.5vw 0.6vw;
   font-size: 1.6rem;
-  font-family: "Montserrat", "sans-serif";
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
+  transition: color 0.3s, background-color 0.3s; /* Added transition for smoother hover effect */
 }
 
 .button:hover {
@@ -29,35 +30,42 @@
   color: var(--hover-font-color);
 }
 
+/* Define a base button size */
+.button--base {
+  padding: 0.5vw 0.6vw;
+  font-size: 1.6rem;
+}
+
+/* Define a large button size and icon size */
 .button--size-large {
   padding: 1vw;
   font-size: 1.5vw;
 }
 
-.button__icon--size-large {
-  margin-left: 1vw;
+.button--size-large .button__icon {
+  margin-left: 0.5rem;
 }
 
+/* Responsive design for smaller screens */
 @media (max-width: 1000px) {
   .button {
     width: 100%;
-    margin: 1.8vw 1.8vw 1vw 0vw;
+    margin: 1.8vw 0 1vw 0;
     padding: 1.5vw 2.5vw;
     font-size: 6vw;
   }
 
   .button__icon {
     font-size: 6vw;
-    padding: 2vw 2.5vw;
+    margin-right: 0.5rem;
   }
 
-  .button--size-large {
+  /* Use the large button and icon size for smaller screens */
+  .button--size-large,
+  .button--size-large .button__icon {
     padding: 3vw 2.5vw;
     font-size: 5vw;
-  }
-
-  .button__icon--size-large {
-    font-size: 7vw;
-    margin-right: 0vw;
+    margin-left: 0.5rem;
+    margin-right: 0;
   }
 }

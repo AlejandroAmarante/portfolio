@@ -1,33 +1,34 @@
+/* Define font families */
 @font-face {
   font-family: "Plaster";
+  font-display: swap;
   src: url("../fonts/Plaster-Regular.ttf");
-  font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
+  font-display: swap;
+  font-weight: normal;
   src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
+  font-display: swap;
+  font-weight: bold;
   src: url("../fonts/Montserrat-Bold.ttf");
-  font-weight: bold;
-  font-display: swap;
 }
 
 @font-face {
   font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Regular.ttf");
+  font-display: swap;
   font-weight: normal;
-  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Bold.ttf");
-  font-weight: bold;
   font-display: swap;
+  font-weight: bold;
+  src: url("../fonts/OpenSans-Bold.ttf");
 }

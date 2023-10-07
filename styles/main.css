@@ -1,3 +1,4 @@
+/* Import Stylesheets */
 @import url("./sections/home.css");
 @import url("./sections/about.css");
 @import url("./sections/projects.css");
@@ -6,9 +7,10 @@
 @import url("navigation.css");
 @import url("buttons.css");
 
-/* Dark Theme Colors */
+/* Dark and Light Theme Colors */
 :root {
-  color-scheme: light dark; /* both supported */
+  color-scheme: light dark;
+
   --border-color: #181818;
   --bg-color: #0f0f0f;
   --bg-color-panel: #141414;
@@ -23,7 +25,6 @@
   --react-tag-color: #282c34;
 }
 
-/* Light Theme Colors */
 [data-theme="light"] {
   --border-color: #dbdbdb;
   --bg-color: #eeeeee;
@@ -34,6 +35,7 @@
   --hover-font-color: #ebebeb;
 }
 
+/* Global Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -52,6 +54,7 @@ body {
   transition: 0.2s ease-in-out;
 }
 
+/* Typography */
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -64,16 +67,19 @@ p {
   font-family: "OpenSans", sans-serif;
 }
 
+/* Icon Styling */
 ion-icon {
   color: var(--font-color);
 }
 
+/* Link Styling */
 .embeddedLink {
   color: var(--font-color);
   text-decoration-color: var(--font-color);
   text-decoration-thickness: 0.2rem;
 }
 
+/* Responsive Styles */
 @media (max-width: 1000px) {
   body {
     padding-inline-start: 0;
