@@ -3,6 +3,7 @@ window.onload = function () {
   const sunnyIcons = document.getElementsByName("sunny");
   const moonIcons = document.getElementsByName("moon");
   const themeSwitches = document.getElementsByClassName("switch");
+  const body = document.body;
 
   // Use a constant for the theme name to avoid magic strings
   const THEME_DARK = "dark";
@@ -17,12 +18,19 @@ window.onload = function () {
         moonIcons[i].style.display = "inline-block";
       }
       theme = THEME_LIGHT;
+      let currentUrl = getComputedStyle(body).backgroundImage;
+      let newUrl = currentUrl.replace("fill='%23fff'", "fill='%23000'");
+      body.style.backgroundImage = newUrl;
+      console.log(currentUrl);
     } else {
       for (let i = 0; i < sunnyIcons.length; i++) {
         sunnyIcons[i].style.display = "inline-block";
         moonIcons[i].style.display = "none";
       }
       theme = THEME_DARK;
+      let currentUrl = getComputedStyle(body).backgroundImage;
+      let newUrl = currentUrl.replace("fill='%23000'", "fill='%23fff'");
+      body.style.backgroundImage = newUrl;
     }
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.theme = theme;
