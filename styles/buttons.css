@@ -5,7 +5,7 @@
   align-items: center;
   cursor: pointer;
   color: var(--font-color);
-  border-radius: 0.3rem;
+  border-radius: 0.4rem;
   text-decoration: none;
   background: transparent;
   border: 1px solid var(--font-color);
@@ -14,7 +14,7 @@
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-  transition: color 0.3s, background-color 0.3s; /* Added transition for smoother hover effect */
+  transition: color 0.2s, background-color 0.2s; /* Added transition for smoother hover effect */
 }
 
 .button:hover {
@@ -69,3 +69,4 @@
     margin-right: 0;
   }
 }
+

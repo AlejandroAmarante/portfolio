@@ -2,33 +2,34 @@
 @font-face {
   font-family: "Plaster";
   font-display: swap;
+  font-weight: 400;
   src: url("../fonts/Plaster-Regular.ttf");
 }
 
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  font-weight: normal;
+  font-weight: 400;
   src: url("../fonts/Montserrat-Regular.ttf");
 }
 
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  font-weight: bold;
+  font-weight: 700;
   src: url("../fonts/Montserrat-Bold.ttf");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-display: swap;
-  font-weight: normal;
+  font-weight: 400;
   src: url("../fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-display: swap;
-  font-weight: bold;
+  font-weight: 700;
   src: url("../fonts/OpenSans-Bold.ttf");
 }

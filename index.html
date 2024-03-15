@@ -2,7 +2,8 @@
 <html lang="en" id="top">
 
 <head>
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.jsdelivr.net/npm/ionicons@6.0.0/">
+  <meta http-equiv="Content-Security-Policy"
+    content="script-src 'self' https://unpkg.com/ionicons@7.1.0/dist/ionicons/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Alejandro Montalvo" />
@@ -16,8 +17,8 @@
   <link rel="preload" as="style" href="./styles/main.css" media="screen">
   <link rel="stylesheet" href="./styles/main.css" media="screen" />
   <!-- Icons -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6.0.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -28,8 +29,8 @@
     <a class="nav__link" href="#projects">Projects</a>
     <a class="nav__link" href="#contact">Contact</a>
     <div class="switch">
-      <ion-icon name="sunny"></ion-icon>
-      <ion-icon name="moon"></ion-icon>
+      <ion-icon name="sunny" aria-hidden="true"></ion-icon>
+      <ion-icon name="moon" aria-hidden="true"></ion-icon>
     </div>
   </nav>
   <header>
@@ -38,10 +39,10 @@
       <div id="mobileNav__menu">
         <a id="mobileNav__logo" class="mobileNav__close" href="#top">a</a>
         <div class="switch">
-          <ion-icon name="sunny"></ion-icon>
-          <ion-icon name="moon"></ion-icon>
+          <ion-icon name="sunny" aria-hidden="true"></ion-icon>
+          <ion-icon name="moon" aria-hidden="true"></ion-icon>
         </div>
-        <ion-icon id="mobileNav__icon" name="menu-sharp"></ion-icon>
+        <ion-icon id="mobileNav__icon" name="menu"></ion-icon>
       </div>
       <div id="mobileNav__links">
         <a class="mobileNav__button mobileNav__close" href="#about">About Me</a>
@@ -60,17 +61,17 @@
       </div>
       <div id="home__buttons">
         <a href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener" class="button">
-          <ion-icon class="button__icon" name="logo-github"></ion-icon>GitHub
+          <ion-icon class="button__icon" name="logo-github" aria-hidden="true"></ion-icon>GitHub
         </a>
         <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" rel="noopener"
           class="button">
-          <ion-icon class="button__icon" name="logo-linkedin"></ion-icon>LinkedIn
+          <ion-icon class="button__icon" name="logo-linkedin" aria-hidden="true"></ion-icon>LinkedIn
         </a>
         <a href="mailto:alejandrormont@gmail.com" class="button">
-          <ion-icon class="button__icon" name="mail-sharp"></ion-icon>Email
+          <ion-icon class="button__icon" name="mail" aria-hidden="true"></ion-icon>Email
         </a>
         <a href="./PDFs/AlejandroMontalvoResume.pdf" target="_blank" class="button">
-          <ion-icon class="button__icon" name="document-text-sharp"></ion-icon>Resume
+          <ion-icon class="button__icon" name="document-text" aria-hidden="true"></ion-icon>Resume
         </a>
       </div>
     </div>
@@ -97,10 +98,11 @@
         clients achieve their goals.
       </p>
       <div class="about__button">
-        <a class="button button--size-large" href="./PDFs/AlejandroMontalvo.pdf" target="_blank" rel="noopener">Check
+        <a class="button button--size-large" href="./PDFs/AlejandroMontalvoResume.pdf" target="_blank"
+          rel="noopener">Check
           out my
           resume!
-          <ion-icon class="button__icon button__icon--size-large" name="open-sharp"></ion-icon>
+          <ion-icon class="button__icon button__icon--size-large" name="open" aria-hidden="true"></ion-icon>
         </a>
       </div>
     </div>
@@ -118,7 +120,7 @@
             <h2 class="project__title">Nile Marketplace</h2>
             <div class="project__external">
               <a href="https://github.com/AlejandroMontalvo/nile-marketplace" target="_blank" rel="noopener">
-                <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
+                <ion-icon class="project__external__icon" name="logo-github" aria-hidden="true"></ion-icon>
               </a>
             </div>
           </div>
@@ -128,10 +130,10 @@
           </p>
           <div class="tags">
             <div class="tag tag--react">
-              <ion-icon class="tag__icon tag__icon--react" name="logo-react"></ion-icon>React Native
+              <ion-icon class="tag__icon tag__icon--react" name="logo-react" aria-hidden="true"></ion-icon>React Native
             </div>
             <div class="tag tag--nodejs">
-              <ion-icon class="tag__icon tag__icon--nodejs" name="logo-nodejs"></ion-icon>Node.js
+              <ion-icon class="tag__icon tag__icon--nodejs" name="logo-nodejs" aria-hidden="true"></ion-icon>Node.js
             </div>
           </div>
         </div>
@@ -146,7 +148,7 @@
             <h2 class="project__title">weathr</h2>
             <div class="project__external">
               <a href="https://github.com/AlejandroMontalvo/weathr" target="_blank" rel="noopener">
-                <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
+                <ion-icon class="project__external__icon" name="logo-github" aria-hidden="true"></ion-icon>
               </a>
             </div>
           </div>
@@ -157,51 +159,50 @@
           </p>
           <div class="tags">
             <div class="tag tag--html">
-              <ion-icon class="tag__icon tag__icon--html" name="logo-html5"></ion-icon>HTML
+              <ion-icon class="tag__icon tag__icon--html" name="logo-html5" aria-hidden="true"></ion-icon>HTML
             </div>
             <div class="tag tag--css">
-              <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
+              <ion-icon class="tag__icon tag__icon--css" name="logo-css3" aria-hidden="true"></ion-icon>CSS
             </div>
             <div class="tag tag--javascript">
-              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
+              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"
+                aria-hidden="true"></ion-icon>JavaScript
             </div>
           </div>
         </div>
       </div>
       <div class="project">
-        <a class="project__image" href="https://alejandromontalvo.github.io/PassGen/" target="_blank" rel="noopener">
-          <picture><img src="./imgs/Project3.webp" alt="Project 1" />
+        <a class="project__image" href="https://alejandromontalvo.github.io/locksmith/" target="_blank" rel="noopener">
+          <picture><img src="./imgs/Project3.png" alt="Project 1" />
           </picture>
         </a>
         <div class="project__information">
           <div class="project__header">
-            <h2 class="project__title">PassGen</h2>
-            <a href="https://github.com/AlejandroMontalvo/PassGen" target="_blank" rel="noopener">
-              <ion-icon class="project__external__icon" name="logo-github"></ion-icon>
+            <h2 class="project__title">LOCKSMITH</h2>
+            <a href="https://github.com/AlejandroMontalvo/locksmith" target="_blank" rel="noopener">
+              <ion-icon class="project__external__icon" name="logo-github" aria-hidden="true"></ion-icon>
             </a>
           </div>
-
           <p class="project__description">
             An easy-to-use, yet powerful, secure password generator. Features a highly customizable password
             generation
             experience, all handled clientside for extra security.
           </p>
-
           <div class="tags">
             <div class="tag tag--html">
-              <ion-icon class="tag__icon tag__icon--html" name="logo-html5"></ion-icon>HTML
+              <ion-icon class="tag__icon tag__icon--html" name="logo-html5" aria-hidden="true"></ion-icon>HTML
             </div>
             <div class="tag tag--css">
-              <ion-icon class="tag__icon tag__icon--css" name="logo-css3"></ion-icon>CSS
+              <ion-icon class="tag__icon tag__icon--css" name="logo-css3" aria-hidden="true"></ion-icon>CSS
             </div>
             <div class="tag tag--javascript">
-              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"></ion-icon>JavaScript
+              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"
+                aria-hidden="true"></ion-icon>JavaScript
             </div>
           </div>
         </div>
       </div>
     </div>
-
     </div>
   </section>
   <!-- Contact Section -->
@@ -218,13 +219,13 @@
         </p>
       </div>
       <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" rel="noopener" class="button">
-        <ion-icon class="button__icon" name="logo-linkedin"></ion-icon>LinkedIn
+        <ion-icon class="button__icon" name="logo-linkedin" aria-hidden="true"></ion-icon>LinkedIn
       </a>
       <a href="mailto:alejandrormont@gmail.com" class="button">
-        <ion-icon class="button__icon" name="mail-sharp"></ion-icon>Email
+        <ion-icon class="button__icon" name="mail" aria-hidden="true"></ion-icon>Email
       </a>
       <a href="./PDFs/AlejandroMontalvoResume.pdf" target="_blank" rel="noopener" class="button">
-        <ion-icon class="button__icon" name="document-text-sharp"></ion-icon>Resume
+        <ion-icon class="button__icon" name="document-text" aria-hidden="true"></ion-icon>Resume
       </a>
     </div>
   </section>
