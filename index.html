@@ -2,8 +2,7 @@
 <html lang="en" id="top">
 
 <head>
-  <meta http-equiv="Content-Security-Policy"
-    content="script-src 'self' https://unpkg.com/ionicons@7.1.0/dist/ionicons/">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://unpkg.com/aos@2.3.1/">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Alejandro Montalvo" />
@@ -14,190 +13,195 @@
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/svg" href="./imgs/favicon.svg" />
   <!-- Import Stylesheet -->
-  <link rel="preload" as="style" href="./styles/main.css" media="screen">
-  <link rel="stylesheet" href="./styles/main.css" media="screen" />
+  <link rel="preload" as="style" href="./styles/index.css" media="screen">
+  <link rel="stylesheet" href="./styles/index.css" media="screen" />
   <!-- Icons -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- Desktop Navigation -->
-  <nav id="nav">
-    <a id="nav__logo" href="#top">a</a>
+  <nav class="nav">
+    <a class="nav__logo" href="#top">a</a>
     <a class="nav__link" href="#about">About Me</a>
     <a class="nav__link" href="#projects">Projects</a>
     <a class="nav__link" href="#contact">Contact</a>
-    <div class="switch">
-      <ion-icon name="sunny" aria-hidden="true"></ion-icon>
-      <ion-icon name="moon" aria-hidden="true"></ion-icon>
+    <div class="theme-switch">
+      <i class="ri-sun-fill theme-switch__icon" name="sunny" aria-hidden="true"></i>
+      <i class="ri-moon-fill theme-switch__icon" name="moon" aria-hidden="true"></i>
     </div>
   </nav>
   <header>
     <!-- Mobile Navigation -->
-    <nav id="mobileNav">
-      <div id="mobileNav__menu">
-        <a id="mobileNav__logo" class="mobileNav__close" href="#top">a</a>
-        <div class="switch">
-          <ion-icon name="sunny" aria-hidden="true"></ion-icon>
-          <ion-icon name="moon" aria-hidden="true"></ion-icon>
+    <nav class="mobile-nav">
+      <div class="mobile-nav__menu">
+        <a class="mobile-nav__logo mobile-nav__close" href="#top">a</a>
+        <div class="theme-switch">
+          <i class="ri-sun-fill theme-switch__icon" name="sunny" aria-hidden="true"></i>
+          <i class="ri-moon-fill theme-switch__icon" name="moon" aria-hidden="true"></i>
         </div>
-        <ion-icon id="mobileNav__icon" name="menu"></ion-icon>
+        <i class="mobile-nav__icon ri-menu-line"></i>
       </div>
-      <div id="mobileNav__links">
-        <a class="mobileNav__button mobileNav__close" href="#about">About Me</a>
-        <a class="mobileNav__button mobileNav__close" href="#projects">Projects</a>
-        <a class="mobileNav__button mobileNav__close" href="#contact">Contact</a>
+      <div class="mobile-nav__links">
+        <a class="mobile-nav__button mobile-nav__close" href="#about">About Me</a>
+        <a class="mobile-nav__button mobile-nav__close" href="#projects">Projects</a>
+        <a class="mobile-nav__button mobile-nav__close" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
   <!-- Home Section -->
   <section id="home">
-    <div id="home__content">
-      <div id="typewriter__text">
-        <div id="staticText">I'm Alejandro and I </div>
-        <div id="dynamicText"></div>
-        <div id="cursor"></div>
+    <div class="home__content">
+      <div class="typewriter">
+        <div class="typewriter__static-text">I'm Alejandro and I </div>
+        <div class="typewriter__dynamic-text"></div>
+        <div class="typewriter__cursor"></div>
       </div>
-      <div id="home__buttons">
+      <div class="home__buttons">
         <a href="https://github.com/AlejandroMontalvo" target="_blank" rel="noopener" class="button">
-          <ion-icon class="button__icon" name="logo-github" aria-hidden="true"></ion-icon>GitHub
+          <i class="ri-github-fill button__icon"></i>GitHub
         </a>
         <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" rel="noopener"
           class="button">
-          <ion-icon class="button__icon" name="logo-linkedin" aria-hidden="true"></ion-icon>LinkedIn
+          <i class="ri-linkedin-box-fill button__icon"></i>LinkedIn
         </a>
-        <a href="mailto:alejandrormont@gmail.com" class="button">
-          <ion-icon class="button__icon" name="mail" aria-hidden="true"></ion-icon>Email
+        <a class="button button--email">
+          <i class="ri-mail-fill button__icon"></i>Email
         </a>
         <a href="./PDFs/AlejandroMontalvoResume.pdf" target="_blank" class="button">
-          <ion-icon class="button__icon" name="document-text" aria-hidden="true"></ion-icon>Resume
+          <i class="ri-profile-fill button__icon"></i>Resume
         </a>
       </div>
     </div>
-    <div id="scroll__indicator">
-      <ion-icon name="chevron-down-sharp"></ion-icon>
+    <div class="scroll-indicator">
+      <i class="ri-arrow-down-wide-line"></i>
     </div>
   </section>
   <!-- About Section -->
   <section id="about">
-    <div id="about__grid">
-      <h1 class="about__title">About Me</h1>
-      <picture class="about__image">
-        <img src="./imgs/aboutme.webp" width="144" height="125" alt="Me" />
-      </picture>
-      <p class="about__description">
-        As a <a href="https://www.ucf.edu/" target="_blank" rel="noopener" class="embeddedLink"><strong> University of
-            Central
-            Florida</strong></a> student majoring in <a href="https://www.ucf.edu/degree/digital-media-ba/"
-          target="_blank" rel="noopener" class="embeddedLink"><strong>Digital Media</strong></a>, I have a strong
-        passion
-        for designing and
-        developing modern, responsive websites and applications. My ultimate aim is to use my passion and expertise to
-        craft impactful and memorable digital experiences that help
-        clients achieve their goals.
-      </p>
-      <div class="about__button">
-        <a class="button button--size-large" href="./PDFs/AlejandroMontalvoResume.pdf" target="_blank"
-          rel="noopener">Check
-          out my
-          resume!
-          <ion-icon class="button__icon button__icon--size-large" name="open" aria-hidden="true"></ion-icon>
-        </a>
+    <div class="about__flex" data-aos="fade-right">
+      <div class="about__left">
+        <h1 class="about__title">About Me</h1>
+        <p class="about__description">
+          As a graduate of the <a href="https://www.ucf.edu/" target="_blank" rel="noopener"
+            class="link link--embedded"><strong>
+              University of
+              Central
+              Florida</strong></a> with a degree in <a href="https://www.ucf.edu/degree/digital-media-ba/"
+            target="_blank" rel="noopener" class="link link--embedded"><strong>Digital Media</strong></a>, I have a
+          strong
+          passion
+          for designing and
+          developing modern, responsive websites and applications. My ultimate aim is to use my passion and expertise to
+          craft impactful and memorable digital experiences that help
+          clients achieve their goals. </p>
+        <div class="about__button">
+          <a class="button button--large" href="./PDFs/AlejandroMontalvoResume.pdf" target="_blank" rel="noopener">Check
+            out my resume
+            <i class="ri-external-link-line button__icon"></i>
+          </a>
+        </div>
+      </div>
+      <div class="about__right">
+        <picture class="about__image">
+          <img src="./imgs/aboutme.webp" width="144" height="125" alt="Alejandro Profile Pic" />
+        </picture>
       </div>
     </div>
   </section>
   <!-- Projects Section -->
   <section id="projects">
-    <h1>Projects</h1>
-    <div id="projects__list">
-      <div class="project">
-        <div class="project__image">
+    <h1 class="projects__title">Projects</h1>
+    <div class="projects__list">
+      <div class="project-card" data-aos="fade-down" data-aos-delay="0">
+        <div class="project-card__image">
           <picture><img src="./imgs/Project1.png" alt="Project 1" /></picture>
         </div>
-        <div class="project__information">
-          <div class="project__header">
-            <h2 class="project__title">Nile Marketplace</h2>
-            <div class="project__external">
+        <div class="project-card__information">
+          <div class="project-card__header">
+            <h2 class="project-card__title">Nile Marketplace</h2>
+            <div class="project-card__external">
               <a href="https://github.com/AlejandroMontalvo/nile-marketplace" target="_blank" rel="noopener">
-                <ion-icon class="project__external__icon" name="logo-github" aria-hidden="true"></ion-icon>
+                <ion-icon class="project-card__external-icon" name="logo-github" aria-hidden="true"></ion-icon>
               </a>
             </div>
           </div>
-          <p class="project__description">
+          <p class="project-card__description">
             A marketplace implementation which allows users to browse, favorite, and create
             listings.
           </p>
           <div class="tags">
             <div class="tag tag--react">
-              <ion-icon class="tag__icon tag__icon--react" name="logo-react" aria-hidden="true"></ion-icon>React Native
+              <i class="ri-reactjs-fill tag__icon--react" aria-hidden="true"></i>React Native
             </div>
             <div class="tag tag--nodejs">
-              <ion-icon class="tag__icon tag__icon--nodejs" name="logo-nodejs" aria-hidden="true"></ion-icon>Node.js
+              <i class="ri-nodejs-fill tag__icon--nodejs" aria-hidden="true"></i>Node.js
             </div>
           </div>
         </div>
       </div>
-      <div class="project">
-        <a class="project__image" href="https://alejandromontalvo.github.io/Weathr/" target="_blank" rel="noopener">
+      <div class="project-card" data-aos="fade-down" data-aos-delay="200">
+        <a class="project-card__image" href="https://alejandromontalvo.github.io/Weathr/" target="_blank"
+          rel="noopener">
           <picture><img src="./imgs/Project2.webp" alt="Project 1" />
           </picture>
         </a>
-        <div class="project__information">
-          <div class="project__header">
-            <h2 class="project__title">weathr</h2>
-            <div class="project__external">
+        <div class="project-card__information">
+          <div class="project-card__header">
+            <h2 class="project-card__title">weathr</h2>
+            <div class="project-card__external">
               <a href="https://github.com/AlejandroMontalvo/weathr" target="_blank" rel="noopener">
-                <ion-icon class="project__external__icon" name="logo-github" aria-hidden="true"></ion-icon>
+                <ion-icon class="project-card__external-icon" name="logo-github" aria-hidden="true"></ion-icon>
               </a>
             </div>
           </div>
-          <p class="project__description">
-            A simple weather site that displays todays weather. Fetches data provided by the <a class="embeddedLink"
-              href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeather Weather API</a>. An
+          <p class="project-card__description">
+            A simple weather site that displays todays weather. Fetches data provided by the <a
+              class="link link--embedded" href="https://openweathermap.org/api" target="_blank"
+              rel="noopener">OpenWeather Weather API</a>. An
             OpenWeather API key is required for use.
           </p>
           <div class="tags">
             <div class="tag tag--html">
-              <ion-icon class="tag__icon tag__icon--html" name="logo-html5" aria-hidden="true"></ion-icon>HTML
+              <i class="ri-html5-fill tag__icon--html" aria-hidden="true"></i>HTML
             </div>
             <div class="tag tag--css">
-              <ion-icon class="tag__icon tag__icon--css" name="logo-css3" aria-hidden="true"></ion-icon>CSS
+              <i class="ri-css3-fill tag__icon--css" aria-hidden="true"></i>CSS
             </div>
             <div class="tag tag--javascript">
-              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"
-                aria-hidden="true"></ion-icon>JavaScript
+              <i class="ri-javascript-line tag__icon--javascript" aria-hidden="true"></i>JavaScript
             </div>
           </div>
         </div>
       </div>
-      <div class="project">
-        <a class="project__image" href="https://alejandromontalvo.github.io/locksmith/" target="_blank" rel="noopener">
+      <div class="project-card" data-aos="fade-down" data-aos-delay="400">
+        <a class="project-card__image" href="https://alejandromontalvo.github.io/locksmith/" target="_blank"
+          rel="noopener">
           <picture><img src="./imgs/Project3.png" alt="Project 1" />
           </picture>
         </a>
-        <div class="project__information">
-          <div class="project__header">
-            <h2 class="project__title">LOCKSMITH</h2>
+        <div class="project-card__information">
+          <div class="project-card__header">
+            <h2 class="project-card__title">LOCKSMITH</h2>
             <a href="https://github.com/AlejandroMontalvo/locksmith" target="_blank" rel="noopener">
-              <ion-icon class="project__external__icon" name="logo-github" aria-hidden="true"></ion-icon>
+              <ion-icon class="project-card__external-icon" name="logo-github" aria-hidden="true"></ion-icon>
             </a>
           </div>
-          <p class="project__description">
+          <p class="project-card__description">
             An easy-to-use, yet powerful, secure password generator. Features a highly customizable password
             generation
             experience, all handled clientside for extra security.
           </p>
           <div class="tags">
             <div class="tag tag--html">
-              <ion-icon class="tag__icon tag__icon--html" name="logo-html5" aria-hidden="true"></ion-icon>HTML
+              <i class="ri-html5-fill tag__icon--html" aria-hidden="true"></i>HTML
             </div>
             <div class="tag tag--css">
-              <ion-icon class="tag__icon tag__icon--css" name="logo-css3" aria-hidden="true"></ion-icon>CSS
+              <i class="ri-css3-fill tag__icon--css" aria-hidden="true"></i>CSS
             </div>
             <div class="tag tag--javascript">
-              <ion-icon class="tag__icon tag__icon--javascript" name="logo-javascript"
-                aria-hidden="true"></ion-icon>JavaScript
+              <i class="ri-javascript-line tag__icon--javascript" aria-hidden="true"></i>JavaScript
             </div>
           </div>
         </div>
@@ -207,30 +211,47 @@
   </section>
   <!-- Contact Section -->
   <section id="contact">
-    <div id="contact__info">
-      <h1 id="contact__title">
-        Lets get in touch
+    <div class="contact__info" data-aos="fade-right">
+      <h1 class="contact__title">
+        Let's Connect
       </h1>
-      <div id="contact__subtext">
+      <div class="contact__subtext">
         <p>
           I'm always open to new opportunities.</p>
         <p>
           Contact me if you're ready to make great things together!</p>
         </p>
       </div>
-      <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" rel="noopener" class="button">
-        <ion-icon class="button__icon" name="logo-linkedin" aria-hidden="true"></ion-icon>LinkedIn
-      </a>
-      <a href="mailto:alejandrormont@gmail.com" class="button">
-        <ion-icon class="button__icon" name="mail" aria-hidden="true"></ion-icon>Email
-      </a>
-      <a href="./PDFs/AlejandroMontalvoResume.pdf" target="_blank" rel="noopener" class="button">
-        <ion-icon class="button__icon" name="document-text" aria-hidden="true"></ion-icon>Resume
-      </a>
+      <div>
+        <a href="https://www.linkedin.com/in/alejandro-montalvo-342649186/" target="_blank" rel="noopener"
+          class="button">
+          <i class="ri-linkedin-box-fill button__icon"></i>LinkedIn
+        </a>
+        <a class="button button--email">
+          <i class="ri-mail-fill button__icon"></i>Email
+        </a>
+        <a href="./PDFs/AlejandroMontalvoResume.pdf" target="_blank" rel="noopener" class="button">
+          <i class="ri-profile-fill button__icon"></i>Resume
+        </a>
+      </div>
+    </div>
     </div>
   </section>
   <!-- Scripts -->
-  <script src="./scripts/main.js" type="text/javascript"></script>
+  <script type="module" src="./scripts/index.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Only initialize AOS after the script has loaded
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 600,
+          easing: 'ease-in-out',
+          once: false
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

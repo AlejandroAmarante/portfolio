@@ -5,7 +5,7 @@
   align-items: center;
   cursor: pointer;
   color: var(--font-color);
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   text-decoration: none;
   background: transparent;
   border: 1px solid var(--font-color);
@@ -23,7 +23,7 @@
 }
 
 .button__icon {
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
 }
 
 .button:hover .button__icon {
@@ -37,12 +37,12 @@
 }
 
 /* Define a large button size and icon size */
-.button--size-large {
+.button--large {
   padding: 1vw;
   font-size: 1.5vw;
 }
 
-.button--size-large .button__icon {
+.button--large .button__icon {
   margin-left: 0.5rem;
 }
 
@@ -69,4 +69,3 @@
     margin-right: 0;
   }
 }
-

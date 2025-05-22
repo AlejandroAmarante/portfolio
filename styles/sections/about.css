@@ -5,43 +5,91 @@
   align-items: center;
 }
 
-#about__grid {
-  display: grid;
+.about__flex {
   width: 85%;
-  grid-template-columns: 45% 55%;
-  grid-template-rows: 0fr 1fr;
-  grid-template-areas:
-    "about__title about__image"
-    "about__description about__image"
-    "about__button about__image";
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--bg-color-panel);
   padding: 1.5rem;
   box-sizing: border-box;
   border-radius: 0.6rem;
   border: solid 1px var(--border-color);
+  transition: all 0.2s ease-in-out;
 }
 
-.about__title {
-  grid-area: about__title;
+.about__left {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
 }
 
-.about__image {
-  grid-area: about__image;
+.about__right {
+  flex: 0 0 55%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.about__title {
+  width: 100%;
+}
+
+.about__image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Update your image styling */
 .about__image img {
   display: block;
   width: 50%;
   height: auto;
-  border-radius: 100%;
   box-sizing: border-box;
+
+  /* Add these properties for the liquid effect */
+  animation: liquid-border 10s linear infinite;
+}
+
+/* Add this animation */
+@keyframes liquid-border {
+  0% {
+    border-radius: 55% 45% 55% 45% / 55% 45% 55% 45%;
+  }
+  10% {
+    border-radius: 60% 40% 52% 48% / 51% 49% 58% 42%;
+  }
+  20% {
+    border-radius: 62% 38% 47% 53% / 46% 54% 59% 41%;
+  }
+  30% {
+    border-radius: 58% 42% 42% 58% / 43% 57% 56% 44%;
+  }
+  40% {
+    border-radius: 52% 48% 39% 61% / 40% 60% 50% 50%;
+  }
+  50% {
+    border-radius: 45% 55% 42% 58% / 41% 59% 45% 55%;
+  }
+  60% {
+    border-radius: 40% 60% 47% 53% / 46% 54% 41% 59%;
+  }
+  70% {
+    border-radius: 42% 58% 51% 49% / 51% 49% 43% 57%;
+  }
+  80% {
+    border-radius: 47% 53% 54% 46% / 54% 46% 48% 52%;
+  }
+  90% {
+    border-radius: 51% 49% 56% 44% / 57% 43% 52% 48%;
+  }
+  100% {
+    border-radius: 55% 45% 55% 45% / 55% 45% 55% 45%;
+  }
 }
 
 .about__description {
-  grid-area: about__description;
   color: var(--font-color);
   margin: 0rem 0rem 1rem 0rem;
   font-size: 1.45vw;
@@ -50,7 +98,7 @@
 }
 
 .about__button {
-  grid-area: about__button;
+  margin-top: auto;
 }
 
 @media (max-width: 1400px) {
@@ -61,42 +109,46 @@
 
 @media (max-width: 1000px) {
   #about {
-    height: 100vh;
     justify-content: center;
   }
 
-  #about__grid {
-    display: grid;
+  .about__flex {
     width: 90%;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 3vw;
-    grid-template-areas:
-      "about__title"
-      "about__image"
-      "about__description"
-      "about__button";
+    flex-direction: column;
     margin-top: 3.5rem;
+    justify-content: center;
     padding: 1.2rem;
+    gap: 3vw;
+  }
+
+  .about__left {
+    flex: 0 0 100%;
+    order: 1;
+  }
+
+  .about__right {
+    flex: 0 0 100%;
+    order: 0;
+    margin: 1vw 0;
   }
 
   .about__title {
     text-align: center;
-  }
-
-  .about__image {
-    margin: 1vw;
-  }
-  .about__image img {
-    width: 40vw;
+    order: 0;
   }
 
   .about__description {
     font-size: 4.9vw;
     margin-bottom: 0;
+    order: 1;
   }
 
   .about__button {
     width: 100%;
+    order: 2;
+  }
+
+  .about__image img {
+    width: 40vw;
   }
 }

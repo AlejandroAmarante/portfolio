@@ -5,20 +5,22 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  position: relative; /* Added for positioning context */
 }
 
-#home__content {
+.home__content {
   width: 100%;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 }
 
-#typewriter__text {
+.typewriter {
   height: fit-content;
 }
 
-#staticText,
-#dynamicText {
+.typewriter__static-text,
+.typewriter__dynamic-text {
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   display: inline-block;
   font-size: 4.5vw;
@@ -26,15 +28,15 @@
   letter-spacing: 0.1vw;
 }
 
-#staticText {
+.typewriter__static-text {
   margin-bottom: 1vw;
 }
 
-#dynamicText {
+.typewriter__dynamic-text {
   margin-left: 1vw;
 }
 
-#cursor {
+.typewriter__cursor {
   display: inline-block;
   width: 3vw;
   height: 5vw;
@@ -42,7 +44,8 @@
 }
 
 @keyframes blink {
-  from, to {
+  from,
+  to {
     opacity: 1;
   }
   50% {
@@ -50,28 +53,31 @@
   }
 }
 
-#scroll__indicator {
+.scroll-indicator {
+  position: absolute; /* Changed from display: none */
+  bottom: 2rem; /* Position at bottom with some spacing */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Complete the centering */
+  width: auto; /* Changed from 100% */
+  font-size: 3rem; /* Reduced from 6rem for better proportion */
+  color: var(--font-color);
+  text-align: center;
+  z-index: 10; /* Ensure it's above other content */
   display: none;
-  width: 100%;
-  margin-top: 10rem;
 }
 
-#scroll__indicator ion-icon {
-  animation: updown 2s ease infinite;
-  font-size: 6rem;
+.scroll-indicator i {
+  display: inline-block; /* Needed for transform to work */
+  animation: updown 2s ease-in-out infinite;
 }
 
 @keyframes updown {
-  0% {
-    transform: translateY(-50%);
-  }
-
-  50% {
+  0%,
+  100% {
     transform: translateY(0);
   }
-
-  100% {
-    transform: translateY(-50%);
+  50% {
+    transform: translateY(-15px); /* More noticeable movement */
   }
 }
 
@@ -83,50 +89,67 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Ensure positioning context on mobile too */
   }
 
-  #home__content {
+  .home__content {
     width: 100%;
     font-family: "Montserrat", sans-serif;
     margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  #typewriter__text {
+  .typewriter {
     height: 20rem;
   }
 
-  #staticText,
-  #dynamicText {
-    font-size: 16vw;
+  .typewriter__static-text,
+  .typewriter__dynamic-text {
+    font-size: 4rem;
     letter-spacing: 0.1vw;
     color: var(--font-color);
     font-weight: bold;
   }
 
-  #staticText {
+  .typewriter__static-text {
     margin-bottom: 0;
   }
 
-  #dynamicText {
+  .typewriter__dynamic-text {
     margin-left: 1vw;
     margin-bottom: 1.2vw;
     height: 3rem;
   }
 
-  #cursor {
+  .typewriter__cursor {
     display: inline-block;
     width: 7vw;
     height: 13vw;
     background-color: var(--font-color);
   }
 
-  #home__buttons {
-    width: 50%;
-    display: none;
+  .home__buttons {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  #scroll__indicator {
-    display: block;
-    margin-top: auto;
+  .scroll-indicator {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    font-size: 6rem; /* Slightly smaller on mobile */
+    z-index: 0;
+  }
+
+  .scroll-indicator i {
+    display: inline-block;
   }
 }

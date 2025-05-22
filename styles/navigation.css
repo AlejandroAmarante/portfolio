@@ -1,6 +1,5 @@
-#nav {
+.nav {
   height: 100%;
-  width: 13rem;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -11,7 +10,7 @@
   transition: 0.2s ease-in-out;
 }
 
-#nav__logo {
+.nav__logo {
   color: var(--font-color);
   font-family: "Plaster", sans-serif;
   font-size: 6rem;
@@ -20,10 +19,11 @@
   width: fit-content;
   display: block;
   text-align: center;
+  transition: 0.2s ease-in-out;
 }
 
 /* Rainbow Animation on :hover ------------------*/
-#nav__logo:hover {
+.nav__logo:hover {
   background: linear-gradient(
     to right,
     red,
@@ -32,14 +32,14 @@
     green,
     blue,
     indigo,
-    violet,
-    red
+    violet
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: rainbow_animation 20s linear infinite;
-  background-size: 10000% 100%;
+  animation: rainbow_animation 20s ease-in-out infinite alternate;
+  background-size: 700% 100%;
+  transition: 0.2s ease-in-out;
 }
 
 @keyframes rainbow_animation {
@@ -52,11 +52,15 @@
 }
 /*-----------------------------------------------*/
 
+.nav > *:not(:first-child) {
+  padding: 0.8rem 1.5rem;
+}
+
 /* The navigation menu links */
+
 .nav__link {
   display: block;
   font-family: "Montserrat", sans-serif;
-  padding: 0.8rem 1rem 0.8rem 1rem;
   text-decoration: none;
   font-size: 2rem;
   color: var(--font-color);
@@ -64,13 +68,13 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.nav__link:hover {
-  text-decoration: underline;
+.nav__link:hover:not(.nav__link--active) {
+  text-decoration: underline var(--font-color) 2px;
 }
 
 .nav__link--active {
-  color: var(--hover-font-color);
   background-color: var(--hover-color);
+  color: var(--hover-font-color);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -83,7 +87,7 @@
   }
 }
 
-#mobileNav {
+.mobile-nav {
   display: none;
   width: 100%;
   position: fixed;
@@ -99,7 +103,7 @@
   z-index: 10;
 }
 
-#mobileNav__menu {
+.mobile-nav__menu {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -107,19 +111,19 @@
   align-items: center;
 }
 
-#mobileNav__icon {
+.mobile-nav__icon {
   color: var(--font-color);
   font-size: 4rem;
   float: right;
   cursor: pointer;
 }
 
-#mobileNav__links {
+.mobile-nav__links {
   padding-top: 0rem;
   height: 0px;
 }
 
-.mobileNav__button {
+.mobile-nav__button {
   display: block;
   text-align: center;
   font-family: "Montserrat", "sans-serif";
@@ -131,40 +135,34 @@
   padding: none;
 }
 
-.mobileNav__button:hover {
+.mobile-nav__button:hover {
   background-color: var(--hover-color);
   color: var(--hover-font-color);
 }
 
-.switch {
+.theme-switch {
   cursor: pointer;
   width: fit-content;
   height: fit-content;
 }
 
-ion-icon[name="sunny"] {
-  width: 2rem;
-  height: 2rem;
-  padding: 0.8rem 1rem 0.8rem 1rem;
-}
-
-ion-icon[name="moon"] {
-  display: none;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.8rem 1rem 0.8rem 1rem;
+.theme-switch i {
+  color: var(--font-color);
+  transition: 0.2s ease-in-out;
+  font-size: 2rem;
+  text-align: center;
 }
 
 @media (max-width: 1000px) {
-  #nav {
+  .nav {
     display: none;
   }
 
-  #mobileNav {
+  .mobile-nav {
     display: inline-flex;
   }
 
-  #mobileNav__logo {
+  .mobile-nav__logo {
     color: var(--font-color);
     font-family: "Plaster", sans-serif;
     font-size: 4.5rem;
@@ -174,18 +172,10 @@ ion-icon[name="moon"] {
     width: fit-content;
   }
 
-  ion-icon[name="sunny"] {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  ion-icon[name="moon"] {
-    display: none;
-    align-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
+  .theme-switch i {
+    color: var(--font-color);
+    transition: 0.2s ease-in-out;
+    font-size: 2.5rem;
+    text-align: center;
   }
 }
