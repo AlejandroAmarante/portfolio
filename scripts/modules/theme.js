@@ -1,7 +1,7 @@
 // Constants for theme management
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
-const SVG_PATH = "./imgs/background.svg"; // Adjusted path for GitHub Pages
+const SVG_PATH = "../../imgs/background.svg"; // Adjusted path for GitHub Pages
 
 /**
  * Initialize theme toggle functionality
