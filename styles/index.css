@@ -1,99 +1,163 @@
 /* Import Stylesheets */
+@import url("fonts.css");
+@import url("navigation.css");
+@import url("buttons.css");
 @import url("./sections/home.css");
 @import url("./sections/about.css");
 @import url("./sections/projects.css");
 @import url("./sections/contact.css");
-@import url("fonts.css");
-@import url("navigation.css");
-@import url("buttons.css");
 
-/* Dark and Light Theme Colors */
+/* CSS Custom Properties (Variables) */
 :root {
   color-scheme: light dark;
 
-  --border-color: #1f1f1f;
-  --bg-color: #0f0f0f;
-  --bg-color-panel: #141414;
-  --bg-color-card: #141414;
-  --font-color: #e0e0e0;
-  --hover-color: #e0e0e0;
-  --hover-font-color: #0f0f0f;
-  --tag-background-color: #313131;
-  --html-tag-color: #e34c26;
-  --css-tag-color: #1b73ba;
-  --js-tag-color: #f4da3b;
-  --nodejs-tag-color: #363028;
-  --react-tag-color: #282c34;
+  /* Layout */
+  --desktop-padding: 16rem;
+  --border-radius: 0.25rem;
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 1s ease;
+
+  /* Colors - Dark Theme (Default) */
+  --border-color: hsl(0, 0%, 12%);
+  --bg-color: hsl(0, 0%, 6%);
+  --bg-color-panel: hsl(0, 0%, 8%);
+  --bg-color-card: hsl(0, 0%, 8%);
+  --font-color: hsl(0, 0%, 88%);
+  --hover-color: hsl(0, 0%, 88%);
+  --hover-font-color: hsl(0, 0%, 6%);
+  --tag-background-color: hsl(0, 0%, 19%);
+
+  /* Technology Colors */
+  --html-tag-color: hsl(14, 77%, 52%);
+  --css-tag-color: hsl(207, 84%, 42%);
+  --js-tag-color: hsl(53, 89%, 60%);
+  --nodejs-tag-color: hsl(45, 12%, 19%);
+  --react-tag-color: hsl(210, 17%, 19%);
+
+  /* Typography */
+  --font-primary: "Montserrat", system-ui, sans-serif;
+  --font-secondary: "OpenSans", system-ui, sans-serif;
+  --font-size-h1: clamp(2rem, 2.8vw, 4rem);
+  --font-size-h1-mobile: clamp(2.5rem, 10vw, 6rem);
 }
 
+/* Light Theme Override */
 [data-theme="light"] {
-  --border-color: #dbdbdb;
-  --bg-color: #eeeeee;
-  --bg-color-panel: #f5f5f5;
-  --bg-color-card: #f5f5f5;
-  --font-color: #0f0f0f;
-  --hover-color: #0f0f0f;
-  --hover-font-color: #ebebeb;
-  --tag-background-color: #f0f0f0;
-  --html-tag-color: #ec5f3c;
-  --css-tag-color: #377abb;
-  --js-tag-color: #e6d861;
-  --nodejs-tag-color: #535046;
-  --react-tag-color: #323b52;
+  --border-color: hsl(0, 0%, 86%);
+  --bg-color: hsl(0, 0%, 93%);
+  --bg-color-panel: hsl(0, 0%, 96%);
+  --bg-color-card: hsl(0, 0%, 96%);
+  --font-color: hsl(0, 0%, 6%);
+  --hover-color: hsl(0, 0%, 6%);
+  --hover-font-color: hsl(0, 0%, 92%);
+  --tag-background-color: hsl(0, 0%, 94%);
+  --html-tag-color: hsl(14, 73%, 58%);
+  --css-tag-color: hsl(207, 60%, 54%);
+  --js-tag-color: hsl(53, 73%, 65%);
+  --nodejs-tag-color: hsl(45, 12%, 32%);
+  --react-tag-color: hsl(210, 25%, 32%);
 }
 
-/* Global Styles */
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--bg-color);
-  background-size: 1200px;
-  padding-inline-start: 16rem;
-  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  padding-inline-start: var(--desktop-padding);
   width: 100%;
-  height: 100%;
-  transition: background-color 0.2s ease-in-out;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  transition: background-color var(--transition-fast);
+  background-size: 90rem;
 }
 
 /* Typography */
 h1 {
   color: var(--font-color);
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 2.8vw;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--font-size-h1);
+  margin: 0;
+  line-height: 1.2;
 }
 
 p {
   color: var(--font-color);
-  font-family: "OpenSans", sans-serif;
+  font-family: var(--font-secondary);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
 }
 
 /* Link Styling */
 .link--embedded {
   color: var(--font-color);
   text-decoration-color: var(--font-color);
-  text-decoration-thickness: 0.2rem;
-  transition: 0.2s ease-in-out;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.25rem;
+  transition: var(--transition-fast);
 }
 
-/* Responsive Styles */
-@media (max-width: 1000px) {
+.link--embedded:hover,
+.link--embedded:focus {
+  text-decoration-thickness: 0.2rem;
+}
+
+/* Utility Classes */
+.copied-popup {
+  position: absolute;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgb(94, 94, 94);
+  border-radius: var(--border-radius);
+  font-size: 1.125rem;
+  font-family: var(--font-primary);
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1000;
+  transition: opacity var(--transition-medium),
+    transform var(--transition-medium);
+  transform: translateY(0);
+}
+
+.copied-popup--fade {
+  opacity: 0;
+  transform: translateY(-0.5rem);
+}
+
+/* Responsive Design */
+@media (max-width: 62.5rem) {
+  /* 1000px */
   body {
     padding-inline-start: 0;
   }
 
   h1 {
-    color: var(--font-color);
-    font-size: 10vw;
+    font-size: var(--font-size-h1-mobile);
     text-align: center;
   }
+}
 
-  p {
-    font-family: "OpenSans", sans-serif;
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

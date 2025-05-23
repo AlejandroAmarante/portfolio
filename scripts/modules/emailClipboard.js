@@ -24,39 +24,26 @@ export function initEmailClipboard() {
             isAnimating = true;
 
             // Create the "Copied!" notification
-            const notification = document.createElement("div");
-            notification.textContent = "Copied!";
-            notification.style.cssText = `
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.75);
-                color: white;
-                padding: 8px 12px;
-                border-radius: 4px;
-                font-size: 18px;
-                pointer-events: none;
-                opacity: 1;
-                transition: opacity 1s ease, transform 1s ease;
-                transform: translateY(0);
-                z-index: 1000;
-                font-family: "Montserrat", sans-serif;
-              `;
+            const copiedPopup = document.createElement("div");
+            copiedPopup.classList.add("copied-popup");
+            copiedPopup.textContent = "Copied!";
 
             // Position the notification above the click point
-            notification.style.left = event.pageX - 30 + "px";
-            notification.style.top = event.pageY - 40 + "px";
+            copiedPopup.style.left = event.pageX - 30 + "px";
+            copiedPopup.style.top = event.pageY - 40 + "px";
 
             // Add the notification to the document
-            document.body.appendChild(notification);
+            document.body.appendChild(copiedPopup);
 
             // Fade out and remove the notification after animation
             setTimeout(() => {
-              notification.style.opacity = "0";
-              notification.style.transform = "translateY(-20px)";
+              copiedPopup.style.opacity = "0";
+              copiedPopup.style.transform = "translateY(-20px)";
             }, 200);
 
             // Reset animation flag when animation is complete
             setTimeout(() => {
-              document.body.removeChild(notification);
+              document.body.removeChild(copiedPopup);
               isAnimating = false;
             }, 1000);
           })
