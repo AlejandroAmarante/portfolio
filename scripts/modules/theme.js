@@ -1,7 +1,19 @@
 // Constants for theme management
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
-const SVG_PATH = "../../imgs/background.svg"; // Adjusted path for GitHub Pages
+
+/**
+ * Gets the full URL to the background SVG
+ */
+function getBackgroundSvgUrl() {
+  // Get the base URL (e.g., "https://alejandroamarante.github.io/portfolio/")
+  const baseUrl =
+    window.location.href.split("/").slice(0, 3).join("/") +
+    window.location.pathname.split("/").slice(0, 2).join("/");
+
+  // Construct full URL to the SVG
+  return `${baseUrl}/imgs/background.svg`;
+}
 
 /**
  * Initialize theme toggle functionality
@@ -51,8 +63,15 @@ function applyTheme(theme, sunnyIcons, moonIcons) {
  * Update the SVG fill color
  */
 function updateSvgFill(fillColor) {
-  fetch(SVG_PATH)
-    .then((response) => response.text())
+  const svgUrl = getBackgroundSvgUrl();
+
+  fetch(svgUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load SVG: ${response.status}`);
+      }
+      return response.text();
+    })
     .then((svgText) => {
       // Update the fill color in the SVG
       const updatedSvg = svgText.replace(
@@ -61,14 +80,14 @@ function updateSvgFill(fillColor) {
       );
 
       // Create data URL instead of Blob for better compatibility
-      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
+      const svgDataUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
         updatedSvg
       )}`;
-      document.body.style.backgroundImage = `url("${svgUrl}")`;
+      document.body.style.backgroundImage = `url("${svgDataUrl}")`;
     })
     .catch((error) => {
       console.error("Error updating SVG pattern:", error);
-      // Fallback to CSS background if SVG fails
+      // Fallback to CSS background
       document.body.style.backgroundImage =
         theme === THEME_DARK
           ? "linear-gradient(to right, #333, #333)"
