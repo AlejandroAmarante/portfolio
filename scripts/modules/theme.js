@@ -1,6 +1,7 @@
 // Constants for theme management
 const THEME_DARK = "dark";
 const THEME_LIGHT = "light";
+const SVG_PATH = "./imgs/background.svg"; // Adjusted path for GitHub Pages
 
 /**
  * Initialize theme toggle functionality
@@ -12,9 +13,6 @@ export function initThemeToggle() {
 
   // Get saved theme or use dark as default
   let theme = localStorage.getItem("theme") || THEME_DARK;
-
-  // Load and setup SVG pattern
-  setupSvgPattern();
 
   // Apply the initial theme
   applyTheme(theme, sunnyIcons, moonIcons);
@@ -29,29 +27,7 @@ export function initThemeToggle() {
 }
 
 /**
- * Load and prepare the SVG pattern
- */
-function setupSvgPattern() {
-  fetch("/path/to/pattern.svg")
-    .then((response) => response.text())
-    .then((svgText) => {
-      // Create a Blob from the SVG text
-      const blob = new Blob([svgText], { type: "image/svg+xml" });
-      const url = URL.createObjectURL(blob);
-
-      // Set initial background image
-      document.body.style.backgroundImage = `url(${url})`;
-    })
-    .catch((error) => {
-      console.error("Error loading SVG pattern:", error);
-    });
-}
-
-/**
  * Apply the selected theme to the document
- * @param {string} theme - Theme name ('dark' or 'light')
- * @param {HTMLCollection} sunnyIcons - Collection of sunny icons
- * @param {HTMLCollection} moonIcons - Collection of moon icons
  */
 function applyTheme(theme, sunnyIcons, moonIcons) {
   // Update icons visibility
@@ -63,7 +39,7 @@ function applyTheme(theme, sunnyIcons, moonIcons) {
     icon.style.display = showSunny ? "none" : "inline-block";
   });
 
-  // Update SVG fill color dynamically
+  // Update SVG fill color
   updateSvgFill(theme === THEME_DARK ? "#fff" : "#000");
 
   // Set theme attribute and save to localStorage
@@ -73,10 +49,9 @@ function applyTheme(theme, sunnyIcons, moonIcons) {
 
 /**
  * Update the SVG fill color
- * @param {string} fillColor - Color to use for the SVG fill
  */
 function updateSvgFill(fillColor) {
-  fetch("../../imgs/background.svg")
+  fetch(SVG_PATH)
     .then((response) => response.text())
     .then((svgText) => {
       // Update the fill color in the SVG
@@ -85,14 +60,18 @@ function updateSvgFill(fillColor) {
         `<path fill="${fillColor}"`
       );
 
-      // Create a Blob from the modified SVG
-      const blob = new Blob([updatedSvg], { type: "image/svg+xml" });
-      const url = URL.createObjectURL(blob);
-
-      // Update the background image
-      document.body.style.backgroundImage = `url(${url})`;
+      // Create data URL instead of Blob for better compatibility
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
+        updatedSvg
+      )}`;
+      document.body.style.backgroundImage = `url("${svgUrl}")`;
     })
     .catch((error) => {
       console.error("Error updating SVG pattern:", error);
+      // Fallback to CSS background if SVG fails
+      document.body.style.backgroundImage =
+        theme === THEME_DARK
+          ? "linear-gradient(to right, #333, #333)"
+          : "linear-gradient(to right, #fff, #fff)";
     });
 }
