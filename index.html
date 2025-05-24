@@ -107,94 +107,100 @@
   <section id="projects">
     <h1 class="projects__title">Projects</h1>
     <div class="projects__list">
-      <div class="project-card" data-aos="fade-down" data-aos-delay="0">
-        <div class="project-card__image">
-          <picture><img src="./imgs/Project1.png" alt="Project 1" /></picture>
-        </div>
-        <div class="project-card__information">
-          <div class="project-card__header">
-            <h2 class="project-card__title">Nile Marketplace</h2>
-            <div class="project-card__external">
-              <a href="https://github.com/AlejandroMontalvo/nile-marketplace" target="_blank" rel="noopener">
-                <ion-icon class="project-card__external-icon" name="logo-github" aria-hidden="true"></ion-icon>
-              </a>
-            </div>
+      <div class="project-card-wrapper" data-aos="fade-down" data-aos-delay="0">
+        <div class="project-card" data-link="https://alejandroamarante.github.io/qr-generator/" data-target="_blank">
+          <div class="project-card__image">
+            <picture>
+              <img src="./imgs/Project1.png" alt="Project 1" />
+            </picture>
           </div>
-          <p class="project-card__description">
-            A marketplace implementation which allows users to browse, favorite, and create
-            listings.
-          </p>
-          <div class="tags">
-            <div class="tag tag--react">
-              <i class="ri-reactjs-fill tag__icon--react" aria-hidden="true"></i>React Native
+          <div class="project-card__information">
+            <div class="project-card__header">
+              <h2 class="project-card__title">QR Generator</h2>
             </div>
-            <div class="tag tag--nodejs">
-              <i class="ri-nodejs-fill tag__icon--nodejs" aria-hidden="true"></i>Node.js
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="project-card" data-aos="fade-down" data-aos-delay="200">
-        <a class="project-card__image" href="https://alejandromontalvo.github.io/Weathr/" target="_blank"
-          rel="noopener">
-          <picture><img src="./imgs/Project2.webp" alt="Project 1" />
-          </picture>
-        </a>
-        <div class="project-card__information">
-          <div class="project-card__header">
-            <h2 class="project-card__title">weathr</h2>
-            <div class="project-card__external">
-              <a href="https://github.com/AlejandroMontalvo/weathr" target="_blank" rel="noopener">
-                <ion-icon class="project-card__external-icon" name="logo-github" aria-hidden="true"></ion-icon>
-              </a>
-            </div>
-          </div>
-          <p class="project-card__description">
-            A simple weather site that displays todays weather. Fetches data provided by the <a
-              class="link link--embedded" href="https://openweathermap.org/api" target="_blank"
-              rel="noopener">OpenWeather Weather API</a>. An
-            OpenWeather API key is required for use.
-          </p>
-          <div class="tags">
-            <div class="tag tag--html">
-              <i class="ri-html5-fill tag__icon--html" aria-hidden="true"></i>HTML
-            </div>
-            <div class="tag tag--css">
-              <i class="ri-css3-fill tag__icon--css" aria-hidden="true"></i>CSS
-            </div>
-            <div class="tag tag--javascript">
-              <i class="ri-javascript-line tag__icon--javascript" aria-hidden="true"></i>JavaScript
+            <p class="project-card__description">
+              A QR Code generator, utilizing my own javascript library, QRCore.js (forked from QRCode.js). Users are
+              able
+              to generate QR Codes for URLs, Text, Emails, and more!
+            </p>
+            <div class="tags">
+              <div class="tag tag--html">
+                <i class="ri-html5-fill tag__icon--html" aria-hidden="true"></i>HTML
+              </div>
+              <div class="tag tag--css">
+                <i class="ri-css3-fill tag__icon--css" aria-hidden="true"></i>CSS
+              </div>
+              <div class="tag tag--javascript">
+                <i class="ri-javascript-line tag__icon--javascript" aria-hidden="true"></i>JavaScript
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="project-card" data-aos="fade-down" data-aos-delay="400">
-        <a class="project-card__image" href="https://alejandromontalvo.github.io/locksmith/" target="_blank"
-          rel="noopener">
-          <picture><img src="./imgs/Project3.png" alt="Project 1" />
-          </picture>
-        </a>
-        <div class="project-card__information">
-          <div class="project-card__header">
-            <h2 class="project-card__title">LOCKSMITH</h2>
-            <a href="https://github.com/AlejandroMontalvo/locksmith" target="_blank" rel="noopener">
-              <ion-icon class="project-card__external-icon" name="logo-github" aria-hidden="true"></ion-icon>
-            </a>
+      <div class="project-card-wrapper" data-aos="fade-down" data-aos-delay="200">
+        <div class="project-card" data-link="https://alejandromontalvo.github.io/Weathr/" data-target="_blank">
+          <div class="project-card__image">
+            <picture><img src="./imgs/Project2.webp" alt="Project 1" />
+            </picture>
           </div>
-          <p class="project-card__description">
-            An easy-to-use, yet powerful, secure password generator. Features a highly customizable password
-            generation
-            experience, all handled clientside for extra security.
-          </p>
-          <div class="tags">
-            <div class="tag tag--html">
-              <i class="ri-html5-fill tag__icon--html" aria-hidden="true"></i>HTML
+          <div class="project-card__information">
+            <div class="project-card__header">
+              <h2 class="project-card__title">weathr</h2>
+              <div class="project-card__external">
+                <a href="https://github.com/AlejandroMontalvo/weathr" target="_blank" rel="noopener">
+                  <ion-icon class="project-card__external-icon" name="logo-github" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
             </div>
-            <div class="tag tag--css">
-              <i class="ri-css3-fill tag__icon--css" aria-hidden="true"></i>CSS
+            <p class="project-card__description">
+              A simple weather site that displays todays weather. Fetches data provided by the <a
+                class="link link--embedded" href="https://openweathermap.org/api" target="_blank"
+                rel="noopener">OpenWeather Weather API</a>. An
+              OpenWeather API key is required for use.
+            </p>
+            <div class="tags">
+              <div class="tag tag--html">
+                <i class="ri-html5-fill tag__icon--html" aria-hidden="true"></i>HTML
+              </div>
+              <div class="tag tag--css">
+                <i class="ri-css3-fill tag__icon--css" aria-hidden="true"></i>CSS
+              </div>
+              <div class="tag tag--javascript">
+                <i class="ri-javascript-line tag__icon--javascript" aria-hidden="true"></i>JavaScript
+              </div>
             </div>
-            <div class="tag tag--javascript">
-              <i class="ri-javascript-line tag__icon--javascript" aria-hidden="true"></i>JavaScript
+          </div>
+        </div>
+      </div>
+      <div class="project-card-wrapper" data-aos="fade-down" data-aos-delay="400">
+        <div class="project-card">
+          <a class="project-card__image" href="https://alejandromontalvo.github.io/locksmith/" target="_blank"
+            rel="noopener">
+            <picture><img src="./imgs/Project3.png" alt="Project 1" />
+            </picture>
+          </a>
+          <div class="project-card__information">
+            <div class="project-card__header">
+              <h2 class="project-card__title">LOCKSMITH</h2>
+              <a href="https://github.com/AlejandroMontalvo/locksmith" target="_blank" rel="noopener">
+                <ion-icon class="project-card__external-icon" name="logo-github" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+            <p class="project-card__description">
+              An easy-to-use, yet powerful, secure password generator. Features a highly customizable password
+              generation
+              experience, all handled clientside for extra security.
+            </p>
+            <div class="tags">
+              <div class="tag tag--html">
+                <i class="ri-html5-fill tag__icon--html" aria-hidden="true"></i>HTML
+              </div>
+              <div class="tag tag--css">
+                <i class="ri-css3-fill tag__icon--css" aria-hidden="true"></i>CSS
+              </div>
+              <div class="tag tag--javascript">
+                <i class="ri-javascript-line tag__icon--javascript" aria-hidden="true"></i>JavaScript
+              </div>
             </div>
           </div>
         </div>

@@ -8,17 +8,22 @@
   margin-top: 3.5rem;
   height: 100vh;
   justify-content: center;
+  gap: 1.2rem;
 }
 
 .projects__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.project-card-wrapper {
+  width: fit-content;
+  width: calc(33.33% - 1vw);
+  max-width: calc(33.33% - 1vw);
 }
 
 .project-card {
-  margin-top: 1vw;
-  margin-bottom: 1vw;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color-card);
@@ -27,11 +32,8 @@
   height: fit-content;
   border: 1px solid var(--border-color);
   overflow: hidden;
-  width: calc(33.33% - 1vw); /* Set the width to one-third minus the margin */
-  max-width: calc(
-    33.33% - 1vw
-  ); /* Set the maximum width to one-third minus the margin */
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .project-card__image {

@@ -4,6 +4,7 @@ import { initMobileNavigation } from "./modules/mobileNav.js";
 import { initTypewriter } from "./modules/typewriter.js";
 import { initNavigation } from "./modules/navigation.js";
 import { initEmailClipboard } from "./modules/emailClipboard.js";
+import { initProjectCards } from "./modules/projectCards.js";
 
 // Initialize all modules when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initTypewriter();
   initNavigation();
   initEmailClipboard();
+  initProjectCards();
 });
