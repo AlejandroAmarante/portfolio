@@ -1,6 +1,6 @@
 // modules/mouseFollowingCards.js
 
-export function initProjectCards() {
+export function initProjectCard() {
   const cards = document.querySelectorAll(".project-card");
 
   if (!cards.length) {
