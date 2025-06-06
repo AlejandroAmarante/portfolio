@@ -23,6 +23,7 @@
   --bg-color-panel: hsl(0, 0%, 8%);
   --bg-color-card: hsl(0, 0%, 8%);
   --font-color: hsl(0, 0%, 88%);
+  --font-color-rgb: 224, 224, 224;
   --hover-color: hsl(0, 0%, 88%);
   --hover-font-color: hsl(0, 0%, 6%);
   --tag-background-color: hsl(0, 0%, 19%);
@@ -48,6 +49,7 @@
   --bg-color-panel: hsl(0, 0%, 96%);
   --bg-color-card: hsl(0, 0%, 96%);
   --font-color: hsl(0, 0%, 15%);
+  --font-color-rgb: 38, 38, 38;
   --hover-color: hsl(0, 0%, 15%);
   --hover-font-color: hsl(0, 0%, 92%);
   --tag-background-color: hsl(0, 0%, 94%);

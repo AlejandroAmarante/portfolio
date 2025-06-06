@@ -1,8 +1,6 @@
 // modules/mouseFollowingCards.js
-
 export function initProjectCard() {
   const cards = document.querySelectorAll(".project-card");
-
   if (!cards.length) {
     console.warn("No project cards found for mouse following effect");
     return;
@@ -16,7 +14,6 @@ export function initProjectCard() {
     // Set initial transition for smooth entry
     card.addEventListener("mouseenter", function () {
       card.style.transition = "transform 0.1s ease-out";
-
       // Add cursor pointer if card is clickable
       if (cardLink) {
         card.style.cursor = "pointer";
@@ -33,7 +30,6 @@ export function initProjectCard() {
       const rect = card.getBoundingClientRect();
       const cardCenterX = rect.left + rect.width / 2;
       const cardCenterY = rect.top + rect.height / 2;
-
       const mouseX = e.clientX;
       const mouseY = e.clientY;
 
@@ -41,15 +37,35 @@ export function initProjectCard() {
       const deltaX = mouseX - cardCenterX;
       const deltaY = mouseY - cardCenterY;
 
-      // Convert to rotation angles (max ±20 degrees)
-      const rotateX = (deltaY / rect.height) * -20;
-      const rotateY = (deltaX / rect.width) * 20;
+      // Calculate distance from center for intensity scaling
+      const maxDistance = Math.sqrt(
+        (rect.width / 2) ** 2 + (rect.height / 2) ** 2
+      );
+      const currentDistance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+      const distanceRatio = Math.min(currentDistance / maxDistance, 1);
 
-      // Apply 3D transform
+      // Normalize deltas to card dimensions
+      const normalizedX = (deltaX / rect.width) * 2; // Range: -1 to 1
+      const normalizedY = (deltaY / rect.height) * 2;
+
+      // Apply smooth intensity scaling and clamp
+      const intensity = 0.8 * distanceRatio; // Scale down as distance increases
+      const maxRotation = 10; // Maximum rotation angle
+
+      const rotateX = Math.max(
+        -maxRotation,
+        Math.min(maxRotation, normalizedY * -maxRotation * intensity)
+      );
+      const rotateY = Math.max(
+        -maxRotation,
+        Math.min(maxRotation, normalizedX * maxRotation * intensity)
+      );
+
+      // Apply 3D transform with smoother transitions
       card.style.transform = `
-          perspective(1000px) 
-          rotateX(${rotateX}deg) 
-          rotateY(${rotateY}deg) 
+          perspective(1000px)
+          rotateX(${rotateX}deg)
+          rotateY(${rotateY}deg)
           scale(1.02)
           translateZ(10px)
         `;
@@ -76,15 +92,10 @@ export function initProjectCard() {
       card.style.transition = "transform 0.3s ease-out";
       card.style.transform =
         "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1) translateZ(0px)";
-
       // Reset cursor
       if (cardLink) {
         card.style.cursor = "pointer";
       }
     });
   });
-
-  console.log(
-    `Mouse following effect initialized for ${cards.length} project cards`
-  );
 }

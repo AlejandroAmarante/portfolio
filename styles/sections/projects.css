@@ -11,16 +11,73 @@
   gap: 1.2rem;
 }
 
+.projects__header {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  flex-direction: row;
+  gap: 1.2rem;
+  justify-content: space-between;
+}
+.projects__github-link {
+  color: var(--font-color);
+  font-family: "OpenSans", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0;
+  position: relative;
+}
+
+.projects__github-link-mobile {
+  display: none;
+}
+
+.projects__github-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(var(--font-color-rgb), 0.5); /* base line */
+  pointer-events: none;
+}
+
+.projects__github-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--font-color); /* solid overlay */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.projects__github-link:hover::before {
+  transform: scaleX(1);
+}
+
 .projects__list {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
+  justify-content: space-between;
 }
 
 .project-card-wrapper {
   width: fit-content;
   width: calc(33.33% - 1vw);
   max-width: calc(33.33% - 1vw);
+  display: flex;
+  align-items: center;
 }
 
 .project-card {
@@ -47,6 +104,7 @@
   cursor: pointer;
   object-fit: cover;
   border-radius: 0.6rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .project-card__information {
@@ -78,21 +136,6 @@
   font-size: 1.45vw;
   hyphens: auto;
   text-align: justify;
-}
-
-.project__external {
-  display: flex;
-  align-items: center;
-}
-
-.project__external a {
-  margin-left: 0.8vw;
-  text-decoration: none;
-}
-
-.project__external__icon {
-  font-size: 3vw;
-  color: var(--font-color);
 }
 
 .tags {
@@ -152,6 +195,12 @@
   border: none;
 }
 
+.tag--wordpress,
+.tag__icon--wordpress {
+  color: #21759b;
+  background-color: var(--tag-background-color);
+}
+
 @media (max-width: 1000px) {
   #projects {
     width: 100%;
@@ -165,6 +214,27 @@
   .projects__list {
     flex-direction: column;
     align-items: center;
+  }
+
+  .projects__github-link {
+    display: none;
+  }
+
+  .projects__github-link-mobile {
+    color: var(--font-color);
+    font-family: "OpenSans", sans-serif;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+    position: relative;
+  }
+
+  .project-card-wrapper {
+    width: fit-content;
+    width: 80%;
+    max-width: 80%;
   }
 
   .project-card__image img {
@@ -189,7 +259,7 @@
   .project-card {
     flex-direction: column;
     margin-top: 5vw;
-    width: 90%;
+    width: 100%;
     max-width: 100%;
   }
   .project-card__external__icon {

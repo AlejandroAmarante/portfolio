@@ -105,10 +105,14 @@
   </section>
   <!-- Projects Section -->
   <section id="projects">
-    <h1 class="projects__title">Projects</h1>
+    <div class="projects__header">
+      <h1 class="projects__title">Projects</h1>
+      <a class="projects__github-link" href="https://github.com/AlejandroAmarante" target="_blank" data-aos="fade-up"
+        data-aos-delay="800">More on GitHub<i class="ri-github-fill"></i></a>
+    </div>
     <div class="projects__list">
       <div class="project-card-wrapper" data-aos="fade-down" data-aos-delay="0">
-        <div class="project-card" data-link="https://github.com/alejandroamarante/qr-generator" data-target="_blank">
+        <div class="project-card" data-link="https://roastandrye.com/" data-target="_blank">
           <div class="project-card__image">
             <picture>
               <img src="./imgs/Project1.png" alt="Project 1" />
@@ -116,22 +120,20 @@
           </div>
           <div class="project-card__information">
             <div class="project-card__header">
-              <h2 class="project-card__title">QR Generator</h2>
+              <h2 class="project-card__title">Roast and Rye</h2>
             </div>
             <p class="project-card__description">
-              A QR Code generator, utilizing my own javascript library, QRCore.js (forked from QRCode.js). Users are
-              able
-              to generate QR Codes for URLs, Text, Emails, and more!
+              Created a custom logo and enhanced WordPress theme styling for Roast and Rye, a coffee and cocktail blog,
+              transforming
+              it from a generic template into a distinctive brand presence that stands out in the specialty coffee
+              space.
             </p>
             <div class="tags">
-              <div class="tag tag--html">
-                <i class="ri-html5-fill tag__icon--html" aria-hidden="true"></i>HTML
+              <div class="tag tag--wordpress">
+                <i class="ri-wordpress-fill tag__icon--wordpress" aria-hidden="true"></i>WordPress
               </div>
               <div class="tag tag--css">
                 <i class="ri-css3-fill tag__icon--css" aria-hidden="true"></i>CSS
-              </div>
-              <div class="tag tag--javascript">
-                <i class="ri-javascript-line tag__icon--javascript" aria-hidden="true"></i>JavaScript
               </div>
             </div>
           </div>
@@ -174,11 +176,11 @@
       </div>
       <div class="project-card-wrapper" data-aos="fade-down" data-aos-delay="400">
         <div class="project-card">
-          <a class="project-card__image" href="https://alejandromontalvo.github.io/locksmith/" target="_blank"
+          <div class="project-card__image" href="https://alejandromontalvo.github.io/locksmith/" target="_blank"
             rel="noopener">
             <picture><img src="./imgs/Project3.png" alt="Project 1" />
             </picture>
-          </a>
+          </div>
           <div class="project-card__information">
             <div class="project-card__header">
               <h2 class="project-card__title">LOCKSMITH</h2>
@@ -205,6 +207,8 @@
           </div>
         </div>
       </div>
+      <a class="projects__github-link-mobile" href="https://github.com/AlejandroAmarante" target="_blank" data-aos="fade-up"
+        data-aos-delay="800">More on GitHub<i class="ri-github-fill"></i></a>
     </div>
     </div>
   </section>
