@@ -77,7 +77,6 @@
   width: calc(33.33% - 1vw);
   max-width: calc(33.33% - 1vw);
   display: flex;
-  align-items: center;
 }
 
 .project-card {
