@@ -50,7 +50,7 @@ export function initProjectCard() {
 
       // Apply smooth intensity scaling and clamp
       const intensity = 0.8 * distanceRatio; // Scale down as distance increases
-      const maxRotation = 10; // Maximum rotation angle
+      const maxRotation = 20; // Maximum rotation angle
 
       const rotateX = Math.max(
         -maxRotation,
