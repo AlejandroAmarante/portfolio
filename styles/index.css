@@ -44,20 +44,20 @@
 
 /* Light Theme Override */
 [data-theme="light"] {
-  --border-color: hsl(0, 0%, 86%);
-  --bg-color: hsl(0, 0%, 93%);
-  --bg-color-panel: hsl(0, 0%, 96%);
-  --bg-color-card: hsl(0, 0%, 96%);
-  --font-color: hsl(0, 0%, 15%);
-  --font-color-rgb: 38, 38, 38;
-  --hover-color: hsl(0, 0%, 15%);
-  --hover-font-color: hsl(0, 0%, 92%);
-  --tag-background-color: hsl(0, 0%, 94%);
-  --html-tag-color: hsl(14, 73%, 58%);
-  --css-tag-color: hsl(207, 60%, 54%);
-  --js-tag-color: hsl(53, 73%, 65%);
-  --nodejs-tag-color: hsl(45, 12%, 32%);
-  --react-tag-color: hsl(210, 25%, 32%);
+  --border-color: hsl(210, 15%, 82%);
+  --bg-color: hsl(215, 25%, 96%);
+  --bg-color-panel: hsl(215, 20%, 98%);
+  --bg-color-card: hsl(215, 20%, 98%);
+  --font-color: hsl(0, 0%, 6%);
+  --font-color-rgb: 35, 42, 56;
+  --hover-color: hsl(0, 0%, 6%);
+  --hover-font-color: hsl(215, 20%, 98%);
+  --tag-background-color: hsl(215, 25%, 92%);
+  --html-tag-color: hsl(14, 80%, 55%);
+  --css-tag-color: hsl(207, 75%, 48%);
+  --js-tag-color: hsl(50, 90%, 58%);
+  --nodejs-tag-color: hsl(120, 45%, 35%);
+  --react-tag-color: hsl(195, 80%, 48%);
 }
 
 /* Reset and Base Styles */
