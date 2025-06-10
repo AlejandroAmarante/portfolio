@@ -18,15 +18,15 @@
   --transition-medium: 1s ease;
 
   /* Colors - Dark Theme (Default) */
-  --border-color: hsl(0, 0%, 12%);
-  --bg-color: hsl(0, 0%, 6%);
-  --bg-color-panel: hsl(0, 0%, 8%);
-  --bg-color-card: hsl(0, 0%, 8%);
-  --font-color: hsl(0, 0%, 88%);
-  --font-color-rgb: 224, 224, 224;
-  --hover-color: hsl(0, 0%, 88%);
-  --hover-font-color: hsl(0, 0%, 6%);
-  --tag-background-color: hsl(0, 0%, 19%);
+  --bg-color: hsl(210, 4%, 7%);
+  --bg-color-panel: hsl(210, 4%, 9%);
+  --bg-color-card: hsl(210, 4%, 11%);
+  --border-color: hsl(210, 4%, 15%);
+  --font-color: hsl(210, 3%, 92%);
+  --font-color-rgb: 233, 234, 235;
+  --hover-color: hsl(210, 3%, 92%);
+  --hover-font-color: hsl(210, 4%, 7%);
+  --tag-background-color: hsl(210, 4%, 19%);
 
   /* Technology Colors */
   --html-tag-color: hsl(14, 77%, 52%);
