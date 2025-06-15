@@ -48,9 +48,9 @@
   --bg-color: hsl(215, 25%, 96%);
   --bg-color-panel: hsl(215, 20%, 98%);
   --bg-color-card: hsl(215, 20%, 98%);
-  --font-color: hsl(0, 0%, 6%);
-  --font-color-rgb: 35, 42, 56;
-  --hover-color: hsl(0, 0%, 6%);
+  --font-color: hsl(210, 4%, 9%);
+  --font-color-rgb: 22, 23, 24;
+  --hover-color: hsl(210, 4%, 9%);
   --hover-font-color: hsl(215, 20%, 98%);
   --tag-background-color: hsl(215, 25%, 96%);
   --html-tag-color: hsl(14, 80%, 55%);
