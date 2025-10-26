@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 1px solid red; */
 }
 
 html,
@@ -12,20 +13,34 @@ body {
 
 body {
   background-color: #05090c;
+  padding: 1.5rem 1rem;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 10vh;
-  background-color: #333;
-  color: white;
+  color: #fdffff;
+  border-bottom: 1px solid #fdffff;
+  gap: 1px;
+  height: 60px;
 }
 
-nav a {
-  text-decoration: none;
+.nav-btns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-right: 20px;
+  border-right: 1px solid #fdffff;
+}
+
+.nav-btn {
+  background-color: transparent;
   color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  height: 100%;
 }
 
 main {
