@@ -11,7 +11,7 @@
   --border-hi: #3a3a3a;
   --text: #ededed;
   --text-muted: #7a7a7a;
-  --text-dim: #414141;
+  --text-dim: #414040;
 
   /* Accent — acid chartreuse */
   --accent: #ea027e;
@@ -179,8 +179,7 @@ body.cursor-click #cursor-ring {
   border-radius: 2px;
   white-space: nowrap;
   opacity: 0;
-  transform: translate(18px, -50%);
-  transition: opacity 0.18s var(--ease-out);
+  transition: opacity 0.5s var(--ease-out);
 }
 #copy-tooltip.visible {
   opacity: 1;
@@ -473,10 +472,8 @@ main {
   background:
     linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.6) 0%,
-      transparent 40%,
-      transparent 100%,
-      rgba(0, 0, 0, 0) 100%
+      rgba(0, 0, 0, 0.4) 0%,
+      transparent 40%
     )
 }
 
@@ -759,7 +756,7 @@ main {
 /* Media */
 .project-media {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16/9;
   overflow: hidden; /* contains image zoom, unaffected by card change */
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -1018,6 +1015,7 @@ main {
   background: transparent;
   position: relative;
   overflow: hidden;
+  transform: translateZ(0);
 }
 .contact-row:first-child {
   border-top: none;
@@ -1071,14 +1069,11 @@ main {
   display: block;
 }
 
-.contact-row:hover .contact-label {
-  color: var(--accent);
-}
-.contact-row:hover .contact-value {
-  color: var(--text);
-}
+.contact-row:hover .contact-label,
+.contact-row:hover .contact-value,
 .contact-row:hover .contact-icon {
   color: var(--accent);
+  will-change: color;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1173,7 +1168,7 @@ main {
 #modal-inner {
   position: relative;
   z-index: 1;
-  width: min(1200px, 100%);
+  width: min(1080px, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
