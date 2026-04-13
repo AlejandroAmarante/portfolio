@@ -21,7 +21,7 @@
 ───────────────────────────────────────────────────────────── */
 const CELL = 10;
 const STEP_MS = 200;
-const FRAME_MS = 1000 / 30; // 30 fps render cap
+const FRAME_MS = 1000 / 60; // 60 fps render cap
 const SEED_DENSITY = 0.28;
 const LOW_ALIVE_MIN = 0.045;
 const LOW_ALIVE_FRAMES = 18;
