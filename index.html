@@ -1,26 +1,403 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <title>Alejandro's Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO — Alejandro Amarante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Plaster&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-btns">
-            <button class="nav-btn" id="about">ABOUT ME</button>
-            <button class="nav-btn" id="projects">PROJECTS</button>
-            <button class="nav-btn" id="contact">CONTACT</button>
+
+    <!-- ═══ AMBIENT LAYERS ═══════════════════════════════════════ -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div id="noise-overlay" aria-hidden="true"></div>
+    <div id="scanlines" aria-hidden="true"></div>
+
+    <!-- ═══ CURSOR — two independent fixed elements ══════════════ -->
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="cursor-ring" aria-hidden="true"></div>
+
+    <!-- ═══ COPY TOOLTIP ════════════════════════════════════════ -->
+    <div id="copy-tooltip" aria-hidden="true" role="status">Copied Email</div>
+
+    <!-- ═══ NAVIGATION ══════════════════════════════════════════ -->
+    <nav id="nav" role="navigation" aria-label="Primary navigation">
+
+        <a href="#hero" class="nav-logo" aria-label="Back to top">a</a>
+
+        <div class="nav-center" aria-hidden="true">
+            <span class="nav-ticker">PORTFOLIO ·
+                <script>document.write(new Date().getFullYear())</script>
+            </span>
         </div>
-        <div class="nav-logo">
-            
+
+        <div class="nav-right">
+            <a href="#hero" class="nav-link">Index</a>
+            <a href="#projects" class="nav-link">Work</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+            <button id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+
     </nav>
-    <h1>Boilerplate</h1>
-    <p>This is some boilerplate HTML.</p>
+
+    <!-- ═══ MOBILE MENU ══════════════════════════════════════════ -->
+    <div id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <a href="#hero" class="mobile-nav-link" data-mobile-link>01 — Index</a>
+            <a href="#projects" class="mobile-nav-link" data-mobile-link>02 — Work</a>
+            <a href="#contact" class="mobile-nav-link" data-mobile-link>03 — Contact</a>
+        </div>
+        <div class="mobile-menu-footer">PORTFOLIO ·
+            <script>document.write(new Date().getFullYear())</script>
+        </div>
+    </div>
+
+    <!-- ═══ MAIN ═════════════════════════════════════════════════ -->
+    <main>
+
+        <!-- ─── HERO ──────────────────────────────────────────────── -->
+        <section id="hero" aria-label="Introduction">
+
+            <div class="hero-left">
+
+                <div class="hero-top-meta reveal"></div>
+
+                <div class="hero-name-wrap reveal reveal-delay-1">
+                    <h1 class="hero-name" id="hero-name" aria-label="Alejandro Amarante">
+                        <span class="name-line">ALEJANDRO</span>
+                        <span class="name-line outline">AMARANTE</span>
+                    </h1>
+                </div>
+
+                <div class="hero-meta reveal reveal-delay-2">
+                    <div class="meta-row">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Business Analyst / Jack of All Trades</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Company</span>
+                        <span class="meta-value accent-text">uBreakiFix · Hybrid</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Data Analysis · Process Improvement</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Stack</span>
+                        <span class="meta-value">TypeScript · Rust · WebGL · CSS</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <div class="hero-image-wrap reveal">
+                    <!-- Replace with: <img src="your-photo.jpg" alt="Portrait of Alejandro Amarante" /> -->
+                    <div class="image-placeholder" aria-label="Portrait placeholder">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                            <circle cx="32" cy="22" r="10" />
+                            <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" />
+                            <rect x="1" y="1" width="62" height="62" rx="2" stroke-dasharray="4 3" />
+                        </svg>
+                        <span>Your Image / Avatar</span>
+                    </div>
+                </div>
+
+                <div class="hero-status reveal reveal-delay-1">
+                    <p class="status-text">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        System Online
+                    </p>
+                    <p class="hero-coords">28.5384°N · 81.3789°W</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ─── PROJECTS ───────────────────────────────────────────── -->
+        <section id="projects" aria-label="Featured projects">
+
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <span class="section-title">Selected Work</span>
+                <span class="section-count">3 projects</span>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- PROJECT 1 -->
+                <article class="project-card reveal">
+                    <a class="card-link-overlay" href="https://github.com/yourusername/project-alpha" target="_blank"
+                        rel="noopener noreferrer" aria-label="View Project Alpha on GitHub"></a>
+
+                    <div class="project-media" data-modal-trigger>
+                        <span class="project-index" aria-hidden="true">01</span>
+                        <!-- REPLACE WITH -->
+                        <img src="assets/imgs/project1.png" alt="Project Alpha preview" loading="lazy" />
+                        <div class="media-zoom-hint" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.41421 5H10V3H3V10H5V6.41421L9.29289 10.7071L10.7071 9.29289L6.41421 5ZM21 14H19V17.5858L14.7071 13.2929L13.2929 14.7071L17.5858 19H14V21H21V14Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-info">
+                            <h2 class="project-title">Project Alpha</h2>
+                            <p class="project-desc">A real-time collaborative data-visualization tool built for
+                                distributed teams. Handles 10k+ live events per second with a sub-20 ms render pipeline
+                                engineered for performance at scale.</p>
+                            <div class="project-tags">
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">WebGL</span>
+                                <span class="tag">Rust</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="gh-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z" />
+                                </svg>
+                                View on GitHub
+                            </span>
+                            <span class="card-arrow" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 2 -->
+                <article class="project-card reveal reveal-delay-1">
+                    <a class="card-link-overlay" href="https://github.com/yourusername/system-beta" target="_blank"
+                        rel="noopener noreferrer" aria-label="View System Beta on GitHub"></a>
+
+                    <div class="project-media" data-modal-trigger>
+                        <span class="project-index" aria-hidden="true">02</span>
+                        <div class="media-placeholder" aria-label="Media placeholder">
+                            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1"
+                                aria-hidden="true">
+                                <rect x="1" y="1" width="38" height="38" rx="2" />
+                                <path d="M1 10h38" />
+                                <circle cx="6" cy="5.5" r="1.5" fill="currentColor" />
+                                <circle cx="11" cy="5.5" r="1.5" fill="currentColor" />
+                                <rect x="6" y="17" width="12" height="12" rx="1" />
+                                <path d="M22 17h12M22 22.5h9M22 28h6" stroke-linecap="round" />
+                            </svg>
+                            <span>Screenshot / Video</span>
+                        </div>
+                        <div class="media-zoom-hint" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.41421 5H10V3H3V10H5V6.41421L9.29289 10.7071L10.7071 9.29289L6.41421 5ZM21 14H19V17.5858L14.7071 13.2929L13.2929 14.7071L17.5858 19H14V21H21V14Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-info">
+                            <h2 class="project-title">System Beta</h2>
+                            <p class="project-desc">An opinionated design-system toolkit with zero runtime dependencies.
+                                Generates type-safe CSS custom properties and component tokens from a single declarative
+                                schema definition.</p>
+                            <div class="project-tags">
+                                <span class="tag">CSS</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">CLI</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="gh-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z" />
+                                </svg>
+                                View on GitHub
+                            </span>
+                            <span class="card-arrow" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 3 -->
+                <article class="project-card reveal reveal-delay-2">
+                    <a class="card-link-overlay" href="https://github.com/yourusername/terminal-gamma" target="_blank"
+                        rel="noopener noreferrer" aria-label="View Terminal Gamma on GitHub"></a>
+
+                    <div class="project-media" data-modal-trigger>
+                        <span class="project-index" aria-hidden="true">03</span>
+                        <div class="media-placeholder" aria-label="Media placeholder">
+                            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1"
+                                aria-hidden="true">
+                                <rect x="1" y="1" width="38" height="38" rx="2" />
+                                <path d="M1 10h38" />
+                                <circle cx="6" cy="5.5" r="1.5" fill="currentColor" />
+                                <circle cx="11" cy="5.5" r="1.5" fill="currentColor" />
+                                <rect x="6" y="17" width="12" height="12" rx="1" />
+                                <path d="M22 17h12M22 22.5h9M22 28h6" stroke-linecap="round" />
+                            </svg>
+                            <span>Screenshot / Video</span>
+                        </div>
+                        <div class="media-zoom-hint" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.41421 5H10V3H3V10H5V6.41421L9.29289 10.7071L10.7071 9.29289L6.41421 5ZM21 14H19V17.5858L14.7071 13.2929L13.2929 14.7071L17.5858 19H14V21H21V14Z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-info">
+                            <h2 class="project-title">Terminal Gamma</h2>
+                            <p class="project-desc">A procedural generative-art engine for the browser. Exposes a
+                                declarative API to compose layered noise fields, reaction-diffusion patterns, and
+                                particle systems rendered via WebGPU.</p>
+                            <div class="project-tags">
+                                <span class="tag">WebGPU</span>
+                                <span class="tag">WGSL</span>
+                                <span class="tag">Canvas</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="gh-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z" />
+                                </svg>
+                                View on GitHub
+                            </span>
+                            <span class="card-arrow" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ─── CONTACT ────────────────────────────────────────────── -->
+        <section id="contact" aria-label="Contact">
+
+            <div class="section-header">
+                <span class="section-num">03</span>
+                <span class="section-title">Contact</span>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-left reveal">
+                    <p class="contact-tagline">
+                        Open to collaborations,<br>
+                        freelance work,<br>
+                        and interesting problems.
+                    </p>
+                    <p class="contact-sub">
+                        Based remotely. Working globally.<br>
+                        Response time &lt; 24 h.
+                    </p>
+                </div>
+
+                <div class="contact-links reveal reveal-delay-1">
+
+                    <a href="https://github.com/yourusername" class="contact-row" target="_blank"
+                        rel="noopener noreferrer" aria-label="GitHub profile">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">alejandroamarante</span>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="https://linkedin.com/in/yourusername" class="contact-row" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">alejandroamarante</span>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <button class="contact-row" id="email-copy" data-email="alejandrormont@gmail.com"
+                        aria-label="Copy email address to clipboard">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value" id="email-display">alejandrormont@gmail.com</span>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z" />
+                            </svg>
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ─── FOOTER ─────────────────────────────────────────────── -->
+        <footer id="footer">
+            <div class="footer-left">
+                <p class="footer-copy">©
+                    <script>document.write(new Date().getFullYear());</script> Alejandro Amarante
+                </p>
+                <p class="footer-build">Built with intention · No frameworks harmed</p>
+            </div>
+            <nav class="footer-links" aria-label="Social links">
+                <a href="https://github.com/yourusername" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+        </footer>
+
+    </main>
+
+    <!-- ═══ MODAL ════════════════════════════════════════════════ -->
+    <div id="modal" role="dialog" aria-modal="true" aria-label="Media preview" aria-hidden="true">
+        <div id="modal-backdrop"></div>
+        <div id="modal-inner">
+            <button id="modal-close" aria-label="Close preview">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="3" y1="3" x2="17" y2="17" />
+                    <line x1="17" y1="3" x2="3" y2="17" />
+                </svg>
+            </button>
+            <div id="modal-content"></div>
+            <p id="modal-hint">ESC or click outside to close</p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
